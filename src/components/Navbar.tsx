@@ -1,3 +1,3 @@
 export default function Navbar() {
-  return <div>Navbar</div>;
+  return <div className='text-primary-main'>Navbar</div>;
 }
