@@ -15,6 +15,20 @@ const config: Config = {
           'hight-light': '#EC018A',
         },
       },
+      backgroundColor: {
+        primary: {
+          main: '#9481C0',
+          light: '#9551A9',
+        },
+        grey: {
+          light: '#FAFAFA',
+          main: '#EFEFF4',
+          'hight-light': '#373B4D',
+        },
+        purple: {
+          main: '#FEE5F3',
+        },
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
