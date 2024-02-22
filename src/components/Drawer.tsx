@@ -49,15 +49,9 @@ export default function Drawer({
               leave='transition ease duration-300 transform'
               leaveFrom='opacity-100 translate-x-0'
               leaveTo='opacity-0 translate-x-12'
-              // enter='ease-out duration-300'
-              // enterFrom='opacity-0 scale-95'
-              // enterTo='opacity-100 scale-100'
-              // leave='ease-in duration-200'
-              // leaveFrom='opacity-100 scale-100'
-              // leaveTo='opacity-0 scale-95'
             >
               <Dialog.Panel className='w-full h-full p-6 transition-all transform bg-white shadow-xl'>
-                <Dialog.Title className='flex justify-end mt-4 mb-2 mr-2'>
+                <Dialog.Title className='flex justify-end mt-4 mb-2'>
                   <button onClick={closeModal}>
                     <IoMdClose size={30} />
                   </button>

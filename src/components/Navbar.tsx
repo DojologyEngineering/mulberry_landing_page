@@ -6,41 +6,12 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa';
 import { FiEdit3 } from 'react-icons/fi';
-import { TbMailFilled, TbMenu2, TbPhoneFilled } from 'react-icons/tb';
+import { TbMenu2 } from 'react-icons/tb';
 
 import Drawer from '@/components/Drawer';
 
-const data = {
-  phone: '+855 12 123 123',
-  email: 'test@gmail.com',
-  socialMedias: [
-    {
-      icon: FaInstagram,
-      title: 'instagram',
-      value: 'https://www.instagram.com',
-    },
-    {
-      icon: FaFacebookF,
-      title: 'facebook',
-      value: 'https://www.facebook.com',
-    },
-    {
-      icon: FaTiktok,
-      title: 'tiktok',
-      value: 'https://www.tiktok.com',
-    },
-  ],
-  menu: [
-    { title: 'Home', value: '/' },
-    { title: 'About', value: '/about' },
-    { title: 'Curriculum', value: '/curriculum' },
-    { title: 'News & Events', value: '/news' },
-    { title: 'Locations', value: '/locations' },
-    { title: 'Contact Us', value: '/contact' },
-  ],
-};
+import { contactData, menu, socialMedias } from '@/utils/data-util';
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -48,20 +19,25 @@ export default function Navbar() {
 
   const [isOpen, setIsOpen] = useState(false);
   const [hideNav, setHideNav] = useState(false);
+  const [prevScrollpos, setPrevScrollpos] = useState(0);
+
+  // console.log('hideNav:', hideNav);
 
   useEffect(() => {
     // Function to handle scroll events
-    let prevScrollpos = 0;
+    // let prevScrollpos = 0;
     const handleScroll = () => {
       const currentScrollPos = window.scrollY;
+      const screenHeight = window.screen.height;
       if (prevScrollpos > currentScrollPos) {
         // Show navbar
         setHideNav(false);
       } else {
         // Hide navbar
-        if (currentScrollPos > 200) setHideNav(true);
+        if (currentScrollPos > screenHeight / 2) setHideNav(true);
       }
-      prevScrollpos = currentScrollPos;
+      setPrevScrollpos(currentScrollPos);
+      // prevScrollpos = currentScrollPos;
     };
     // Add scroll event listener when the component mounts
     window.addEventListener('scroll', handleScroll);
@@ -69,32 +45,28 @@ export default function Navbar() {
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [prevScrollpos]);
 
   return (
     <div
-      className={`transition-all ease-in-out delay-150 duration-300 sticky top-0 bg-white ${hideNav && '-top-52'}`}
+      className={`transition-all ease-in-out duration-300 sticky z-10 bg-white ${hideNav ? '-top-52' : 'top-0'} ${!hideNav && prevScrollpos > 0 ? 'drop-shadow-md' : 'drop-shadow-none'}`}
     >
       <div className='hidden bg-primary-light md:block'>
         <div className='container flex items-center mx-auto space-x-6'>
-          <span className='flex items-center text-white'>
-            <TbPhoneFilled size={18} />
-            <a className='ml-3 text-sm underline' href={`tel:${data.phone}`}>
-              {data.phone}
-            </a>
-          </span>
-          <span className='flex items-center text-white'>
-            <TbMailFilled size={18} />
-            <a className='ml-3 text-sm underline' href={`mailto:${data.email}`}>
-              {data.email}
-            </a>
-          </span>
+          {contactData.map((con, i) => (
+            <span key={i} className='flex items-center text-white'>
+              <con.icon size={18} />
+              <a className='ml-3 text-sm underline' href={con.href}>
+                {con.text}
+              </a>
+            </span>
+          ))}
 
           <span className='flex-grow' />
 
           {/* social media */}
           <span className='flex items-center space-x-2 text-white'>
-            {data.socialMedias.map((sm, i) => (
+            {socialMedias.map((sm, i) => (
               <a
                 key={i}
                 href={sm.value}
@@ -125,7 +97,7 @@ export default function Navbar() {
             />
           </Link>
           <span className='items-center hidden space-x-2 md:flex'>
-            {data.menu.map((m, i) => (
+            {menu.map((m, i) => (
               <Link
                 key={i}
                 href={m.value}
@@ -145,11 +117,11 @@ export default function Navbar() {
       </header>
 
       <Drawer {...{ isOpen, setIsOpen }}>
-        {data.menu.map((m, i) => (
+        {menu.map((m, i) => (
           <Link
             key={i}
             href={m.value}
-            className='flex items-center justify-center h-12 border-b-[1px] hover:text-primary-hight-light hover:bg-slate-50'
+            className='flex items-center justify-center h-14 border-b-[1px] hover:text-primary-hight-light hover:bg-slate-50'
           >
             <span className='font-medium'>{m.title}</span>
           </Link>
@@ -159,7 +131,7 @@ export default function Navbar() {
             Enroll Now <FiEdit3 className='ml-2' size={24} />
           </button>
           <div className='flex mt-8 space-x-3'>
-            {data.socialMedias.map((sm, i) => (
+            {socialMedias.map((sm, i) => (
               <a
                 key={i}
                 href={sm.value}

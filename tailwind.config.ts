@@ -15,6 +15,12 @@ const config: Config = {
           'hight-light': '#EC018A',
         },
       },
+      textColor: {
+        secondary: '#333333',
+      },
+      backgroundColor: {
+        footer: '#EAEAEA',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
