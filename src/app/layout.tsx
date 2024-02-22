@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import ScrollToTopButton from '@/components/ScrollToTop';
 import { Links } from '@/components/links';
 
 import './globals.css';
@@ -24,9 +25,9 @@ export default function RootLayout({
     <html lang='en'>
       <body className={inter.className}>
         <Navbar />
-        <Links />
         <main className='min-h-screen'>{children}</main>
-        <Footer />
+        <ScrollToTopButton />
+        {/* <Footer /> */}
       </body>
     </html>
   );

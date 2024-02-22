@@ -34,7 +34,7 @@ const data = {
     { title: 'Curriculum', value: '/curriculum' },
     { title: 'News & Events', value: '/news' },
     { title: 'Locations', value: '/locations' },
-    { title: 'Contact Us', value: '/contact' },
+    { title: 'Contact Us', value: '/contact-us' },
   ],
 };
 
