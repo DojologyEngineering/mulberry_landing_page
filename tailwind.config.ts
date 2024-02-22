@@ -26,6 +26,13 @@ const config: Config = {
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
       },
+      fontFamily: {
+        popin: ['var(--font-popin)'],
+        raleway: ['var(--font-raleway)'],
+        patrick: ['var(--font-patrick-hand)'],
+        avenir: ['var(--font-avenir)'],
+        helvetica: ['var(--font-helvetica)'],
+      },
     },
   },
   plugins: [],

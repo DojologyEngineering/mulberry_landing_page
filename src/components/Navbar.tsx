@@ -78,7 +78,7 @@ export default function Navbar() {
             ))}
           </span>
           {/* end social media */}
-          <button className='flex items-center h-12 px-3 text-white transition duration-150 bg-primary-main hover:bg-primary-hight-light'>
+          <button className='flex items-center font-patrick text-xl font-normal h-12 px-3 text-white transition duration-150 bg-primary-main hover:bg-primary-hight-light'>
             Book a School Tour <FiEdit3 className='ml-2' size={24} />
           </button>
         </div>
@@ -101,7 +101,7 @@ export default function Navbar() {
               <Link
                 key={i}
                 href={m.value}
-                className={`h-10 px-4 font-medium transition ease-in-out delay-150 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${pathname === m.value ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
+                className={`h-10 px-4 text-sm font-semibold transition ease-in-out delay-150 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${pathname === m.value ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
               >
                 {m.title}
               </Link>

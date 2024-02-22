@@ -27,7 +27,7 @@ export const socialMedias = [
 
 export const menu = [
   { title: 'Home', value: '/' },
-  { title: 'About', value: '/about' },
+  { title: 'About Us', value: '/about' },
   { title: 'Curriculum', value: '/curriculum' },
   { title: 'News & Events', value: '/news' },
   { title: 'Locations', value: '/locations' },

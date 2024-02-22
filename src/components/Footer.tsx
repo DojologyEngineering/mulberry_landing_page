@@ -26,12 +26,12 @@ export default function Footer() {
             </Link>
           </div>
           <div className='col-span-2 md:px-4'>
-            <p className='text-sm text-center md:text-left text-secondary'>
+            <p className='text-sm text-center md:text-left text-secondary font-avenir font-light'>
               {footerCenterText}
             </p>
           </div>
           <div className='col-span-2 text-sm md:pl-10'>
-            <p className='mb-4 text-lg font-medium text-center md:text-base md:text-left'>
+            <p className='mb-4 text-lg font-medium text-center md:text-base md:text-left font-avenir'>
               Contact with us
             </p>
             {location.map((loc, i) => (
@@ -39,7 +39,9 @@ export default function Footer() {
                 <div className='text-left min-w-8'>
                   <loc.icon size={20} />
                 </div>
-                <p className='text-secondary'>{loc.text}</p>
+                <p className='text-secondary font-avenir font-light'>
+                  {loc.text}
+                </p>
               </div>
             ))}
             {contactData.map((con, i) => (
@@ -47,7 +49,10 @@ export default function Footer() {
                 <div className='text-left min-w-8'>
                   <con.icon size={20} />
                 </div>
-                <a className='underline text-secondary' href={con.href}>
+                <a
+                  className='underline text-secondary font-avenir font-light'
+                  href={con.href}
+                >
                   {con.text}
                 </a>
               </div>
@@ -64,7 +69,7 @@ export default function Footer() {
       </div>
       <div className='bg-primary-main'>
         <div className='container px-16 py-8 mx-auto'>
-          <p className='text-sm font-light text-center text-white'>
+          <p className='text-sm font-light text-center text-white font-helvetica tracking-[0.01em]'>
             Copyright © {new Date().getFullYear()} Mulberry Learning Cambodia.
             All Rights Reserved. Privacy Policy
           </p>
