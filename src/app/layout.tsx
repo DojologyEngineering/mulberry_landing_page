@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 
-import { Inter } from 'next/font/google';
+import { Patrick_Hand, Poppins, Raleway } from 'next/font/google';
+import localFont from 'next/font/local';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
@@ -9,7 +10,54 @@ import { Links } from '@/components/links';
 
 import './globals.css';
 
-const inter = Inter({ subsets: ['latin'] });
+const poppin = Poppins({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-popin',
+});
+
+const raleway = Raleway({
+  subsets: ['latin'],
+  weight: ['300', '400', '500', '600', '700'],
+  display: 'swap',
+  variable: '--font-raleway',
+});
+
+const patrickHand = Patrick_Hand({
+  subsets: ['latin'],
+  weight: ['400'],
+  display: 'swap',
+  variable: '--font-patrick-hand',
+});
+
+const avenir = localFont({
+  src: [
+    {
+      path: '../../public/fonts/avenir_light.woff2',
+      weight: '300',
+    },
+    {
+      path: '../../public/fonts/avenir_regular.woff2',
+      weight: '400',
+    },
+    {
+      path: '../../public/fonts/avenir_heavy.woff2',
+      weight: '700',
+    },
+  ],
+  variable: '--font-avenir',
+});
+
+const helvetica = localFont({
+  src: [
+    {
+      path: '../../public/fonts/helvetica_roman.woff2',
+      weight: '300',
+    },
+  ],
+  variable: '--font-helvetica',
+});
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -22,12 +70,15 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en'>
-      <body className={inter.className}>
+    <html
+      lang='en'
+      className={`${poppin.variable} ${raleway.variable} ${patrickHand.variable} ${avenir.variable} ${helvetica.variable}`}
+    >
+      <body>
         <Navbar />
         <main className='min-h-screen'>{children}</main>
         <ScrollToTopButton />
-        {/* <Footer /> */}
+        <Footer />
       </body>
     </html>
   );

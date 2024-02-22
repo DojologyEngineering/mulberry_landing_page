@@ -33,10 +33,23 @@ const config: Config = {
           main: '#FEE5F3',
         },
       },
+      textColor: {
+        secondary: '#333333',
+      },
+      backgroundColor: {
+        footer: '#EAEAEA',
+      },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
           'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+      },
+      fontFamily: {
+        popin: ['var(--font-popin)'],
+        raleway: ['var(--font-raleway)'],
+        patrick: ['var(--font-patrick-hand)'],
+        avenir: ['var(--font-avenir)'],
+        helvetica: ['var(--font-helvetica)'],
       },
     },
   },
