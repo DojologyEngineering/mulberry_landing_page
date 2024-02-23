@@ -32,13 +32,14 @@ const config: Config = {
         purple: {
           main: '#FEE5F3',
         },
+        footer: '#EAEAEA',
       },
       textColor: {
         secondary: '#333333',
       },
-      backgroundColor: {
-        footer: '#EAEAEA',
-      },
+      // backgroundColor: {
+      //   footer: '#EAEAEA',
+      // },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
