@@ -9,15 +9,17 @@ const ScrollToTopButton = () => {
 
   useEffect(() => {
     const toggleVisibility = () => {
-      window.scrollY > 500 ? setIsVisible(true) : setIsVisible(false);
+      setIsVisible(window.scrollY > 500);
     };
+
+    toggleVisibility();
+
     window.addEventListener('scroll', toggleVisibility);
+
     return () => {
       window.removeEventListener('scroll', toggleVisibility);
     };
   }, []);
-
-  // handles the animation when scrolling to the top
   const scrollToTop = () => {
     isVisible &&
       window.scrollTo({
