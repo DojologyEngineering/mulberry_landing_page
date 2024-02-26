@@ -20,7 +20,7 @@ export const location = [
     value: '',
   },
   {
-    id: 1,
+    id: 2,
     logo: schoolLocation,
     nameLocation: 'Mulberry Learning @ Greenhills',
     locationDetail:

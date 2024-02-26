@@ -17,8 +17,14 @@ const config: Config = {
         black: {
           light: '#000000',
         },
+        errorborder: {
+          light: '#FF512E',
+        },
       },
       backgroundColor: {
+        errorbg: {
+          main: '#FFECEC',
+        },
         primary: {
           main: '#9481C0',
           light: '#9551A9',
@@ -37,6 +43,7 @@ const config: Config = {
       textColor: {
         secondary: '#333333',
       },
+
       // backgroundColor: {
       //   footer: '#EAEAEA',
       // },

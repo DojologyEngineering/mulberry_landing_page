@@ -305,13 +305,16 @@ function ContactUs() {
                   name='name'
                   control={control}
                   defaultValue={''}
+                  rules={{ required: true }}
                   render={({ field: { onChange, value } }) => (
                     <>
                       <input
                         onChange={(value) => onChange(value)}
                         type='text'
                         className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
-                          !value ? 'border-red-500 bg-red-100' : ''
+                          errors.name
+                            ? 'border-2 border-errorborder-light bg-errorbg-main'
+                            : ''
                         }`}
                         aria-invalid={errors.name ? 'true' : 'false'}
                       />
@@ -327,13 +330,19 @@ function ContactUs() {
                 <Controller
                   name='mobile'
                   control={control}
+                  rules={{ required: true }}
                   defaultValue={''}
                   render={({ field: { onChange, value } }) => (
                     <>
                       <input
                         onChange={(value) => onChange(value)}
                         type='text'
-                        className='bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none'
+                        className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
+                          errors.name
+                            ? 'border-2 border-errorborder-light bg-errorbg-main'
+                            : ''
+                        }`}
+                        aria-invalid={errors.name ? 'true' : 'false'}
                       />
                     </>
                   )}
@@ -347,13 +356,18 @@ function ContactUs() {
                 <Controller
                   name='address'
                   control={control}
+                  rules={{ required: true }}
                   defaultValue={''}
                   render={({ field: { onChange, value } }) => (
                     <>
                       <input
                         onChange={(value) => onChange(value)}
                         type='text'
-                        className='bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none'
+                        className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
+                          errors.name
+                            ? 'border-2 border-errorborder-light bg-errorbg-main'
+                            : ''
+                        }`}
                       />
                     </>
                   )}
@@ -369,12 +383,17 @@ function ContactUs() {
                   name='childname1'
                   control={control}
                   defaultValue={''}
+                  rules={{ required: true }}
                   render={({ field: { onChange, value } }) => (
                     <>
                       <input
                         onChange={(value) => onChange(value)}
                         type='text'
-                        className='bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none'
+                        className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
+                          errors.name
+                            ? 'border-2 border-errorborder-light bg-errorbg-main'
+                            : ''
+                        }`}
                       />
                     </>
                   )}
@@ -389,6 +408,7 @@ function ContactUs() {
                   name='datechild1'
                   control={control}
                   defaultValue={''}
+                  rules={{ required: true }}
                   render={({ field: { onChange, value } }) => (
                     <div className='relative w-full'>
                       <DatePicker
@@ -400,7 +420,11 @@ function ContactUs() {
                         dateFormat='MMMM d, yyyy'
                         wrapperClassName='w-full'
                         showYearDropdown
-                        className='bg-grey-main rounded-3xl h-10 hover:bg-purple-main focus:outline-none px-4 w-full'
+                        className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
+                          errors.name
+                            ? 'border-2 border-errorborder-light bg-errorbg-main'
+                            : ''
+                        }`}
                       />
                       <BiCalendar className='absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500' />
                     </div>
@@ -432,7 +456,7 @@ function ContactUs() {
             <div className='grid grid-cols-1 md:grid-cols-3 gap-6 mt-4'>
               <div>
                 <label className='block mb-1 font-avenir text-sm'>
-                  Child 2&apos;s Name *
+                  Child 2&apos;s Name
                 </label>
                 <Controller
                   name='childname2'
@@ -452,7 +476,7 @@ function ContactUs() {
 
               <div>
                 <label className='block mb-1 font-avenir text-sm'>
-                  Child 2&apos;s Date of Birth *
+                  Child 2&apos;s Date of Birth
                 </label>
                 <Controller
                   name='datechild2'
@@ -482,19 +506,18 @@ function ContactUs() {
                   control={control}
                   rules={{ required: 'Please complete the reCAPTCHA' }}
                   render={({ field, fieldState }) => (
-                    <div className='flex flex-col w-full'>
-                      <div className='w-full'>
-                        {loading && <p>Loading...</p>}
-                        <ReCAPTCHA
-                          size='normal'
-                          sitekey='6LdI4n8pAAAAADB04MnWhrp2zajRiKS2bDRrIkD4'
-                          onChange={(value) => {
-                            field.onChange(value);
-                            console.log('value', value);
-                          }}
-                          onLoadCapture={handleRecaptchaLoad}
-                        />
-                      </div>
+                    <div className='w-full max-w-screen-md mx-auto'>
+                      {loading && <p>Loading...</p>}
+                      <ReCAPTCHA
+                        size='normal'
+                        sitekey='6LdI4n8pAAAAADB04MnWhrp2zajRiKS2bDRrIkD4'
+                        onChange={(value) => {
+                          field.onChange(value);
+                          console.log('value', value);
+                        }}
+                        onLoadCapture={handleRecaptchaLoad}
+                        style={{ width: '100%' }}
+                      />
                       <div className={`${errors.name ? 'text-red-500' : ''}`}>
                         {fieldState?.error && (
                           <span className='text-sm'>
