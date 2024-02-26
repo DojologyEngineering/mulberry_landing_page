@@ -1,17 +1,20 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Fragment, useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
+import { Menu, Transition } from '@headlessui/react';
 import { FiEdit3 } from 'react-icons/fi';
 import { TbMenu2 } from 'react-icons/tb';
 
 import Drawer from '@/components/Drawer';
 
 import { contactData, menu, socialMedias } from '@/utils/data-util';
+
+type menuType = (typeof menu)[0];
 
 export default function Navbar() {
   const pathname = usePathname();
@@ -20,8 +23,25 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [prevScrollpos, setPrevScrollpos] = useState(0);
+  const [openSubmenu, setOpenSubmenu] = useState('');
 
   // console.log('hideNav:', hideNav);
+
+  const isActive = (menu: menuType) => {
+    console.log('menu:', menu);
+    if (!menu.subMenu) {
+      return pathname === menu.value;
+    } else {
+      const isSubActive = menu.subMenu.findIndex((sm) => sm.value === pathname);
+      if (isSubActive !== -1) {
+        return true;
+      } else {
+        return openSubmenu === menu.value;
+      }
+    }
+
+    return false;
+  };
 
   useEffect(() => {
     // Function to handle scroll events
@@ -97,15 +117,60 @@ export default function Navbar() {
             />
           </Link>
           <span className='items-center hidden space-x-2 md:flex'>
-            {menu.map((m, i) => (
-              <Link
-                key={i}
-                href={m.value}
-                className={`h-10 px-4 text-sm font-semibold transition ease-in-out delay-150 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${pathname === m.value ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
-              >
-                {m.title}
-              </Link>
-            ))}
+            {menu.map((m, i) =>
+              !m.subMenu ? (
+                <Link
+                  key={i}
+                  href={m.value}
+                  className={`h-10 px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
+                >
+                  {m.title}
+                </Link>
+              ) : (
+                <Menu
+                  key={i}
+                  as='div'
+                  className='relative inline-block text-left'
+                  onMouseEnter={() => setOpenSubmenu(m.value)}
+                  onMouseLeave={() => setOpenSubmenu('')}
+                >
+                  <div>
+                    <Menu.Button
+                      className={`outline-none h-10 flex px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
+                    >
+                      {m.title}
+                    </Menu.Button>
+                  </div>
+                  <Transition
+                    as={Fragment}
+                    show={openSubmenu === m.value}
+                    enter='transition ease-out duration-100'
+                    enterFrom='transform opacity-0 scale-95'
+                    enterTo='transform opacity-100 scale-100'
+                    leave='transition ease-in duration-75'
+                    leaveFrom='transform opacity-100 scale-100'
+                    leaveTo='transform opacity-0 scale-95'
+                  >
+                    <Menu.Items className='absolute left-0 w-72 origin-top-right divide-y divide-gray-100 rounded-md bg-gray-50 shadow-lg ring-1 ring-black/5 focus:outline-none'>
+                      <div className='px-1 py-1 flex flex-col'>
+                        {m.subMenu.map((sm, i) => (
+                          <Menu.Item key={i}>
+                            {({ active }) => (
+                              <Link
+                                href={sm.value}
+                                className={`w-full px-4 py-3 text-sm font-semibold transition ease-in-out delay-100 hover:text-primary-hight-light hover:bg-slate-50 ${pathname === sm.value ? ' text-primary-hight-light' : ''}`}
+                              >
+                                {sm.title}
+                              </Link>
+                            )}
+                          </Menu.Item>
+                        ))}
+                      </div>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+              ),
+            )}
           </span>
           <button
             className='block text-gray-600 md:hidden'

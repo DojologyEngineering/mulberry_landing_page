@@ -27,10 +27,37 @@ export const socialMedias = [
 
 export const menu = [
   { title: 'Home', value: '/' },
-  { title: 'About Us', value: '/about' },
-  { title: 'Curriculum', value: '/curriculum' },
+  {
+    title: 'About Us',
+    value: '/about',
+    subMenu: [
+      { title: 'Mulberry Learning Credo', value: '/about' },
+      { title: 'Center Enviroment', value: '/centers' },
+      { title: 'Careers', value: '/careers' },
+    ],
+  },
+  {
+    title: 'Curriculum',
+    value: '/curriculum',
+    subMenu: [
+      { title: 'Habits of Mind', value: '/habits-of-mind' },
+      { title: 'Literacy And Numeracy', value: '/literacy-and-numeracy' },
+      { title: 'Project Inquiry', value: '/project-inquiry' },
+      { title: 'S.T.E.A.M Enrichment', value: 'steam-enrichment' },
+    ],
+  },
   { title: 'News & Events', value: '/news' },
-  { title: 'Locations', value: '/locations' },
+  {
+    title: 'Locations',
+    value: '/locations',
+    subMenu: [
+      { title: 'Mulberry Learning @ BGC', value: '/mulberry-learning-bgc' },
+      {
+        title: 'Mulberry Learning @ Greenhills',
+        value: '/mulberry-learning-greenhills',
+      },
+    ],
+  },
   { title: 'Contact Us', value: '/contact' },
 ];
 
