@@ -509,7 +509,6 @@ function ContactUs() {
                     <div className='w-full max-w-screen-md mx-auto'>
                       {loading && <p>Loading...</p>}
                       <ReCAPTCHA
-                        size='normal'
                         sitekey='6LdI4n8pAAAAADB04MnWhrp2zajRiKS2bDRrIkD4'
                         onChange={(value) => {
                           field.onChange(value);
