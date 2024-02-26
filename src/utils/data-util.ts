@@ -58,7 +58,7 @@ export const menu = [
       },
     ],
   },
-  { title: 'Contact Us', value: '/contact' },
+  { title: 'Contact Us', value: '/contact-us' },
 ];
 
 export const location = [

@@ -152,7 +152,7 @@ export default function Navbar() {
                     leaveTo='transform opacity-0 scale-95'
                   >
                     <Menu.Items className='absolute left-0 w-72 origin-top-right divide-y divide-gray-100 rounded-md bg-gray-50 shadow-lg ring-1 ring-black/5 focus:outline-none'>
-                      <div className='px-1 py-1 flex flex-col'>
+                      <div className='px-1 py-1 flex flex-col outline-none'>
                         {m.subMenu.map((sm, i) => (
                           <Menu.Item key={i}>
                             {({ active }) => (

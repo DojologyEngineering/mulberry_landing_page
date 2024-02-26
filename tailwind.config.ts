@@ -14,13 +14,39 @@ const config: Config = {
           light: '#BD82BE',
           'hight-light': '#EC018A',
         },
+        black: {
+          light: '#000000',
+        },
+        errorborder: {
+          light: '#FF512E',
+        },
+      },
+      backgroundColor: {
+        errorbg: {
+          main: '#FFECEC',
+        },
+        primary: {
+          main: '#9481C0',
+          light: '#9551A9',
+        },
+        grey: {
+          primary: '#EAEAEA',
+          light: '#FAFAFA',
+          main: '#EFEFF4',
+          'hight-light': '#373B4D',
+        },
+        purple: {
+          main: '#FEE5F3',
+        },
+        footer: '#EAEAEA',
       },
       textColor: {
         secondary: '#333333',
       },
-      backgroundColor: {
-        footer: '#EAEAEA',
-      },
+
+      // backgroundColor: {
+      //   footer: '#EAEAEA',
+      // },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic':
