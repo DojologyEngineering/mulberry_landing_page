@@ -20,6 +20,7 @@ const config: Config = {
       },
       backgroundColor: {
         footer: '#EAEAEA',
+        centers: 'rgb(239,239,244)',
       },
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
