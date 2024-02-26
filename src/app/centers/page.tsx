@@ -109,7 +109,7 @@ export const ClassroomGrid = {
   },
 };
 
-export function page() {
+export function Centers() {
   return (
     <main className='pb-10'>
       <div className='flex justify-center align-middle flex-col'>
@@ -170,4 +170,4 @@ export function page() {
   );
 }
 
-export default page;
+export default Centers;
