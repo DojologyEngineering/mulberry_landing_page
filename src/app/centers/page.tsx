@@ -136,7 +136,7 @@ export function Centers() {
             </p>
           </section>
 
-          <section className='flex flex-col gap-5 justify-center items-center py-10 my-10 bg-centers'>
+          <section className='flex flex-col gap-5 justify-center items-center py-10 my-10 bg-grey-primary'>
             <div className='w-full max-w-[950px]  mx-auto '>
               {' '}
               {/* Adjust max width as needed */}

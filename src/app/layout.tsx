@@ -5,6 +5,8 @@ import localFont from 'next/font/local';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
+import ScrollToTopButton from '@/components/ScrollToTop';
+import { Links } from '@/components/links';
 
 import './globals.css';
 
@@ -75,6 +77,7 @@ export default function RootLayout({
       <body>
         <Navbar />
         <main className='min-h-screen'>{children}</main>
+        <ScrollToTopButton />
         <Footer />
       </body>
     </html>
