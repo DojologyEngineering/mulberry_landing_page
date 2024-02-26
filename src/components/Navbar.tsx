@@ -4,7 +4,7 @@ import { Fragment, useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import { Menu, Transition } from '@headlessui/react';
 import { FiEdit3 } from 'react-icons/fi';
@@ -19,7 +19,7 @@ type menuType = (typeof menu)[0];
 export default function Navbar() {
   const pathname = usePathname();
   // console.log('pathname:', pathname);
-
+  const navigate = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [prevScrollpos, setPrevScrollpos] = useState(0);
@@ -136,6 +136,9 @@ export default function Navbar() {
                 >
                   <div>
                     <Menu.Button
+                      onClick={() => {
+                        navigate.push(`${m.value}`);
+                      }}
                       className={`outline-none h-10 flex px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
                     >
                       {m.title}
