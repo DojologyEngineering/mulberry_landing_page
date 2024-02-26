@@ -25,6 +25,17 @@ import { FaPhone } from 'react-icons/fa6';
 import { GrMail } from 'react-icons/gr';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 
+import {
+  Centers,
+  help,
+  jopSeeker,
+  location,
+  parentsData,
+  partnership,
+  program,
+} from '@/utils/contact-util';
+
+import LocationCard from './LocationCard';
 import schoolLogo from '/public/img/MBR_Logo_RGB.webp';
 import profilePic from '/public/img/curve.webp';
 import schoolLocation from '/public/img/school.jpg';
@@ -43,76 +54,7 @@ interface IFormInput {
   message: string;
   recaptcha: boolean;
 }
-const location = [
-  {
-    id: 0,
-    logo: schoolLocation,
-    nameLocation: 'Mulberry Learning @ BGC',
-    locationDetail:
-      '7/F, GSC Corporate Tower, Triangle Drive, Bonifacio Global City, Taguig City, 1630 Metro Manila',
-    value: '',
-  },
-  {
-    id: 1,
-    logo: schoolLocation,
-    nameLocation: 'Mulberry Learning @ Greenhills',
-    locationDetail:
-      '297 Connecticut St., Greenhills East, Mandaluyong City, Metro Manila',
-    value: '',
-  },
-];
-const parentsData = [
-  {
-    question: 'I’m interested in enrolling my child at a Mulberry Learning.',
-    answer:
-      'Great! Please fill out the booking form below to schedule a tour and to learn about the fees and enrollment process. We look forward to hearing from you.',
-  },
-  {
-    question: 'I’m a Mulberry Learning parent with a question.',
-    answer:
-      'We are available to assist you Monday through Friday between the hours of 9 a.m. to 5 p.m. You can reach us by phone at +63 945 186 6486 or you can email us at inquiry@mulberrylearning.com.ph.',
-  },
-];
-const jopSeeker = [
-  {
-    question: 'I’d like to work at Mulberry Learning.',
-    answer:
-      'Great! We`re looking for dedicated educators and child care professionals like you. Mulberry Learning professionals enjoy careers that are both challenging and rewarding.',
-    link: 'Learn more about Careers with Mulberry Learning',
-  },
-];
-const partnership = [
-  {
-    detail:
-      'We are available to assist you Monday through Friday between the hours of 9 a.m. to 5 p.m. You can reach us by phone at +63 945 186 6486 or you can email us at inquiry@mulberrylearning.com.ph.',
-  },
-];
-const Centers = [
-  { id: 1, name: 'Mulberry Learning @ BGC', value: 'Mulberry Learning @ BGC' },
-  {
-    id: 2,
-    name: 'Mulberry Learning @ Greenhills',
-    value: 'Mulberry Learning @ Greenhills',
-  },
-];
-const program = [
-  {
-    id: 1,
-    name: 'Half day program (Morning)',
-    value: 'Half day program (Morning)',
-  },
-  {
-    id: 2,
-    name: 'Half day program (Afternoon)',
-    value: 'Half day program (Afternoon)',
-  },
-  { id: 3, name: 'Full day program', value: 'Full day program' },
-  { id: 4, name: 'Enrichment programs', value: 'Enrichment programs' },
-];
-type ExampleCustomInputProps = {
-  value?: string;
-  onClick?: () => void;
-} & InputHTMLAttributes<HTMLInputElement>;
+
 function ContactUs() {
   const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
@@ -136,23 +78,6 @@ function ContactUs() {
     setIsOpen(!isOpen);
   };
 
-  const ExampleCustomInput = forwardRef(
-    (
-      { value, onClick, ...rest }: ExampleCustomInputProps,
-      ref: Ref<HTMLInputElement>,
-    ) => (
-      <input
-        type='text'
-        className='example-custom-input w-full'
-        onClick={onClick}
-        value={value}
-        readOnly
-        ref={ref}
-        {...rest}
-      />
-    ),
-  );
-  ExampleCustomInput.displayName = 'ExampleCustomInput';
   return (
     <div>
       <div className='shadow-sm'>
@@ -173,7 +98,7 @@ function ContactUs() {
       </div>
       <div className='bg-grey-light'>
         <div className='container mx-auto'>
-          <div className='md:mt-48 mt-24 bg-grey-light pt-5 px-5 py-10 '>
+          <div className='md:mt-36 mt-24 bg-grey-light pt-10 px-5 py-10 '>
             <h2 className='text-5xl text-primary-light mb-10 font-avenir'>
               How can we{' '}
               <span className='text-primary-hight-light font-avenir'>
@@ -181,11 +106,7 @@ function ContactUs() {
               </span>
             </h2>
             <div className=' '>
-              <h1 className='text-xl mb-10 font-avenir'>
-                Choosing the right educational childcare and preschool for your
-                family is a big decision. We know you have questions, so we have
-                compiled our most frequently asked questions below.
-              </h1>
+              <h1 className='text-xl mb-10 font-avenir'>{help}</h1>
               <div className='mb-10 flex flex-col items-start'>
                 <Disclosure>
                   <Disclosure.Button className=' text-primary-hight-light underline text-xl'>
@@ -473,11 +394,12 @@ function ContactUs() {
                       <DatePicker
                         selected={value ? new Date(value) : null}
                         onChange={(date) => onChange(date)}
-                        customInput={<ExampleCustomInput className='w-full' />}
                         timeFormat='HH:mm'
                         timeIntervals={15}
                         timeCaption='time'
                         dateFormat='MMMM d, yyyy'
+                        wrapperClassName='w-full'
+                        showYearDropdown
                         className='bg-grey-main rounded-3xl h-10 hover:bg-purple-main focus:outline-none px-4 w-full'
                       />
                       <BiCalendar className='absolute top-1/2 right-4 transform -translate-y-1/2 text-gray-500' />
@@ -541,10 +463,11 @@ function ContactUs() {
                       <DatePicker
                         selected={value ? new Date(value) : null}
                         onChange={(date) => onChange(date)}
-                        customInput={<ExampleCustomInput className='w-full' />}
                         timeFormat='HH:mm'
                         timeIntervals={15}
                         timeCaption='time'
+                        wrapperClassName='w-full'
+                        showYearDropdown
                         dateFormat='MMMM d, yyyy'
                         className='bg-grey-main rounded-3xl h-10 hover:bg-purple-main focus:outline-none px-4 w-full'
                       />
@@ -563,6 +486,7 @@ function ContactUs() {
                       <div className='w-full'>
                         {loading && <p>Loading...</p>}
                         <ReCAPTCHA
+                          size='normal'
                           sitekey='6LdI4n8pAAAAADB04MnWhrp2zajRiKS2bDRrIkD4'
                           onChange={(value) => {
                             field.onChange(value);
@@ -573,7 +497,9 @@ function ContactUs() {
                       </div>
                       <div className={`${errors.name ? 'text-red-500' : ''}`}>
                         {fieldState?.error && (
-                          <span>{fieldState.error.message}</span>
+                          <span className='text-sm'>
+                            {fieldState.error.message}
+                          </span>
                         )}
                       </div>
                     </div>
@@ -592,7 +518,10 @@ function ContactUs() {
                 defaultValue={''}
                 render={({ field: { onChange, value } }) => (
                   <>
-                    <textarea className='bg-grey-main px-4 pt-1 rounded-md hover:bg-purple-main w-full h-36 focus:outline-none'></textarea>
+                    <textarea
+                      onChange={(value) => onChange(value)}
+                      className='bg-grey-main px-4 pt-1 rounded-md hover:bg-purple-main w-full h-36 focus:outline-none'
+                    ></textarea>
                   </>
                 )}
               />
@@ -612,28 +541,17 @@ function ContactUs() {
               Locations
             </span>
           </h2>
-
-          <div className='container mx-auto mt-2 grid md:grid-cols-2 lg:grid-cols-4 px-4 justify-stretch'>
-            {location.map((i) => {
-              return (
-                <div
-                  key={i.id}
-                  className='mb-10 flex items-center flex-col border border-solid border-gray-300 md:mr-4 sm:w-60 md:w-72 max-w-xl min-h-[300px]'
-                >
-                  <Image
-                    src={i.logo}
-                    alt='image'
-                    className='w-full h-auto object-cover'
-                  />
-                  <span className='font-bold mt-10 mb-5 font-avenir'>
-                    {i.nameLocation}
-                  </span>
-                  <span className='pt-2 pb-2 mb-10 text-center font-avenir text-sm'>
-                    {i.locationDetail}
-                  </span>
-                </div>
-              );
-            })}
+          <div className='container mx-auto mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 px-4 justify-stretch'>
+            {location.map((location) => (
+              <LocationCard
+                url={location.value}
+                key={location.id}
+                id={location.id}
+                logo={location.logo}
+                nameLocation={location.nameLocation}
+                locationDetail={location.locationDetail}
+              />
+            ))}
           </div>
         </div>
       </div>
