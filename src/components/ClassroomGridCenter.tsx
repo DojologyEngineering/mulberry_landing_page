@@ -1,4 +1,7 @@
+'use client';
+
 import { ClassroomGrid } from '@/app/centers/page';
+import { useEffect, useState } from 'react';
 
 import Image, { StaticImageData } from 'next/image';
 
@@ -11,14 +14,14 @@ interface IContent {
 }
 interface IContentSpan {
   textHead: string;
-  paragraph1: string;
-  paragraph2: string;
-  span: string;
+  paragraph1?: string;
+  paragraph2?: string;
+  span?: string;
 }
 
 const ImgClass = ({ img }: IImgClass) => {
   return (
-    <div>
+    <div className='flex flex-row justify-center'>
       <Image src={img} alt='ArtImg' width={232} height={232} />
     </div>
   );
@@ -58,58 +61,66 @@ const ContentSpan = ({
 };
 
 function ClassroomGridCenter() {
+  const [isSmallScreen, setIsSmallScreen] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 640);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className='flex justify-center'>
-      <div className='grid grid-cols-4 gap-6 align-middle max-w-[950px]'>
-        <ImgClass img={ClassroomGrid.Art.img} />
-        <Content
-          textHead={ClassroomGrid.Art.textHead}
-          paragraph={ClassroomGrid.Art.paragraph}
-        />
-        <ImgClass img={ClassroomGrid.Construction.img} />
-        <ContentSpan
-          textHead={ClassroomGrid.Construction.textHead}
-          paragraph1={ClassroomGrid.Construction.paragraph1}
-          paragraph2={ClassroomGrid.Construction.paragraph2}
-          span={ClassroomGrid.Construction.span}
-        />
-        <ContentSpan
-          textHead={ClassroomGrid.Busy.textHead}
-          paragraph1={ClassroomGrid.Busy.paragraph1}
-          paragraph2={ClassroomGrid.Busy.paragraph2}
-          span={ClassroomGrid.Busy.span}
-        />
-        <ImgClass img={ClassroomGrid.Busy.img} />
-        <Content
-          textHead={ClassroomGrid.Discovery.textHead}
-          paragraph={ClassroomGrid.Discovery.paragraph}
-        />
-        <ImgClass img={ClassroomGrid.Discovery.img} />
-        <ImgClass img={ClassroomGrid.Finger.img} />
-
-        <Content
-          textHead={ClassroomGrid.Finger.textHead}
-          paragraph={ClassroomGrid.Finger.paragraph}
-        />
-        <ImgClass img={ClassroomGrid.Imaginary.img} />
-
-        <Content
-          textHead={ClassroomGrid.Imaginary.textHead}
-          paragraph={ClassroomGrid.Imaginary.paragraph}
-        />
-        <ContentSpan
-          textHead={ClassroomGrid.Reading.textHead}
-          paragraph1={ClassroomGrid.Reading.paragraph1}
-          paragraph2={ClassroomGrid.Reading.paragraph2}
-          span={ClassroomGrid.Reading.span}
-        />
-        <ImgClass img={ClassroomGrid.Reading.img} />
-        <Content
-          textHead={ClassroomGrid.Light.textHead}
-          paragraph={ClassroomGrid.Light.paragraph}
-        />
-        <ImgClass img={ClassroomGrid.Light.img} />
-      </div>
+      {isSmallScreen ? (
+        <div className='grid  grid-cols-1 gap-6 align-middle max-w-[970px] px-[20px] justify-center'>
+          {ClassroomGrid.map((item) => (
+            <>
+              <ContentSpan
+                textHead={item.textHead}
+                paragraph1={item.paragraph1}
+                paragraph2={item.paragraph2}
+                span={item.span}
+              />
+              <ImgClass img={item.img} />
+            </>
+          ))}
+        </div>
+      ) : (
+        <div className='grid grid-cols-4 gap-6 align-middle max-w-[970px] px-[20px] justify-center'>
+          {ClassroomGrid.map((item, index) => (
+            <>
+              {index === 0 || index === 1 || index === 4 || index === 5 ? (
+                <>
+                  <ImgClass img={item.img} />
+                  <ContentSpan
+                    textHead={item.textHead}
+                    paragraph1={item.paragraph1}
+                    paragraph2={item.paragraph2}
+                    span={item.span}
+                  />
+                </>
+              ) : (
+                <>
+                  <ContentSpan
+                    textHead={item.textHead}
+                    paragraph1={item.paragraph1}
+                    paragraph2={item.paragraph2}
+                    span={item.span}
+                  />
+                  <ImgClass img={item.img} />
+                </>
+              )}
+            </>
+          ))}
+        </div>
+      )}
     </div>
   );
 }

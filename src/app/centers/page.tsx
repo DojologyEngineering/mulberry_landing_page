@@ -15,14 +15,14 @@ import LearningCentersMedia from '../../../public/img/learningCentersMedia.webp'
 
 export const textCover = 'Mulberry Learning Centers';
 
-export const LearningSpaces = {
+export const HeadAbout = {
   headTextPurple: 'Our',
   headTextPink: 'Learning Spaces',
   paragraph:
     'Beautifully designed spaces are hallmarks of the Mulberry Learning center environment. We believe that our children learn best in thoughtfully-curated surroundings. That is why we spare no effort in creating a physical canvas that stimulates their senses, unleashes their innate creativity, and encourages their natural desire to explore.',
 };
 
-export const ThirdTeacher = {
+export const BodyAbout = {
   headTextPurple: 'The vibrant environment as the',
   headTextPink: '“third teacher”',
   paragraohArr: [
@@ -51,14 +51,14 @@ export const Classroom = {
     'Specially-designed learning areas can be found throughout our preschool where children can explore their areas of interest.',
 };
 
-export const ClassroomGrid = {
-  Art: {
+export const ClassroomGrid = [
+  {
     img: ArtImg,
     textHead: 'Art Atelier',
-    paragraph:
+    paragraph1:
       'There are numerous ways children can explore, express, and connect their thoughts, feelings, and imaginations. At the multi-sensorial Art Atelier, children are provided with a plethora of tools, mediums, and materials that enable their imagination and creativity to flow, encouraging them to express their “hundred languages” freely.',
   },
-  Construction: {
+  {
     img: ConstructionImg,
     textHead: 'Construction Piazza',
     paragraph1:
@@ -67,7 +67,7 @@ export const ClassroomGrid = {
       ' and are able to express their creativity in their own unique ways.',
     span: 'cognitive thinking skills',
   },
-  Busy: {
+  {
     img: BusyImg,
     textHead: 'Busy Baker',
     paragraph1:
@@ -75,25 +75,25 @@ export const ClassroomGrid = {
     paragraph2: '; all while having fun!',
     span: 'Mathematics and Science',
   },
-  Discovery: {
+  {
     img: DiscoveryImg,
     textHead: 'Discovery Cove',
-    paragraph:
+    paragraph1:
       'When stepping into the Discovery Cove, the child is immersed in nature. With the availability of authentic and natural materials, children embark on a sensorial exploration that encourages observation and analytical skills, just like a little detective!',
   },
-  Finger: {
+  {
     img: FingerImg,
     textHead: 'Finger Gym',
-    paragraph:
+    paragraph1:
       'Writing is an intricate process for young children as they need to utilise every one of their little fingers and fine motor competencies. The Finger Gym promotes hand-eye coordination, dexterity and cognitive abilities. With the use of inviting materials, tools, and objects, it supports the development of a child’s early writing skills.',
   },
-  Imaginary: {
+  {
     img: ImaginaryImg,
     textHead: 'Imaginary Playscape',
-    paragraph:
+    paragraph1:
       'Children learn best by observing, imagining, and doing. At the Imaginary Playscape, children get to explore the world through different perspectives. Make-believe play stimulates their imagination and helps to develop their social and language capabilities as they collaborate, cooperate, and communicate with their peers. early writing skills.',
   },
-  Reading: {
+  {
     img: ReadingImg,
     textHead: 'Reading Nook',
     paragraph1: 'Reading and',
@@ -101,13 +101,13 @@ export const ClassroomGrid = {
       ' is an integral life skill that helps children acquire new concepts and expand their knowledge base. The Reading Nook is a cosy and inviting space that provides the perfect place for children to retreat into the world of text and prints, and dive into the world of imagination, fantasies and creative literature!',
     span: 'literacy ',
   },
-  Light: {
+  {
     img: LightImg,
     textHead: 'Light Atelier',
-    paragraph:
+    paragraph1:
       'The various forms of light and its unique properties can be discovered at the Light Atelier. We bring together Art and Science through explorations that inspire wonder, curiosity, and deeper inquiry. This learning space offers children an interactive experience with lights, shadows, transparency and reflections; allowing children to create new ideas and garner a fresh perspective on their creativity.',
   },
-};
+];
 
 export function Centers() {
   return (
@@ -119,34 +119,34 @@ export function Centers() {
         <div className='relative h-[140px] w-100% bottom-16'>
           <Image src={Gallery} alt='logo' fill />
         </div>
-        <span className='relative bottom-60  text-center text-[40px] font-raleway font-bold px-5 text-white bg-primary-main mx-auto'>
+        <span className='relative bottom-60 text-center sm:text-[40px] text-[26px] font-raleway font-bold px-5 text-white bg-primary-main mx-auto'>
           {textCover}
         </span>
 
         <div className='relative bottom-20'>
-          <section className='flex flex-col gap-5  justify-center align-middle max-w-[950px] ml-auto mr-auto '>
+          <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto px-[20px]'>
             <h3 className='text-[26px]  font-bold text-primary-main font-raleway'>
-              {LearningSpaces.headTextPurple}
+              {HeadAbout.headTextPurple}
               <span className='text-primary-hight-light pl-2'>
-                {LearningSpaces.headTextPink}
+                {HeadAbout.headTextPink}
               </span>
             </h3>
             <p className='text-base font-avenir font-light'>
-              {LearningSpaces.paragraph}
+              {HeadAbout.paragraph}
             </p>
           </section>
 
-          <section className='flex flex-col gap-5 justify-center items-center py-10 my-10 bg-grey-primary'>
-            <div className='w-full max-w-[950px]  mx-auto '>
+          <section className='flex flex-col gap-5 justify-center items-center py-10 my-10 bg-grey-main'>
+            <div className='w-full max-w-[970px] px-[20px]  mx-auto '>
               {' '}
               {/* Adjust max width as needed */}
               <h3 className='text-[26px] font-bold text-primary-main font-raleway'>
-                {ThirdTeacher.headTextPurple}
+                {BodyAbout.headTextPurple}
                 <span className='text-primary-hight-light pl-2'>
-                  {ThirdTeacher.headTextPink}
+                  {BodyAbout.headTextPink}
                 </span>
               </h3>
-              {ThirdTeacher.paragraohArr.map((item) => (
+              {BodyAbout.paragraohArr.map((item) => (
                 <p className=' text-base py-4 font-avenir font-light'>
                   {item.paragraph}
                 </p>
@@ -154,7 +154,7 @@ export function Centers() {
             </div>
           </section>
 
-          <section className='flex flex-col gap-5  justify-center align-middle max-w-[950px] ml-auto mr-auto mb-[-40px]'>
+          <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto mb-[-40px] px-[20px]'>
             <h3 className='text-[26px]  font-semibold text-primary-hight-light font-avenir'>
               {Classroom.headText}
             </h3>

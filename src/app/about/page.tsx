@@ -5,7 +5,7 @@ import footerAbout1 from '../../../public/img/footerAbout1.jpg';
 import footerAbout2 from '../../../public/img/footerAbout2.jpg';
 import Gallery from '../../../public/img/gallery.png';
 
-export const MulberryLearning = {
+export const AboutUsData = {
   textHead:
     "Mulberry Learning Philippines is a proud partner of Singapore's Award-Winning Preschool Brand - Mulberry Learning.",
   paragraph:
@@ -45,23 +45,22 @@ export default function About() {
   return (
     <main className='pb-10'>
       <div className='flex justify-center align-middle flex-col'>
-        <section className='flex justify-center align-middle'>
+        <section className='sm:flex justify-center align-middle hidden'>
           <Image src={SchoolLogo} alt='School Logo' width={345} height={345} />
         </section>
-        <div className='relative h-[140px] w-100% bottom-10'>
+        <div className='relative sm:h-[140px] h-[30px] w-full sm:w-auto sm:bottom-10'>
           <Image src={Gallery} alt='logo' fill />
         </div>
-        <section className='flex flex-col gap-5 justify-center align-middle max-w-[950px] ml-auto mr-auto pt-10'>
+
+        <section className='flex flex-col gap-5 justify-center align-middle max-w-[970px] ml-auto mr-auto pt-10 px-[20px]'>
           <h3 className='text-[26px] text-primary-hight-light font-bold font-raleway '>
-            {MulberryLearning.textHead}
+            {AboutUsData.textHead}
           </h3>
-          <p className='font-extralight text-sm'>
-            {MulberryLearning.paragraph}
-          </p>
+          <p className='font-extralight text-sm'>{AboutUsData.paragraph}</p>
           <h3 className='text-[26px] text-primary-hight-light font-semibold'>
-            {MulberryLearning.awards}
+            {AboutUsData.awards}
           </h3>
-          {MulberryLearning.awardLists.map((item) => (
+          {AboutUsData.awardLists.map((item) => (
             <ul
               className='list-disc font-extralight text-sm ml-7 mb-[-10px]'
               key={item.textList}
@@ -70,8 +69,8 @@ export default function About() {
             </ul>
           ))}
         </section>
-        <section className='pt-10'>
-          <div className='flex justify-center align-middle'>
+        <section className='pt-10 flex justify-center'>
+          <div className='flex flex-col lg:flex-row justify-center align-middle'>
             <Image
               src={footerAbout1}
               alt='footerAbout1'

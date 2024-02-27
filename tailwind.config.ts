@@ -39,10 +39,12 @@ const config: Config = {
           main: '#FEE5F3',
         },
         footer: '#EAEAEA',
-        centers:""
       },
       textColor: {
         secondary: '#333333',
+      },
+      borderColor: {
+        grey: '#59595A',
       },
 
       // backgroundColor: {

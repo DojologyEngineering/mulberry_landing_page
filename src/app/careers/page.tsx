@@ -1,4 +1,7 @@
 import Image from 'next/image';
+import Link from 'next/link';
+
+import { contactData } from '@/utils/data-util';
 
 import CareerBanner from '../../../public/img/CareerBanner.webp';
 import TeacherHighFive from '../../../public/img/FB-teacher-high5.webp';
@@ -8,7 +11,7 @@ import Gallery from '../../../public/img/gallery.png';
 
 export const textCover = 'Careers at Mulberry Learning';
 
-export const Learning = {
+export const HeadContent = {
   textHead: 'Learning is Engaging, Teaching is Vibrant, Respect for All!',
   paragraphArr: [
     {
@@ -26,7 +29,7 @@ export const Learning = {
   ],
 };
 
-const Empowered = {
+const BodyContent = {
   textHead: 'Be Empowered to Inspire!',
   description: 'Embark on a Fulfilling Teaching Journey with Us',
   img1: TeacherTech,
@@ -43,7 +46,7 @@ const Empowered = {
   ],
 };
 
-export const GrowthModel = {
+export const FootContent = {
   textHead: 'Our i-Inspire™ Teacher Growth Model',
   img: GrowthModelImg,
   description:
@@ -62,37 +65,44 @@ export const GrowthModel = {
   ],
 };
 
+export const Links = {
+  btnText: 'Join Us Today!',
+  descriptionLink:
+    'If you want to get in touch with our HR team, please write to',
+};
+
 function Careers() {
+  const contact = contactData.find((item) => item.text === 'test@gmail.com');
   return (
-    <main className='pb-10'>
+    <main>
       <div className='flex justify-center align-middle flex-col'>
-        <div className='h-[350px] w-100% relative'>
+        <div className='sm:h-[350px] h-[150px] w-100% relative'>
           <Image src={CareerBanner} alt='logo' objectFit='cover' fill />
         </div>
-        <div className='relative h-[140px] w-100% bottom-16'>
+        <div className='relative sm:h-[140px] h-[30px] w-100% sm:bottom-16 bottom-4'>
           <Image src={Gallery} alt='logo' fill />
         </div>
-        <span className='relative bottom-60  text-center text-[40px] font-raleway font-bold px-5 text-white bg-primary-main mx-auto'>
+        <span className='relative bottom-[350px] ml-auto lg:right-[175px] sm:text-[40px] text-[26px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-light mx-auto text-center'>
           {textCover}
         </span>
-        <div className='relative bottom-20'>
-          <section className='flex flex-col gap-5  justify-center align-middle max-w-[950px] ml-auto mr-auto '>
+        <div className='relative sm:bottom-20 bottom-4'>
+          <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto px-[20px]'>
             <h3 className='text-[26px]  font-bold text-primary-hight-light font-raleway'>
-              {Learning.textHead}
+              {HeadContent.textHead}
             </h3>
-            {Learning.paragraphArr.map((item) => (
+            {HeadContent.paragraphArr.map((item) => (
               <p className='text-base font-avenir font-light'>
                 {item.paragraph}
               </p>
             ))}
           </section>
-          <section className='flex flex-col gap-5  justify-center align-middle max-w-[950px] ml-auto mr-auto pt-10'>
+          <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto pt-10 px-[20px]'>
             <h3 className='text-[26px]  font-bold text-primary-hight-light font-raleway'>
-              {GrowthModel.textHead}
+              {FootContent.textHead}
             </h3>
             <div className='flex justify-center align-middle'>
               <Image
-                src={GrowthModel.img}
+                src={FootContent.img}
                 alt='GrowthModelImg'
                 width='850'
                 height='601'
@@ -101,10 +111,10 @@ function Careers() {
             </div>
             <div className='text-center'>
               <h3 className='text-[20px] font-raleway text-primary-main font-bold'>
-                {GrowthModel.description}
+                {FootContent.description}
               </h3>
             </div>
-            {GrowthModel.paragraphArr.map((item) => (
+            {FootContent.paragraphArr.map((item) => (
               <p className='text-base font-avenir font-light'>
                 {item.paragraph1}
                 <span className='text-primary-hight-light'>{item.span}</span>
@@ -112,38 +122,52 @@ function Careers() {
               </p>
             ))}
           </section>
-
-          <section className='flex flex-col gap-5 justify-center items-center py-10 my-10 bg-centers'>
-            <div className='w-full max-w-[950px]  mx-auto '>
-              {' '}
-              {/* Adjust max width as needed */}
-              <h3 className='text-[26px] font-bold text-primary-hight-light font-raleway'>
-                {Empowered.textHead}
-              </h3>
-              <div className='flex justify-center align-middle'>
-                <Image
-                  src={Empowered.img2}
-                  alt='GrowthModelImg'
-                  width='475'
-                  height='475'
-                  sizes='100vw'
-                />
-                <Image
-                  src={Empowered.img1}
-                  alt='GrowthModelImg'
-                  width='475'
-                  height='475'
-                  sizes='100vw'
-                />
-              </div>
-              {Empowered.paragraphArr.map((item) => (
-                <p className=' text-base py-4 font-avenir font-light'>
-                  {item.paragraph}
-                </p>
-              ))}
-            </div>
-          </section>
         </div>
+
+        <section className='flex flex-col gap-5 justify-center items-center py-10  bg-grey-main mt-[-20px]'>
+          <div className='w-full max-w-[970px]  mx-auto flex flex-col gap-5 px-[20px]'>
+            {' '}
+            {/* Adjust max width as needed */}
+            <h3 className='text-[26px] font-bold text-primary-hight-light font-raleway'>
+              {BodyContent.textHead}
+            </h3>
+            <h3 className='text-[20px]  font-raleway'>
+              {BodyContent.description}
+            </h3>
+            <div className='flex md:flex-row flex-col justify-center align-middle'>
+              <Image
+                src={BodyContent.img2}
+                alt='GrowthModelImg'
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              />
+              <Image
+                src={BodyContent.img1}
+                alt='GrowthModelImg'
+                sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+              />
+            </div>
+            {BodyContent.paragraphArr.map((item) => (
+              <p className=' text-base py-4 font-avenir font-light'>
+                {item.paragraph}
+              </p>
+            ))}
+            <div className='flex flex-col justify-center align-middle text-center gap-5'>
+              <Link href={contact?.href || ''}>
+                <button className='bg-transparent py-1 px-20 border border-grey rounded-full text-center font-avenir text-[20px] font-light transition duration-500 ease-in-out hover:bg-black-light hover:text-white hover:border-transparent'>
+                  {Links.btnText}
+                </button>
+              </Link>
+              <p className=' text-base py-4 font-avenir font-light'>
+                {Links.descriptionLink}
+                <span>
+                  <a href={contact?.href || ''} className='underline pl-1'>
+                    {contact?.text}
+                  </a>
+                </span>
+              </p>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );
