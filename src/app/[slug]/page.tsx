@@ -1,7 +1,16 @@
 import { getJobs } from '@/app/db/data-store';
+import { GoogleMap, Marker } from '@react-google-maps/api';
 
 import Image from 'next/image';
 import Link from 'next/link';
+
+import { FaRegHeart } from 'react-icons/fa';
+import { FiEdit3 } from 'react-icons/fi';
+import { LiaCalendarCheckSolid } from 'react-icons/lia';
+
+import Map from '@/components/Map';
+
+import { bookTour, promote } from '@/utils/location-util';
 
 import center from '/public/img/center.webp';
 import profilePic from '/public/img/curve.webp';
@@ -15,6 +24,7 @@ export async function generateStaticParams() {
 
 export default async function Job({ params }: { params: { slug: string } }) {
   const [job] = await getJobs(params.slug);
+
   return (
     <div>
       <div className='relative'>
@@ -57,22 +67,61 @@ export default async function Job({ params }: { params: { slug: string } }) {
         <p className='mt-10'>{job.description}</p>
       </div>
       <div className='container mx-auto mt-2'>
-        {job.feature.map((feature) => (
-          <div key={feature.title}>
-            <p className='text-[26px]'>{feature.title}</p>
+        {job.feature &&
+          job.feature.map((feature) => (
+            <div key={feature.title}>
+              <p className='text-[26px]'>{feature.title}</p>
 
-            {feature.featuretype.map((featureType) => (
-              <div key={featureType.title}>
-                <li className='text-base'>{featureType.title}</li>
-                <ul>
-                  {featureType.descrip.map((description, index) => (
-                    <li key={index}>{description}</li>
-                  ))}
-                </ul>
+              {feature.featuretype.map((featureType) => (
+                <div key={featureType.title}>
+                  <li className='text-base'>{featureType.title}</li>
+                  <ul className='ml-12'>
+                    {featureType.description &&
+                      featureType.description.map((description, index) => (
+                        <li key={index} className='list-disc'>
+                          {description}
+                        </li>
+                      ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
+          ))}
+      </div>
+
+      <div className='container mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 '>
+          <div className='relative flex flex-col items-center'>
+            <div className='rounded-full text-primary-hight-light w-20 h-20 border-4 border-primary-hight-light flex items-center justify-center hover:bg-primary-hight-light hover:text-white'>
+              <div>
+                <LiaCalendarCheckSolid className='w-10 h-10 ' />
               </div>
-            ))}
+            </div>
+            <p className='text-primary-hight-light'> Book a School Tour</p>
+            <p>{bookTour}</p>
           </div>
-        ))}
+
+          <div className='relative flex flex-col items-center'>
+            <div className='rounded-full text-primary-hight-light w-20 h-20 border-4 border-primary-hight-light flex items-center justify-center hover:bg-primary-hight-light hover:text-white'>
+              <div>
+                <FaRegHeart className='w-10 h-10 ' />
+              </div>
+            </div>
+            <p className='text-primary-hight-light'>Center Promotion</p>
+            <p>{promote}</p>
+          </div>
+        </div>
+      </div>
+      <div className='w-full bg-primary-light flex justify-center h-20 items-center '>
+        <button className='flex items-center justify-center min-w-96 font-patrick h-12 px-3 text-white transition duration-150 bg-primary-light hover:bg-primary-hight-light rounded-full border-2'>
+          <div className='flex text-xl hover:text-3xl w-full items-center justify-center'>
+            <span>Book a School Tour</span>
+            <FiEdit3 className='ml-2' size={24} />
+          </div>
+        </button>
+      </div>
+      <div className='min-h-72'>
+        <Map />
       </div>
     </div>
   );

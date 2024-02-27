@@ -5,7 +5,7 @@ import openSoon from '/public/img/opensoon.webp';
 
 interface FeatureType {
   title: string;
-  descrip: string[];
+  description?: string[];
 }
 
 interface Feature {
@@ -14,42 +14,94 @@ interface Feature {
 }
 const featureData: Feature[] = [
   {
-    title: 'Language Literacy Studio (English and Chinese)',
+    title: 'Specialized Learning Studios:',
     featuretype: [
       {
-        title: 'Reading Corner',
-        descrip: [
-          'Immerse in English and Chinese literature',
-          'Encourage a love for reading',
+        title: 'Nursery Wonderment Studio',
+        description: [
+          'The studios are to be built within enclosed rooms, each specialized to cater for specific subject exploration.',
         ],
       },
       {
-        title: 'Language Exploration',
-        descrip: ['Interactive activities in English and Chinese'],
+        title: 'Language Literacy Studio (English and Chinese)',
       },
-    ],
-  },
-  {
-    title: 'Logical Math Studio',
-    featuretype: [
       {
-        title: 'Math Challenges',
-        descrip: [
-          'Engage in logical problem-solving',
-          'Develop mathematical skills',
+        title: 'Logical Math Studio',
+      },
+      {
+        title: 'Multi-purpose studio',
+        description: [
+          'an uncluttered space for all children to perform music & movement, gross motor and drama activity',
         ],
       },
     ],
   },
   {
-    title: 'Multi-purpose Studio',
+    title: 'Centralized Learning Stations:',
+    featuretype: [
+      {
+        title: 'Project Inquiry Space',
+      },
+    ],
+  },
+  {
+    title: 'Construction Piazza',
     featuretype: [
       {
         title: 'Creative Arts',
-        descrip: [
-          'Space for music & movement',
-          'Gross motor and drama activities',
+        description: [
+          'A wide range of skills are developed through block & building play, including creativity, cognitive thinking, spatial thinking, problem solving, fundamental Math and also social skills',
         ],
+      },
+      {
+        title: 'Imaginary Playscape',
+        description: [
+          'Make-believe play stimulates the imagination of children, helping them build social skills, creativity, and a better understanding of others! Children learn best by observing, imagining and doing!',
+        ],
+      },
+      {
+        title: 'Art Atelier',
+        description: [
+          'A place of wonder where children can explore and create with different types of materials and media. Ateliers are equipped with paint, paper, crayons, pencils, clay, dough, wire, beads, loose parts and a wide range of recycled and natural materials made available for the children to express freely the “hundred languages of children”.',
+        ],
+      },
+      {
+        title: 'Transient Atelier',
+        description: [
+          'Loose parts are beautiful objects or natural materials that children can move, manipulate, combine, redesign, take part, and change while they play. When children interact with loose parts, their mind generates many “what if” scenarios that hone their critical thinking, problem-solving and reasoning skills – all highly valuable later in adult life!',
+        ],
+      },
+      {
+        title: 'Light Atelier',
+        description: [
+          'Light in various forms can be discovered through explorations that inspire wonder and curiosity by bringing together Art and Science. The Light Atelier offers children a highly interactive experience that help them create new ideas, test their hypotheses and develop new insights while observing phenomena from different perspectives!',
+        ],
+      },
+      {
+        title: 'Discovery Cove',
+        description: [
+          'Come and investigate, explore, think, predict and analyse... Develop an understanding and love for the wonders of nature around us!',
+        ],
+      },
+      {
+        title: 'Reading Nook',
+        description: [
+          'Cosy and inviting, the Reading Nook is a perfect place for children to browse literary works and retreat into a world of imagination, exploration and discovery!',
+        ],
+      },
+      {
+        title: 'Busy Baker',
+        description: [
+          'In our Busy Baker kitchen, children engage in sensorial activities and hands-on practical experiences, developing fine motor skills, hand-eye coordination and learning important skills! (math skills, comprehension, scientific knowledge, self-esteem, communication, life skills)',
+        ],
+      },
+    ],
+  },
+  {
+    title: 'Indoor Play Spaces',
+    featuretype: [
+      {
+        title: 'Climbing gym and slide, cycling track, play sets',
       },
     ],
   },
@@ -73,7 +125,6 @@ const jobs = [
     title: 'iOS Developer',
     description: '',
     logo: openSoon,
-    feature: featureData,
   },
   // {
   //   slug: 'center',
@@ -88,7 +139,7 @@ interface Job {
   location: string;
   description: string;
   logo: StaticImageData;
-  feature: Feature[];
+  feature?: Feature[];
 }
 export async function getJobs(slug?: string): Promise<Job[]> {
   return new Promise((resolve) => {
