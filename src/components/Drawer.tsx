@@ -1,6 +1,6 @@
 'use client';
 
-import { Dispatch, Fragment, ReactNode, SetStateAction, useState } from 'react';
+import { Dispatch, Fragment, ReactNode, SetStateAction } from 'react';
 
 import { Dialog, Transition } from '@headlessui/react';
 import { IoMdClose } from 'react-icons/io';

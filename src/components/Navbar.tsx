@@ -6,8 +6,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
-import { Menu, Transition } from '@headlessui/react';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { FiEdit3 } from 'react-icons/fi';
+import { IoChevronDown } from 'react-icons/io5';
 import { TbMenu2 } from 'react-icons/tb';
 
 import Drawer from '@/components/Drawer';
@@ -23,7 +24,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [prevScrollpos, setPrevScrollpos] = useState(0);
-  const [openSubmenu, setOpenSubmenu] = useState('');
+  const [openSubmenu, setOpenSubmenu] = useState('/about');
 
   // console.log('hideNav:', hideNav);
 
@@ -98,7 +99,7 @@ export default function Navbar() {
             ))}
           </span>
           {/* end social media */}
-          <button className='flex items-center font-patrick text-xl font-normal h-12 px-3 text-white transition duration-150 bg-primary-main hover:bg-primary-hight-light'>
+          <button className='flex items-center h-12 px-3 text-xl font-normal text-white transition duration-150 font-patrick bg-primary-main hover:bg-primary-hight-light'>
             Book a School Tour <FiEdit3 className='ml-2' size={24} />
           </button>
         </div>
@@ -116,7 +117,7 @@ export default function Navbar() {
               sizes='(max-width: 768px) 96px 80px, (max-width: 1200px) 144px 128px'
             />
           </Link>
-          <span className='items-center hidden space-x-2 md:flex'>
+          <span className='relative items-center hidden space-x-2 md:flex'>
             {menu.map((m, i) =>
               !m.subMenu ? (
                 <Link
@@ -130,7 +131,7 @@ export default function Navbar() {
                 <Menu
                   key={i}
                   as='div'
-                  className='relative inline-block text-left'
+                  // className='relative inline-block text-left'
                   onMouseEnter={() => setOpenSubmenu(m.value)}
                   onMouseLeave={() => setOpenSubmenu('')}
                 >
@@ -151,18 +152,19 @@ export default function Navbar() {
                     leaveFrom='transform opacity-100 scale-100'
                     leaveTo='transform opacity-0 scale-95'
                   >
-                    <Menu.Items className='absolute left-0 w-72 origin-top-right divide-y divide-gray-100 rounded-md bg-gray-50 shadow-lg ring-1 ring-black/5 focus:outline-none'>
-                      <div className='px-1 py-1 flex flex-col outline-none'>
+                    <Menu.Items className='absolute left-0 w-full origin-top-left divide-y shadow-md bg-gray-50'>
+                      <div className='flex flex-col py-2 outline-none'>
                         {m.subMenu.map((sm, i) => (
                           <Menu.Item key={i}>
-                            {({ active }) => (
-                              <Link
-                                href={sm.value}
-                                className={`w-full px-4 py-3 text-sm font-semibold transition ease-in-out delay-100 hover:text-primary-hight-light hover:bg-slate-50 ${pathname === sm.value ? ' text-primary-hight-light' : ''}`}
-                              >
-                                {sm.title}
-                              </Link>
-                            )}
+                            <Link
+                              href={sm.value}
+                              className={`w-full px-6 py-3 text-sm font-semibold transition ease-in-out delay-100 border-b hover:text-primary-hight-light hover:bg-gray-100 text-gray-500 ${pathname === sm.value && 'text-primary-hight-light'}`}
+                              onClick={() => {
+                                setOpenSubmenu('');
+                              }}
+                            >
+                              {sm.title}
+                            </Link>
                           </Menu.Item>
                         ))}
                       </div>
@@ -182,15 +184,60 @@ export default function Navbar() {
       </header>
 
       <Drawer {...{ isOpen, setIsOpen }}>
-        {menu.map((m, i) => (
-          <Link
-            key={i}
-            href={m.value}
-            className='flex items-center justify-center h-14 border-b-[1px] hover:text-primary-hight-light hover:bg-slate-50'
-          >
-            <span className='font-medium'>{m.title}</span>
-          </Link>
-        ))}
+        {menu.map((m, i) =>
+          !m.subMenu ? (
+            <Link
+              key={i}
+              href={m.value}
+              className={`flex items-center justify-center h-14 border-b hover:text-primary-hight-light hover:bg-gray-50 ${isActive(m) && 'text-primary-hight-light'}`}
+              onClick={() => {
+                setOpenSubmenu(m.value);
+                setOpenSubmenu('');
+                setIsOpen(false);
+              }}
+            >
+              <span className='text-sm font-semibold font-raleway'>
+                {m.title}
+              </span>
+            </Link>
+          ) : (
+            <Disclosure key={i}>
+              {({ open }) => (
+                <>
+                  <Disclosure.Button
+                    as='span'
+                    className={`relative flex items-center justify-center border-b h-14 hover:text-primary-hight-light hover:bg-gray-50 ${isActive(m) && 'text-primary-hight-light'}`}
+                    onClick={() => {
+                      setOpenSubmenu(m.value);
+                      setOpenSubmenu('');
+                    }}
+                  >
+                    <span className='text-sm font-semibold font-raleway'>
+                      {m.title}
+                    </span>
+                    <IoChevronDown
+                      className={`${open ? 'rotate-180 transform' : ''} absolute right-4 h-5 w-5`}
+                    />
+                  </Disclosure.Button>
+                  <Disclosure.Panel className='flex flex-col'>
+                    {m.subMenu.map((sm, i) => (
+                      <Link
+                        key={i}
+                        href={sm.value}
+                        className={`relative flex items-center justify-center text-sm font-bold font-avenir h-14 hover:text-primary-hight-light hover:bg-gray-50 ${pathname === sm.value && 'text-primary-hight-light'}`}
+                        onClick={() => {
+                          setIsOpen(false);
+                        }}
+                      >
+                        {sm.title}
+                      </Link>
+                    ))}
+                  </Disclosure.Panel>
+                </>
+              )}
+            </Disclosure>
+          ),
+        )}
         <div className='flex flex-col items-center mt-8'>
           <button className='flex items-center px-8 text-white transition duration-150 rounded-lg h-14 bg-primary-main hover:bg-primary-hight-light'>
             Enroll Now <FiEdit3 className='ml-2' size={24} />
