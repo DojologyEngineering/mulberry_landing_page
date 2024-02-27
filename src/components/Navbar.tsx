@@ -239,7 +239,7 @@ export default function Navbar() {
           ),
         )}
         <div className='flex flex-col items-center mt-8'>
-          <button className='flex items-center px-8 text-white transition duration-150 rounded-lg h-14 bg-primary-main hover:bg-primary-hight-light'>
+          <button className='flex items-center px-8 text-xl text-white transition duration-150 rounded-lg font-patrick h-14 bg-primary-main hover:bg-primary-hight-light'>
             Enroll Now <FiEdit3 className='ml-2' size={24} />
           </button>
           <div className='flex mt-8 space-x-3'>
@@ -247,7 +247,7 @@ export default function Navbar() {
               <a
                 key={i}
                 href={sm.value}
-                className='p-2 text-white rounded-full bg-primary-light'
+                className='p-2 text-white rounded-full bg-primary-light font-'
                 target='_blank'
               >
                 <sm.icon size={18} />
