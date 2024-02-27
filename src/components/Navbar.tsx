@@ -136,7 +136,7 @@ export default function Navbar() {
                 >
                   <div>
                     <Menu.Button
-                      className={`outline-none h-10 flex px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
+                      className={`h-10 flex px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
                     >
                       {m.title}
                     </Menu.Button>
