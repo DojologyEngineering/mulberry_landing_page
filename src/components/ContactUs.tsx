@@ -200,14 +200,11 @@ function ContactUs() {
                             className='bg-grey-main text-white py-2 px-4 rounded-3xl w-full flex items-center justify-between hover:bg-purple-main'
                             onClick={toggleListbox}
                           >
-                            <div className='text-black-light'>
-                              {' '}
-                              {field.value}
-                            </div>
+                            <div className='text-black'>{field.value}</div>
                             {isOpen ? (
-                              <MdKeyboardArrowUp className='text-black-light' />
+                              <MdKeyboardArrowUp className='text-black' />
                             ) : (
-                              <MdKeyboardArrowDown className='text-black-light' />
+                              <MdKeyboardArrowDown className='text-black' />
                             )}
                           </Listbox.Button>
 
@@ -218,7 +215,7 @@ function ContactUs() {
                                   <div
                                     className={`${
                                       active
-                                        ? 'bg-purple-main text-black-light'
+                                        ? 'bg-purple-main text-black'
                                         : 'text-gray-800 hover:bg-gray-200'
                                     } cursor-pointer select-none relative py-2 pl-4 pr-4 ${
                                       index === 0 ? 'rounded-t-3xl' : ''
@@ -258,11 +255,11 @@ function ContactUs() {
                           className='bg-grey-main text-white py-2 px-4 rounded-3xl w-full flex items-center justify-between hover:bg-purple-main'
                           onClick={toggleListbox}
                         >
-                          <div className='text-black-light'> {field.value}</div>
+                          <div className='text-black'> {field.value}</div>
                           {isOpen ? (
-                            <MdKeyboardArrowUp className='text-black-light' />
+                            <MdKeyboardArrowUp className='text-black' />
                           ) : (
-                            <MdKeyboardArrowDown className='text-black-light' />
+                            <MdKeyboardArrowDown className='text-black' />
                           )}
                         </Listbox.Button>
 
@@ -273,7 +270,7 @@ function ContactUs() {
                                 <div
                                   className={`${
                                     active
-                                      ? 'bg-purple-main text-black-light'
+                                      ? 'bg-purple-main text-black'
                                       : 'text-gray-800 hover:bg-gray-200'
                                   } cursor-pointer select-none relative py-2 pl-4 pr-4 ${
                                     index === 0 ? 'rounded-t-3xl' : ''

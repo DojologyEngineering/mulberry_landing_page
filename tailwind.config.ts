@@ -14,9 +14,6 @@ const config: Config = {
           light: '#BD82BE',
           'hight-light': '#EC018A',
         },
-        black: {
-          light: '#000000',
-        },
         errorborder: {
           light: '#FF512E',
         },
