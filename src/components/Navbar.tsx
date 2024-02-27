@@ -72,7 +72,7 @@ export default function Navbar() {
     <div
       className={`transition-all ease-in-out duration-300 sticky z-10 bg-white ${hideNav ? '-top-52' : 'top-0'} ${!hideNav && prevScrollpos > 0 ? 'drop-shadow-md' : 'drop-shadow-none'}`}
     >
-      <div className='hidden bg-primary-light md:block'>
+      <div className='hidden bg-primary-lighter md:block'>
         <div className='container flex items-center mx-auto space-x-6'>
           {contactData.map((con, i) => (
             <span key={i} className='flex items-center text-white'>
@@ -91,7 +91,7 @@ export default function Navbar() {
               <a
                 key={i}
                 href={sm.value}
-                className='p-1 bg-white rounded-full text-primary-light'
+                className='p-1 bg-white rounded-full text-primary-lighter'
                 target='_blank'
               >
                 <sm.icon size={18} />

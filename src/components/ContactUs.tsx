@@ -81,7 +81,7 @@ function ContactUs() {
   return (
     <div>
       <div className='shadow-sm'>
-        <div className=' bg-primary-main md:h-36 flex items-center w-full absolute mt-2'>
+        <div className=' bg-primary-light md:h-36 flex items-center w-full absolute mt-2'>
           <Image
             src={profilePic}
             alt='Picture of the author'
