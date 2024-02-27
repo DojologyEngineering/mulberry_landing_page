@@ -1,6 +1,7 @@
 import { StaticImageData } from 'next/image';
 
 import enrollMent from '/public/img/enrollment.webp';
+import image1 from '/public/img/image1.webp';
 import openSoon from '/public/img/opensoon.webp';
 
 interface FeatureType {
@@ -106,6 +107,7 @@ const featureData: Feature[] = [
     ],
   },
 ];
+const imageReview = [{ id: 0, image: image1 }];
 
 const jobs = [
   {
@@ -117,6 +119,7 @@ const jobs = [
       'Conveniently located at GSC Tower near Uptown Mall BGC, Mulberry Learning @ BGC is a Reggio Emilia inspired haven with spaces that stimulate a child’s senses and encourage their natural curiosity to explore. Our school is bathed in the glow of natural light. Studies reveal that access to natural daylight provides better learning conditions and health in schools. It`s been proven that students had a 20% better learning rate in math and 26% improved rate in reading performance. With 400 sqm of dedicated learning space, Mulberry Learning BGC`s well-thought out design features:',
     logo: enrollMent,
     feature: featureData,
+    imageReview: imageReview,
   },
   {
     slug: 'mulberry-learning-greenhills',
@@ -125,14 +128,9 @@ const jobs = [
     title: 'iOS Developer',
     description: '',
     logo: openSoon,
+    imageReview: imageReview,
   },
-  // {
-  //   slug: 'center',
-  //   title: 'iOS Developer',
-  //   description: 'Passionate for crafting great mobile experiences',
-  // },
 ];
-
 interface Job {
   slug: string;
   title: string;
@@ -140,6 +138,10 @@ interface Job {
   description: string;
   logo: StaticImageData;
   feature?: Feature[];
+  imageReview: {
+    id: number;
+    image: StaticImageData;
+  }[];
 }
 export async function getJobs(slug?: string): Promise<Job[]> {
   return new Promise((resolve) => {

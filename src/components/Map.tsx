@@ -15,9 +15,10 @@ function Map() {
       lng: 104.9064597,
     },
   };
-  const libraries: ('places' | 'visualization' | 'drawing' | 'geometry')[] =
-    // | 'localContext'
-    ['places', 'visualization'];
+  const libraries: ('places' | 'visualization' | 'drawing' | 'geometry')[] = [
+    'places',
+    'visualization',
+  ];
   return (
     <div>
       <LoadScript
