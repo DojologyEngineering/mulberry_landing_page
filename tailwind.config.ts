@@ -11,11 +11,9 @@ const config: Config = {
       colors: {
         primary: {
           main: '#8A549F',
-          light: '#BD82BE',
+          light: '#9481C0',
+          lighter: '#BD82BE',
           'hight-light': '#EC018A',
-        },
-        black: {
-          light: '#000000',
         },
         errorborder: {
           light: '#FF512E',
@@ -25,10 +23,10 @@ const config: Config = {
         errorbg: {
           main: '#FFECEC',
         },
-        primary: {
-          main: '#9481C0',
-          light: '#9551A9',
-        },
+        // primary: {
+        //   main: '#9481C0',
+        //   light: '#9551A9',
+        // },
         grey: {
           primary: '#EAEAEA',
           light: '#FAFAFA',
