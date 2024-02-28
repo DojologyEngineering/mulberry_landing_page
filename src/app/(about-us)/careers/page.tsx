@@ -105,7 +105,7 @@ function Careers() {
               </p>
             ))}
           </section>
-          <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto pt-10 px-[20px]'>
+          <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto py-10 px-[20px]'>
             <h3 className='text-[26px]  font-bold text-primary-hight-light font-raleway'>
               {FootContent.textHead}
             </h3>
@@ -133,7 +133,7 @@ function Careers() {
           </section>
         </div>
 
-        <section className='flex flex-col gap-5 justify-center items-center py-10  bg-grey-main mt-[-20px]'>
+        <section className='flex flex-col gap-5 justify-center items-center py-10  bg-grey-main'>
           <div className='w-full max-w-[970px]  mx-auto flex flex-col gap-5 px-[20px]'>
             {' '}
             {/* Adjust max width as needed */}
