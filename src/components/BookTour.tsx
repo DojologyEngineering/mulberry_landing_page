@@ -4,11 +4,32 @@ import React from 'react';
 
 import { useRouter } from 'next/navigation';
 
+import { FiEdit3 } from 'react-icons/fi';
 import { LiaCalendarCheckSolid } from 'react-icons/lia';
 
 import { bookTour } from '@/utils/location-util';
 
-function BookTour() {
+export const ButtonBookTour = () => {
+  return (
+    <>
+      <button
+        onClick={() => {
+          window.open(
+            'https://form.jotform.com/srunrotha614/testing',
+            '_blank',
+          );
+        }}
+        className='flex items-center justify-center md:min-w-96 min-w-72 h-12 px-3 text-white transition duration-200 bg-primary-light hover:bg-primary-hight-light rounded-full border-2'
+      >
+        <div className='flex text-xl hover:text-3xl transition duration-200 w-full items-center justify-center'>
+          <span>Book a School Tour</span>
+          <FiEdit3 className='ml-2' size={24} />
+        </div>
+      </button>
+    </>
+  );
+};
+export const BookTour = () => {
   return (
     <div>
       <div className='flex justify-start'>
@@ -34,6 +55,4 @@ function BookTour() {
       </div>
     </div>
   );
-}
-
-export default BookTour;
+};
