@@ -24,7 +24,7 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [prevScrollpos, setPrevScrollpos] = useState(0);
-  const [openSubmenu, setOpenSubmenu] = useState('/about');
+  const [openSubmenu, setOpenSubmenu] = useState('');
 
   // console.log('hideNav:', hideNav);
 
