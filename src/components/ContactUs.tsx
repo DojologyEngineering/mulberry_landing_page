@@ -200,10 +200,7 @@ function ContactUs() {
                             className='bg-grey-main text-white py-2 px-4 rounded-3xl w-full flex items-center justify-between hover:bg-purple-main'
                             onClick={toggleListbox}
                           >
-                            <div className='text-black'>
-                              {' '}
-                              {field.value}
-                            </div>
+                            <div className='text-black'>{field.value}</div>
                             {isOpen ? (
                               <MdKeyboardArrowUp className='text-black' />
                             ) : (
