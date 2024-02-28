@@ -4,6 +4,7 @@ import { FaRegHeart } from 'react-icons/fa';
 import { FiEdit3 } from 'react-icons/fi';
 import { LiaCalendarCheckSolid } from 'react-icons/lia';
 
+import BookTour from '@/components/BookTour';
 import ImagePreview from '@/components/ImagePreview';
 import Map from '@/components/Map';
 
@@ -107,19 +108,7 @@ export default async function Job({ params }: { params: { slug: string } }) {
 
         <div className='container mx-auto mt-10 mb-10'>
           <div className='grid grid-cols-1 md:grid-cols-2 items-center'>
-            <div className='flex justify-start'>
-              <div className='relative flex flex-col items-center max-w-md justify-end'>
-                <div className='rounded-full text-primary-hight-light w-36 md:w-20 h-20 border-4 border-primary-hight-light flex items-center justify-center hover:bg-primary-hight-light hover:text-white'>
-                  <div>
-                    <LiaCalendarCheckSolid className='w-10 h-10 ' />
-                  </div>
-                </div>
-                <p className='text-primary-hight-light'> Book a School Tour</p>
-                <p className='mt-5 text-secondary font-light font-avenir text-[15px] md:text-[16px]'>
-                  {bookTour}
-                </p>
-              </div>
-            </div>
+            <BookTour />
 
             <div className='relative flex flex-col items-center max-w-md'>
               <div className='rounded-full text-primary-hight-light w-36 md:w-20 h-20 border-4 border-primary-hight-light flex items-center justify-center hover:bg-primary-hight-light hover:text-white'>
