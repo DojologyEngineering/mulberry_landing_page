@@ -57,16 +57,14 @@ export default function About() {
         <section className='sm:flex justify-center align-middle hidden'>
           <Image src={SchoolLogo} alt='School Logo' priority className='' />
         </section>
-        <div className='relative sm:h-[140px]  w-full sm:w-auto sm:bottom-[50px]'>
-          <Image
-            src={Gallery}
-            alt='logo'
-            priority
-            className='w-full max-h-[120px]'
-          />
-        </div>
+        <Image
+          src={Gallery}
+          alt='logo'
+          priority
+          className='w-full max-h-[120px] relative sm:w-auto sm:bottom-[50px]'
+        />
 
-        <section className='flex flex-col gap-5 justify-center align-middle max-w-[970px] ml-auto mr-auto pt-10 px-[20px] relative sm:bottom-[100px] bottom-8'>
+        <section className='flex flex-col gap-5 justify-center align-middle max-w-[970px] ml-auto mr-auto pt-10 px-[20px] relative sm:bottom-[80px] bottom-8'>
           <h3 className='text-[26px] text-primary-hight-light font-bold font-raleway '>
             {AboutUsData.textHead}
           </h3>
