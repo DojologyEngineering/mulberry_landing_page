@@ -9,6 +9,7 @@ import ScrollToTopButton from '@/components/ScrollToTop';
 import { Links } from '@/components/links';
 
 import './globals.css';
+import { Providers } from './provider';
 
 const poppin = Poppins({
   subsets: ['latin'],
@@ -76,7 +77,10 @@ export default function RootLayout({
     >
       <body>
         <Navbar />
-        <main className='min-h-screen'>{children}</main>
+        <Providers>
+          <main className='min-h-screen'>{children}</main>
+        </Providers>
+
         <ScrollToTopButton />
         <Footer />
       </body>

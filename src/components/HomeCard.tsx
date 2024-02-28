@@ -1,4 +1,3 @@
-// LocationCard.tsx
 'use client';
 
 import React from 'react';
@@ -6,22 +5,16 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 import { useRouter } from 'next/navigation';
 
-// LocationCard.tsx
-
-// LocationCard.tsx
-
 interface LocationCardProps {
   id: number;
   logo: StaticImageData | string;
-  nameLocation: string;
   locationDetail: string;
   url: string;
 }
 
-const LocationCard: React.FC<LocationCardProps> = ({
+const HomeCard: React.FC<LocationCardProps> = ({
   id,
   logo,
-  nameLocation,
   locationDetail,
   url,
 }) => {
@@ -36,13 +29,12 @@ const LocationCard: React.FC<LocationCardProps> = ({
        border-gray-300 sm:w-60 md:w-72 max-w-xl 
        min-h-[300px] hover:cursor-pointer'
     >
-      <Image src={logo} alt='image' className='w-full h-auto object-cover' />
-      <span className='font-bold mt-10 mb-5 font-avenir'>{nameLocation}</span>
-      <span className='pt-2 pb-2 mb-10 text-center font-avenir text-sm'>
+      <Image src={logo} alt='image' className='w-full h-64 object-cover' />
+      <span className='pt-5 pb-2 mb-5 text-center font-avenir text-sm px-3'>
         {locationDetail}
       </span>
     </div>
   );
 };
 
-export default LocationCard;
+export default HomeCard;
