@@ -41,6 +41,9 @@ const config: Config = {
       textColor: {
         secondary: '#333333',
       },
+      borderColor: {
+        grey: '#59595A',
+      },
 
       // backgroundColor: {
       //   footer: '#EAEAEA',
