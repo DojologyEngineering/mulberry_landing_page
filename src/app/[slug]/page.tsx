@@ -27,7 +27,7 @@ export default async function Job({ params }: { params: { slug: string } }) {
           src={center}
           alt='Picture of the author'
           priority
-          className='h-60 w-full'
+          className='h-48 md:h-60 w-full'
         />
         <Image
           src={profilePic}
@@ -136,7 +136,7 @@ export default async function Job({ params }: { params: { slug: string } }) {
         </div>
       </div>
       <div className='w-full bg-primary-light flex justify-center h-20 items-center '>
-        <button className='flex items-center justify-center min-w-96 font-patrick h-12 px-3 text-white transition duration-200 bg-primary-light hover:bg-primary-hight-light rounded-full border-2'>
+        <button className='flex items-center justify-center md:min-w-96 min-w-72 h-12 px-3 text-white transition duration-200 bg-primary-light hover:bg-primary-hight-light rounded-full border-2'>
           <div className='flex text-xl hover:text-3xl transition duration-200 w-full items-center justify-center'>
             <span>Book a School Tour</span>
             <FiEdit3 className='ml-2' size={24} />
