@@ -1,7 +1,4 @@
-'use client';
-
-import { ClassroomGrid } from '@/app/centers/page';
-import { useEffect, useState } from 'react';
+import { ClassroomGrid } from '@/app/(about-us)/centers/page';
 
 import Image, { StaticImageData } from 'next/image';
 
@@ -61,66 +58,48 @@ const ContentSpan = ({
 };
 
 function ClassroomGridCenter() {
-  const [isSmallScreen, setIsSmallScreen] = useState(false);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsSmallScreen(window.innerWidth <= 640);
-    };
-
-    handleResize();
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    };
-  }, []);
-
   return (
     <div className='flex justify-center'>
-      {isSmallScreen ? (
-        <div className='grid  grid-cols-1 gap-6 align-middle max-w-[970px] px-[20px] justify-center'>
-          {ClassroomGrid.map((item) => (
-            <>
-              <ContentSpan
-                textHead={item.textHead}
-                paragraph1={item.paragraph1}
-                paragraph2={item.paragraph2}
-                span={item.span}
-              />
-              <ImgClass img={item.img} />
-            </>
-          ))}
-        </div>
-      ) : (
-        <div className='grid grid-cols-4 gap-6 align-middle max-w-[970px] px-[20px] justify-center'>
-          {ClassroomGrid.map((item, index) => (
-            <>
-              {index === 0 || index === 1 || index === 4 || index === 5 ? (
-                <>
-                  <ImgClass img={item.img} />
-                  <ContentSpan
-                    textHead={item.textHead}
-                    paragraph1={item.paragraph1}
-                    paragraph2={item.paragraph2}
-                    span={item.span}
-                  />
-                </>
-              ) : (
-                <>
-                  <ContentSpan
-                    textHead={item.textHead}
-                    paragraph1={item.paragraph1}
-                    paragraph2={item.paragraph2}
-                    span={item.span}
-                  />
-                  <ImgClass img={item.img} />
-                </>
-              )}
-            </>
-          ))}
-        </div>
-      )}
+      <div className='sm:hidden  grid  grid-cols-1 gap-6 align-middle max-w-[970px] px-[20px] justify-center'>
+        {ClassroomGrid.map((item) => (
+          <>
+            <ContentSpan
+              textHead={item.textHead}
+              paragraph1={item.paragraph1}
+              paragraph2={item.paragraph2}
+              span={item.span}
+            />
+            <ImgClass img={item.img} />
+          </>
+        ))}
+      </div>
+      <div className='hidden sm:grid grid-cols-4 gap-6 align-middle max-w-[970px] px-[20px] justify-center'>
+        {ClassroomGrid.map((item, index) => (
+          <>
+            {index === 0 || index === 1 || index === 4 || index === 5 ? (
+              <>
+                <ImgClass img={item.img} />
+                <ContentSpan
+                  textHead={item.textHead}
+                  paragraph1={item.paragraph1}
+                  paragraph2={item.paragraph2}
+                  span={item.span}
+                />
+              </>
+            ) : (
+              <>
+                <ContentSpan
+                  textHead={item.textHead}
+                  paragraph1={item.paragraph1}
+                  paragraph2={item.paragraph2}
+                  span={item.span}
+                />
+                <ImgClass img={item.img} />
+              </>
+            )}
+          </>
+        ))}
+      </div>
     </div>
   );
 }

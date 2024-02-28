@@ -3,11 +3,11 @@ import Link from 'next/link';
 
 import { contactData } from '@/utils/data-util';
 
-import CareerBanner from '../../../public/img/CareerBanner.webp';
-import TeacherHighFive from '../../../public/img/FB-teacher-high5.webp';
-import GrowthModelImg from '../../../public/img/MBR-TGM-Model_V6-01.webp';
-import TeacherTech from '../../../public/img/fb-teacher-teach-words.webp';
-import Gallery from '../../../public/img/gallery.png';
+import CareerBanner from '../../../../public/img/CareerBanner.webp';
+import TeacherHighFive from '../../../../public/img/FB-teacher-high5.webp';
+import GrowthModelImg from '../../../../public/img/MBR-TGM-Model_V6-01.webp';
+import TeacherTech from '../../../../public/img/fb-teacher-teach-words.webp';
+import Gallery from '../../../../public/img/gallery.png';
 
 export const textCover = 'Careers at Mulberry Learning';
 
@@ -76,16 +76,25 @@ function Careers() {
   return (
     <main>
       <div className='flex justify-center align-middle flex-col'>
-        <div className='sm:h-[350px] h-[150px] w-100% relative'>
-          <Image src={CareerBanner} alt='logo' objectFit='cover' fill />
+        {/* <div className='sm:h-[350px] h-[150px] relative'> */}
+        <div className='relative flex justify-center items-center'>
+          <Image src={CareerBanner} alt='logo' priority className='w-full' />
+          <span className='absolute sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'>
+            {textCover}
+          </span>
         </div>
-        <div className='relative sm:h-[140px] h-[30px] w-100% sm:bottom-16 bottom-4'>
-          <Image src={Gallery} alt='logo' fill />
-        </div>
-        <span className='relative bottom-[350px] ml-auto lg:right-[175px] sm:text-[40px] text-[26px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-light mx-auto text-center'>
-          {textCover}
-        </span>
-        <div className='relative sm:bottom-20 bottom-4'>
+
+        {/* </div> */}
+        {/* <div className='relative sm:h-[140px] h-[30px] w-100% sm:bottom-16 bottom-4'> */}
+        <Image
+          src={Gallery}
+          alt='logo'
+          priority
+          className='max-h-[120px] w-full relative lg:bottom-12 md:bottom-10 sm:bottom-6 bottom-4'
+        />
+        {/* </div> */}
+
+        <div className='relative'>
           <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto px-[20px]'>
             <h3 className='text-[26px]  font-bold text-primary-hight-light font-raleway'>
               {HeadContent.textHead}
@@ -147,13 +156,16 @@ function Careers() {
               />
             </div>
             {BodyContent.paragraphArr.map((item) => (
-              <p className=' text-base py-4 font-avenir font-light'>
+              <p
+                key={item.paragraph}
+                className=' text-base py-4 font-avenir font-light'
+              >
                 {item.paragraph}
               </p>
             ))}
             <div className='flex flex-col justify-center align-middle text-center gap-5'>
               <Link href={contact?.href || ''}>
-                <button className='bg-transparent py-1 px-20 border border-grey rounded-full text-center font-avenir text-[20px] font-light transition duration-500 ease-in-out hover:bg-black-light hover:text-white hover:border-transparent'>
+                <button className='bg-transparent py-1 px-20 border border-grey rounded-full text-center font-avenir text-[20px] font-light transition duration-500 ease-in-out hover:bg-black hover:text-white hover:border-transparent'>
                   {Links.btnText}
                 </button>
               </Link>

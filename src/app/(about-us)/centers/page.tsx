@@ -2,16 +2,16 @@ import Image from 'next/image';
 
 import ClassroomGridCenter from '@/components/ClassroomGridCenter';
 
-import ArtImg from '../../../public/img/Centre-Art-Atelier.webp';
-import BusyImg from '../../../public/img/Centre-Busy-Baker.webp';
-import ConstructionImg from '../../../public/img/Centre-Construction-Piazza.webp';
-import DiscoveryImg from '../../../public/img/Centre-Discovery-Cove.webp';
-import FingerImg from '../../../public/img/Centre-Finger-Gym.webp';
-import ImaginaryImg from '../../../public/img/Centre-Imaginary-Playscape.webp';
-import LightImg from '../../../public/img/Centre-Light-Atelier.webp';
-import ReadingImg from '../../../public/img/Centre-Reading-Nook.webp';
-import Gallery from '../../../public/img/gallery.png';
-import LearningCentersMedia from '../../../public/img/learningCentersMedia.webp';
+import ArtImg from '../../../../public/img/Centre-Art-Atelier.webp';
+import BusyImg from '../../../../public/img/Centre-Busy-Baker.webp';
+import ConstructionImg from '../../../../public/img/Centre-Construction-Piazza.webp';
+import DiscoveryImg from '../../../../public/img/Centre-Discovery-Cove.webp';
+import FingerImg from '../../../../public/img/Centre-Finger-Gym.webp';
+import ImaginaryImg from '../../../../public/img/Centre-Imaginary-Playscape.webp';
+import LightImg from '../../../../public/img/Centre-Light-Atelier.webp';
+import ReadingImg from '../../../../public/img/Centre-Reading-Nook.webp';
+import Gallery from '../../../../public/img/gallery.png';
+import LearningCentersMedia from '../../../../public/img/learningCentersMedia.webp';
 
 export const textCover = 'Mulberry Learning Centers';
 
@@ -113,17 +113,31 @@ export function Centers() {
   return (
     <main className='pb-10'>
       <div className='flex justify-center align-middle flex-col'>
-        <div className='h-[157px] w-100% relative'>
-          <Image src={LearningCentersMedia} alt='logo' objectFit='cover' fill />
+        {/* <div className='h-[157px] w-100% relative'> */}
+        <div className='relative'>
+          <Image
+            src={LearningCentersMedia}
+            alt='logo'
+            priority
+            className='w-full sm:h-auto h-[60px]'
+          />
+          <span className='absolute whitespace-nowrap top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 z-10 bg-primary-main text-white font-raleway font-bold px-5 text-[18px] md:text-[26px] xl:text-[40px]  rounded'>
+            {textCover}
+          </span>
         </div>
-        <div className='relative h-[140px] w-100% bottom-16'>
-          <Image src={Gallery} alt='logo' fill />
-        </div>
-        <span className='relative bottom-60 text-center sm:text-[40px] text-[26px] font-raleway font-bold px-5 text-white bg-primary-main mx-auto'>
-          {textCover}
-        </span>
 
-        <div className='relative bottom-20'>
+        {/* </div> */}
+        <Image
+          src={Gallery}
+          alt='logo'
+          priority
+          className='max-h-[120px] w-full relative lg:bottom-12 md:bottom-10 sm:bottom-6 bottom-2'
+        />
+        {/* <div className='relative h-[140px]w-full sm:bottom-16 bottom-6'>
+          <Image src={Gallery} alt='logo' priority />
+        </div> */}
+
+        <div className='relative'>
           <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto px-[20px]'>
             <h3 className='text-[26px]  font-bold text-primary-main font-raleway'>
               {HeadAbout.headTextPurple}
@@ -154,7 +168,7 @@ export function Centers() {
             </div>
           </section>
 
-          <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto mb-[-40px] px-[20px]'>
+          <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto pb-5 px-[20px]'>
             <h3 className='text-[26px]  font-semibold text-primary-hight-light font-avenir'>
               {Classroom.headText}
             </h3>
