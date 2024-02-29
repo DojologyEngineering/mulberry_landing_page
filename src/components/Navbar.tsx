@@ -4,7 +4,7 @@ import { Fragment, useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { usePathname } from 'next/navigation';
+import { usePathname, useRouter } from 'next/navigation';
 
 import { Disclosure, Menu, Transition } from '@headlessui/react';
 import { FiEdit3 } from 'react-icons/fi';
@@ -20,11 +20,11 @@ type menuType = (typeof menu)[0];
 export default function Navbar() {
   const pathname = usePathname();
   // console.log('pathname:', pathname);
-
+  const navigate = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [prevScrollpos, setPrevScrollpos] = useState(0);
-  const [openSubmenu, setOpenSubmenu] = useState('/about');
+  const [openSubmenu, setOpenSubmenu] = useState('');
 
   // console.log('hideNav:', hideNav);
 
