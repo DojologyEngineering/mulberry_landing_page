@@ -3,13 +3,14 @@ import { ParallaxBanner } from 'react-scroll-parallax';
 import Image from 'next/image';
 
 import HomeCard from '@/components/HomeCard';
+import HomeImageSlider from '@/components/HomeImageSlider';
+import { HomePreview } from '@/components/ImagePreview';
 import LocationCard from '@/components/LocationCard';
 import ParallelImage from '@/components/ParallelImage';
 
 import { location } from '@/utils/contact-util';
 import { centerHighlight, homeBlog, learnEdge } from '@/utils/home-util';
 
-import Test from './test';
 import children1 from '/public/img/children.jpeg';
 import profilePic from '/public/img/curve.webp';
 import partner2 from '/public/img/partner1.webp';
@@ -18,22 +19,7 @@ import partner1 from '/public/img/partner2.webp';
 export default function Home() {
   return (
     <div>
-      <div className='shadow-sm'>
-        <div className=' bg-primary-light md:h-36 flex items-center w-full absolute mt-2'>
-          <Image
-            src={profilePic}
-            alt='Picture of the author'
-            priority
-            className='h-30 pt-20 w-full'
-          />
-        </div>
-
-        <div className=' flex justify-center top-10 relative'>
-          <h1 className='md:text-4xl text-xl font-bold text-white font-avenir'>
-            Common Questions and School Tour
-          </h1>
-        </div>
-      </div>
+      <HomeImageSlider />
       <div className='px-4 '>
         <div className='container mx-auto flex justify-center flex-col items-center'>
           <p className='md:text-[40px] text-[28px] font-raleway font-bold text-primary-main'>
