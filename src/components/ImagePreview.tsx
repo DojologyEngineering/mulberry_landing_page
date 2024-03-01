@@ -78,9 +78,9 @@ export const HomePreview = () => {
             setActiveSlideIndex(newIndex);
           }}
         />
-        <div className='absolute top-1/3 left-1/3 pl-9 transform -translate-x-1/2 -translate-y-1/2 text-center'>
+        <div className='absolute top-1/3 left-1/3 pl-9 transform -translate-x-1/2 -translate-y-1/2 '>
           <p
-            className={`text-primary-hight-light font-raleway text-[26px] font-bold ${
+            className={`text-primary-hight-light font-raleway text-[26px] font-bold  ${
               activeSlideIndex === 0 ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-300`}
           >

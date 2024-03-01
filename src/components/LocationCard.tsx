@@ -8,8 +8,6 @@ import { useRouter } from 'next/navigation';
 
 // LocationCard.tsx
 
-// LocationCard.tsx
-
 interface LocationCardProps {
   id: number;
   logo: StaticImageData | string;
@@ -38,7 +36,7 @@ const LocationCard: React.FC<LocationCardProps> = ({
     >
       <Image src={logo} alt='image' className='w-full h-auto object-cover' />
       <span className='font-bold mt-10 mb-5 font-avenir'>{nameLocation}</span>
-      <span className='pt-2 pb-2 mb-10 text-center font-avenir text-sm'>
+      <span className='pt-2 pb-2 mb-10 text-center font-avenir text-[14px] font-light'>
         {locationDetail}
       </span>
     </div>

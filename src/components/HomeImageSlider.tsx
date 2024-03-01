@@ -11,12 +11,12 @@ function HomeImageSlider() {
       <div className='flex justify-center relative w-full'>
         <HomePreview />
       </div>
-      <div className='md:h-36 flex items-center w-full mt-2 absolute  z-20 bottom-0'>
+      <div className='flex items-center w-full absolute bottom-0'>
         <Image
           src={profilePic}
           alt='Profile picture overlay'
           priority
-          className='h-30 w-full'
+          className='md:h-36 h-36 w-full'
           style={{ objectFit: 'cover' }}
         />
       </div>

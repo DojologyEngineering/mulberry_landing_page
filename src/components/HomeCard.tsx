@@ -30,7 +30,7 @@ const HomeCard: React.FC<LocationCardProps> = ({
        min-h-[300px] hover:cursor-pointer'
     >
       <Image src={logo} alt='image' className='w-full h-64 object-cover' />
-      <span className='pt-5 pb-2 mb-5 text-center font-avenir text-sm px-3'>
+      <span className='pt-5 pb-2 mb-5 text-center font-raleway font-bold text-[16px]  px-3'>
         {locationDetail}
       </span>
     </div>
