@@ -2,6 +2,7 @@
 
 import React from 'react';
 import ImageGallery from 'react-image-gallery';
+import 'react-image-gallery/styles/css/image-gallery.css';
 
 import image1 from '/public/img/image1.webp';
 

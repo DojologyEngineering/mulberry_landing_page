@@ -28,7 +28,7 @@ export default async function Job({ params }: { params: { slug: string } }) {
           src={center}
           alt='Picture of the author'
           priority
-          className='h-48 md:h-60 w-full'
+          className='h-48 md:h-60 w-full object-center'
         />
         <Image
           src={profilePic}
