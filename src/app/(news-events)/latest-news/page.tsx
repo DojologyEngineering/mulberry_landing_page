@@ -9,16 +9,22 @@ import { RiLinkedinFill } from 'react-icons/ri';
 import NewsCard from '@/components/NewsCard';
 
 import EighthCard from '../../../../public/img/EighthCard.webp';
+import EighthCard2 from '../../../../public/img/EighthCard2.webp';
 import FifthCard from '../../../../public/img/FifthCard.webp';
+import FifthCard2 from '../../../../public/img/FifthCard2.webp';
 import FirstCard2 from '../../../../public/img/FirstCard2.webp';
 import FirstCard from '../../../../public/img/FirstCard.webp';
 import FouthCard from '../../../../public/img/FouthCard.webp';
+import FouthCard2 from '../../../../public/img/FouthCard2.webp';
 import ProfileCard from '../../../../public/img/ProfileCard.webp';
 import SecondCard2 from '../../../../public/img/SecondCard2.webp';
 import SecondCard from '../../../../public/img/SecondCard.webp';
+import SeventhCard2 from '../../../../public/img/SeventhCard2.webp';
 import SeventhCard from '../../../../public/img/SeventhCard.webp';
+import SixthCard2 from '../../../../public/img/SixthCard2.webp';
 import SixthCard from '../../../../public/img/SixthCard.webp';
 import ThirdCard from '../../../../public/img/ThirdCard.webp';
+import ThirdCard2 from '../../../../public/img/ThirdCard2.webp';
 import Gallery from '../../../../public/img/gallery.png';
 import NewBanner from '../../../../public/img/newsBanner.webp';
 
@@ -33,6 +39,7 @@ export const CardData = [
     status: '1 min',
     description: "Mulberry Learning Annual Teachers' Training 2023",
     route: 'annual-mulberry-learning-teachers-training-2023',
+    imgDetail:FirstCard2
   },
   {
     img: SecondCard,
@@ -42,6 +49,8 @@ export const CardData = [
     status: '4 min',
     description: 'Importance of Good Nutrition For Preschoolers',
     route: 'importance-of-good-nutrition-for-preschoolers',
+    imgDetail:SecondCard2
+
   },
   {
     img: ThirdCard,
@@ -51,6 +60,8 @@ export const CardData = [
     status: '1 min',
     description: 'Mulberry Learning @ BGC is Officially Open',
     route: 'mulberry-learning-bgc-is-officially-open',
+    imgDetail: ThirdCard2,
+
   },
   {
     img: FouthCard,
@@ -60,6 +71,7 @@ export const CardData = [
     status: '4 min',
     description: 'Mommy, don’t go!',
     route: 'mommy-don-t-go',
+    imgDetail: FouthCard2
   },
   {
     img: FifthCard,
@@ -69,6 +81,7 @@ export const CardData = [
     status: '5 min',
     description: 'Self-Regulation: The key to achieving success',
     route: 'self-regulation-the-key-to-achieving-success',
+    imgDetail: FifthCard2
   },
   {
     img: SixthCard,
@@ -78,6 +91,7 @@ export const CardData = [
     status: '3 min',
     description: 'The Reggio Emilia Approach And Why It Works',
     route: 'the-reggio-emilia-approach-and-why-it-works',
+    imgDetail: SixthCard2
   },
   {
     img: SeventhCard,
@@ -87,6 +101,7 @@ export const CardData = [
     status: '5 min',
     description: 'Why Play Is Important For Your Child – Five Tips For Parents',
     route: 'lorem-ipsum',
+    imgDetail: SeventhCard2
   },
   {
     img: EighthCard,
@@ -96,6 +111,7 @@ export const CardData = [
     status: '2 min',
     description: '3 Ways You May Be Unknowingly Jeopardizing Your Kids’ Health',
     route: 'lorem-ipsum-post2',
+    imgDetail: EighthCard2
   },
 ];
 

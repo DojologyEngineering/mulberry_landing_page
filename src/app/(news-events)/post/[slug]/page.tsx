@@ -1,5 +1,7 @@
 import Image from 'next/image';
 
+import LightBoxCom from '@/components/LightBox';
+
 import Gallery from '../../../../../public/img/gallery.png';
 import NewBanner from '../../../../../public/img/newsBanner.webp';
 import { CardData, textCover } from '../../latest-news/page';
@@ -39,12 +41,14 @@ export default function Page({ params }: { params: { slug: string } }) {
         </section>
 
         <section className='flex flex-col gap-5 justify-center align-middle max-w-[780px] ml-auto mr-auto px-[20px] md:bottom-10 relative '>
-          <Image
+          {/* <Image
             src={dataDetails?.img || ''}
             alt='bannerImg'
             priority
             className='w-[740px]'
-          />
+          /> */}
+          {/* <CardPreview img={dataDetails?.imgDetail} /> */}
+          <LightBoxCom img={dataDetails?.imgDetail} />
         </section>
       </div>
     </main>
