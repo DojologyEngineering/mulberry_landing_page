@@ -1,12 +1,19 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Background, Parallax } from 'react-parallax';
+import { Parallax } from 'react-parallax';
 
-import Image from 'next/image';
+function getStrengthValue() {
+  const screenWidth = window.innerWidth;
 
-import children1 from '/public/img/children.jpeg';
-
+  if (screenWidth <= 767) {
+    return 0;
+  } else if (screenWidth >= 768 && screenWidth <= 1023) {
+    return 300;
+  } else {
+    return 600;
+  }
+}
 export default function ImageParallax() {
   const [strength, setStrength] = useState(getStrengthValue());
 
@@ -19,18 +26,6 @@ export default function ImageParallax() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
-
-  function getStrengthValue() {
-    const screenWidth = window.innerWidth;
-
-    if (screenWidth <= 767) {
-      return 0;
-    } else if (screenWidth >= 768 && screenWidth <= 1023) {
-      return 300;
-    } else {
-      return 600;
-    }
-  }
 
   return (
     <div>

@@ -16,7 +16,7 @@ function HomeImageSlider() {
           src={profilePic}
           alt='Profile picture overlay'
           priority
-          className='md:h-36 h-36 w-full'
+          className='md:h-36 h-28 w-full'
           style={{ objectFit: 'cover' }}
         />
       </div>

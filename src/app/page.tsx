@@ -46,36 +46,40 @@ export default function Home() {
           </p>
           <div className='w-[200px] h-[2px] bg-grey-primary mt-5'></div>
         </div>
-        <section className='flex flex-col md:flex-row mt-10'>
-          <Image src={partner1} alt='partner-logo' className='w-full' />
-          <Image src={partner2} alt='partner-logo' className='w-full' />
-        </section>
+        <div className='container mx-auto'>
+          <section className='flex flex-col md:flex-row mt-10'>
+            <Image src={partner1} alt='partner-logo' className='w-full' />
+            <Image src={partner2} alt='partner-logo' className='w-full' />
+          </section>
+        </div>
       </div>
       <ImageParallax />
-      <div className=' flex justify-center flex-col items-center bg-primary-hight-light md:h-40 h-24'>
+      <div className='flex justify-center flex-col items-center bg-primary-hight-light md:h-40 h-24'>
         <p className='md:text-[40px] text-[23px] font-raleway font-bold text-white'>
           The Mulberry Learning Edge
         </p>
         <div className='w-[200px] h-[2px] bg-grey-primary mt-5'></div>
       </div>
-      <div className='px-4'>
-        <section className='md:flex block items-center justify-evenly mt-10'>
+      <div className='container mx-auto px-4'>
+        <section className='md:flex block items-center justify-around mt-10'>
           {learnEdge.map((i) => {
             return (
-              <>
-                <div className='flex flex-col items-center justify-center '>
+              <div key={i.id}>
+                <div className='flex flex-col items-center justify-center'>
                   <i.logo size={52} className='text-primary-hight-light' />
                   <p className='text-[26px] font-raleway font-bold'>
                     {i.title}
                   </p>
-                  <p className='text-[16px] md:text-[20px] font-avenir font-light text-center'>
-                    {i.desc}
-                  </p>
+                  <div className='md:px-10 px-0'>
+                    <p className='text-[16px] md:text-[20px] font-avenir font-light text-center'>
+                      {i.desc}
+                    </p>
+                  </div>
                   <button className='mt-4 mb-4 text-[18px] py-1 text-primary-hight-light px-5 border border-primary-hight-light font-avenir font-light rounded-full'>
                     Learn more
                   </button>
                 </div>
-              </>
+              </div>
             );
           })}
         </section>

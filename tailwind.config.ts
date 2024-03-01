@@ -60,6 +60,7 @@ const config: Config = {
           main: '#FEE5F3',
         },
         footer: '#EAEAEA',
+        siliver: '#C74300',
       },
       textColor: {
         secondary: '#333333',

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import ImageGallery from 'react-image-gallery';
 
 import Link from 'next/link';
@@ -23,22 +23,18 @@ const images = [
 ];
 const mediumScreen = [
   {
-    original:
-      'https://static.wixstatic.com/media/449222_9d8c114a94c74d8cb49df0c610df1cbd~mv2.jpg/v1/fill/w_2210,h_700,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/449222_9d8c114a94c74d8cb49df0c610df1cbd~mv2.jpg',
+    original: '/img/homepageslide.webp',
   },
   {
-    original:
-      'https://static.wixstatic.com/media/449222_b07e4b31a3704d9ab2c691ba2b43d635~mv2.jpg/v1/fill/w_2210,h_700,al_r,q_85,enc_auto/449222_b07e4b31a3704d9ab2c691ba2b43d635~mv2.jpg',
+    original: '/img/homepageslide2.webp',
   },
 ];
 const smallScreen = [
   {
-    original:
-      'https://static.wixstatic.com/media/449222_9d8c114a94c74d8cb49df0c610df1cbd~mv2.jpg/v1/fill/w_2210,h_1500,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/449222_9d8c114a94c74d8cb49df0c610df1cbd~mv2.jpg',
+    original: '/img/homeslide3.webp',
   },
   {
-    original:
-      'https://static.wixstatic.com/media/449222_b07e4b31a3704d9ab2c691ba2b43d635~mv2.jpg/v1/fill/w_2210,h_1500,al_r,q_85,enc_auto/449222_b07e4b31a3704d9ab2c691ba2b43d635~mv2.jpg',
+    original: '/img/homeslide4.webp',
   },
 ];
 
@@ -51,16 +47,34 @@ export const ImagePreview = () => {
 };
 export const HomePreview = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-
+  const [screenSize, setScreenSize] = useState('small');
   const handleSlide = (index: number) => {
     setActiveSlideIndex(index);
   };
-  function getScreenSize() {
-    return window.innerWidth <= 768 ? 'small' : 'medium';
-  }
 
-  // Determine the images based on screen size
-  const images = getScreenSize() === 'small' ? smallScreen : mediumScreen;
+  const images = screenSize === 'small' ? smallScreen : mediumScreen;
+  const [fontSize, setFontSize] = useState('text-[26px]');
+
+  useEffect(() => {
+    const handleResize = () => {
+      const screenWidth = window.innerWidth;
+      if (screenWidth >= 320 && screenWidth <= 768) {
+        setFontSize('text-[26px]');
+        setScreenSize('small');
+      } else if (screenWidth >= 768 && screenWidth <= 1024) {
+        setFontSize('text-[45px]');
+        setScreenSize('medium');
+      } else if (screenWidth > 1024) {
+        setFontSize('text-[60px]');
+        setScreenSize('medium');
+      }
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <>
       <div className='relative w-full'>
@@ -78,18 +92,18 @@ export const HomePreview = () => {
             setActiveSlideIndex(newIndex);
           }}
         />
-        <div className='absolute top-1/3 left-1/3 pl-9 transform -translate-x-1/2 -translate-y-1/2 '>
-          <p
-            className={`text-primary-hight-light font-raleway text-[26px] font-bold  ${
+        <div className='absolute top-1/3 left-1/3 md:ml-36 ml-9 transform -translate-x-1/2 -translate-y-1/2 '>
+          <h2
+            className={`${fontSize} text-primary-hight-light font-raleway font-bold  ${
               activeSlideIndex === 0 ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-300`}
           >
             Equip your child with intelligent thinking skills
-          </p>
+          </h2>
           <div className='flex flex-col items-baseline'>
             <Link
               href={'#'}
-              className={`underline font-raleway font-bold text-gray-500 ${
+              className={`underline md:text-[26px] font-raleway font-bold text-gray-500 ${
                 activeSlideIndex === 0 ? 'opacity-100' : 'opacity-0'
               } transition-opacity duration-300`}
             >
@@ -97,7 +111,7 @@ export const HomePreview = () => {
             </Link>
             <Link
               href={'#'}
-              className={`underline font-raleway font-bold text-gray-500 ${
+              className={`underline md:text-[26px] font-raleway font-bold text-gray-500 ${
                 activeSlideIndex === 0 ? 'opacity-100' : 'opacity-0'
               } transition-opacity duration-300`}
             >
@@ -106,9 +120,9 @@ export const HomePreview = () => {
           </div>
         </div>
 
-        <div className='absolute top-1/3 left-1/3 pl-9 transform -translate-x-1/2 -translate-y-1/2 '>
+        <div className='absolute top-1/3 left-1/3 md:ml-36 ml-9 transform -translate-x-1/2 -translate-y-1/2 '>
           <p
-            className={`${activeSlideIndex === 1 && 'animate-right-to-left'} text-light font-raleway text-[26px] font-bold ${
+            className={`${fontSize} ${activeSlideIndex === 1 && 'animate-right-to-left'} text-light font-raleway font-bold ${
               activeSlideIndex === 1 ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-300`}
           >
@@ -120,7 +134,7 @@ export const HomePreview = () => {
             } transition-opacity duration-300`}
           >
             <button
-              className={`${activeSlideIndex === 1 && 'animate-left-to-right'} rounded-full bg-primary-hight-light text-white px-3`}
+              className={`md:text-[20px] ${activeSlideIndex === 1 && 'animate-left-to-right'} rounded-full bg-siliver text-white px-10 py-3`}
             >
               ENROLL NOW
             </button>
