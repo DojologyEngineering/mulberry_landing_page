@@ -134,7 +134,7 @@ export const HomePreview = () => {
             } transition-opacity duration-300`}
           >
             <button
-              className={`md:text-[20px] ${activeSlideIndex === 1 && 'animate-left-to-right'} rounded-full bg-siliver text-white px-10 py-3`}
+              className={`md:mt-4 md:text-[20px] ${activeSlideIndex === 1 && 'animate-left-to-right'} rounded-full bg-siliver text-white px-10 py-3`}
             >
               ENROLL NOW
             </button>
