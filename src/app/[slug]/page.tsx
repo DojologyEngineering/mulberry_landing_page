@@ -9,7 +9,7 @@ import { FaRegHeart } from 'react-icons/fa';
 import { FiEdit3 } from 'react-icons/fi';
 import { LiaCalendarCheckSolid } from 'react-icons/lia';
 
-import ImagePreview from '@/components/ImagePreview';
+import { ImagePreview } from '@/components/ImagePreview';
 import Map from '@/components/Map';
 
 import { bookTour, promote } from '@/utils/location-util';

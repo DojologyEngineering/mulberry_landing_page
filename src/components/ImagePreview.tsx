@@ -75,6 +75,7 @@ export const HomePreview = () => {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+
   return (
     <>
       <div className='relative w-full'>
