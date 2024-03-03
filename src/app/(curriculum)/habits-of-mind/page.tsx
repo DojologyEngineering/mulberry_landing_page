@@ -62,7 +62,7 @@ const DataMid = {
   ],
 };
 
-const AwardWinning = {
+export const AwardWinning = {
   headTittle: 'Award-Winning Curriculum',
   des: ' Powered by Mulberry Learning Singapore',
   ImgArr: [
@@ -162,7 +162,7 @@ function HabitOfMine() {
           ))}
         </section>
 
-        <section className='flex flex-col gap-5 justify-center items-center py-10 my-10 bg-grey-main'>
+        <section className='flex flex-col gap-5 justify-center items-center pt-10 my-10 bg-grey-main'>
           <div className='flex justify-center relative md:bottom-6'>
             <div className='grid sm:grid-cols-2 grid-cols-1 gap-6 align-middle max-w-[1470px] px-[20px] xl:px-[100px] justify-center'>
               <div className='max-w-[450px]'>
@@ -181,7 +181,7 @@ function HabitOfMine() {
               <div className='relative w-full h-auto'>
                 <span className='hidden sm:block absolute w-full bg-purple-light m-8 p-[26%]'></span>
                 <Image
-                  src={Kid}
+                  src={bodyData.img}
                   alt='logo'
                   priority
                   className='w-full h-auto relative'
