@@ -35,6 +35,7 @@ const config: Config = {
         },
         purple: {
           main: '#FEE5F3',
+          light: '#C9C5EE',
         },
         footer: '#EAEAEA',
       },
