@@ -29,7 +29,7 @@ export default function Navbar() {
   // console.log('hideNav:', hideNav);
 
   const isActive = (menu: menuType) => {
-    console.log('menu:', menu);
+    // console.log('menu:', menu);
     if (!menu.subMenu) {
       return pathname === menu.value;
     } else {

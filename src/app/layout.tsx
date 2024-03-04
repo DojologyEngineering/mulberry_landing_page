@@ -76,7 +76,9 @@ export default function RootLayout({
     >
       <body>
         <Navbar />
+
         <main className='min-h-screen'>{children}</main>
+
         <ScrollToTopButton />
         <Footer />
       </body>
