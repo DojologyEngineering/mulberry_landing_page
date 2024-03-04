@@ -84,13 +84,7 @@ function SteamEnrichment() {
           className='relative'
           style={{ width: '100%', paddingBottom: '18%' }}
         >
-          <Image
-            src={SteamBanner}
-            alt='logo'
-            priority
-            layout='fill'
-            objectFit='cover'
-          />
+          <Image src={SteamBanner} alt='logo' priority fill />
           <span className='absolute  top-[30%] left-[18%]  sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'>
             {textCover1}
           </span>

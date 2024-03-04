@@ -288,7 +288,7 @@ function HabitOfMine() {
                       className='w-full min-h-[250px]'
                       src={item?.yt}
                       title='YouTube video player'
-                      allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+                      // allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
                       allowFullScreen
                     ></iframe>
                   </div>

@@ -104,8 +104,8 @@ function ProjectInquiry() {
             src={ProjectInquiryBanner}
             alt='logo'
             priority
-            layout='fill'
-            objectFit='cover'
+            fill
+            className='object-cover'
           />
           <span
             className='absolute top-[40%] left-[25%] sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'
@@ -141,7 +141,7 @@ function ProjectInquiry() {
             className='w-full min-h-[400px] px-[50px]'
             src={headData.yt}
             title='YouTube video player'
-            allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+            // allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
             allowFullScreen
           ></iframe>
           <div className='flex flex-col gap-5 pt-10'>
