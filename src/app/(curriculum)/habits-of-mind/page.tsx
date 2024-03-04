@@ -138,10 +138,10 @@ function HabitOfMine() {
             priority
             className='w-full h-[140px] sm:h-auto'
           />
-          <span className='absolute  left-[18%] sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'>
+          <span className='absolute  left-[25%] sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'>
             {textCover1}
           </span>
-          <span className='absolute   left-[18%] sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[150px] sm:mt-[100px] mt-[60px]'>
+          <span className='absolute   left-[25%] sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[150px] sm:mt-[100px] mt-[60px]'>
             {textCover2}
           </span>
         </div>

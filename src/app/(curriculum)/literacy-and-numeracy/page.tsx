@@ -64,7 +64,7 @@ function LiteracyAndNumeracy() {
             layout='fill'
             objectFit='cover'
           />
-          <span className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'>
+          <span className='absolute top-1/2 left-[38%] transform -translate-x-1/2 -translate-y-1/2 sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'>
             {textCover}
           </span>
         </div>
