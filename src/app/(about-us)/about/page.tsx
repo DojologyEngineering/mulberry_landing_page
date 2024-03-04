@@ -42,7 +42,7 @@ export const AboutUsData = {
 };
 
 const ImgFooter = [
-  {
+  { 
     img: footerAbout1,
   },
   {
@@ -83,8 +83,9 @@ export default function About() {
         </section>
         <section className='pt-10 flex justify-center'>
           <div className='flex flex-col lg:flex-row justify-center align-middle'>
-            {ImgFooter.map((item) => (
+            {ImgFooter.map((item,index) => (
               <Image
+                key={index}
                 src={item.img}
                 alt='footerAbout1'
                 width='643'
