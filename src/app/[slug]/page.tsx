@@ -16,9 +16,7 @@ import { bookTour, locations, promote } from '@/utils/location-util';
 import center from '/public/img/center.webp';
 import profilePic from '/public/img/curve.webp';
 
-export function NotFoundCatchAll() {
-  notFound();
-}
+export const dynamicParams = false;
 export async function generateStaticParams() {
   return locations.map((job) => ({
     slug: job.slug,
@@ -27,9 +25,7 @@ export async function generateStaticParams() {
 
 export default async function Job({ params }: { params: { slug: string } }) {
   const job = locations.find((j) => j.slug === params.slug);
-  if (!job) {
-    NotFoundCatchAll();
-  }
+
   return (
     <div>
       <div className='relative'>
