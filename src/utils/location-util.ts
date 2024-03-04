@@ -136,18 +136,18 @@ export const locations = [
     imageReview: imageReview,
   },
 ];
-interface Job {
-  slug: string;
-  title: string;
-  location: string;
-  description: string;
-  logo: StaticImageData;
-  feature?: Feature[];
-  imageReview: {
-    id: number;
-    image: StaticImageData;
-  }[];
-}
+// interface Job {
+//   slug: string;
+//   title: string;
+//   location: string;
+//   description: string;
+//   logo: StaticImageData;
+//   feature?: Feature[];
+//   imageReview: {
+//     id: number;
+//     image: StaticImageData;
+//   }[];
+// }
 // export async function getJobs(slug?: string): Promise<Job[]> {
 //   return new Promise((resolve) => {
 //     setTimeout(() => {

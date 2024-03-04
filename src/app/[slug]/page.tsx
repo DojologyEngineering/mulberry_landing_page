@@ -1,4 +1,7 @@
+import NotFoundLocation from '@/app/not-found';
+
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
 import { FaRegHeart } from 'react-icons/fa';
 import { FiEdit3 } from 'react-icons/fi';
@@ -13,6 +16,9 @@ import { bookTour, locations, promote } from '@/utils/location-util';
 import center from '/public/img/center.webp';
 import profilePic from '/public/img/curve.webp';
 
+export function NotFoundCatchAll() {
+  notFound();
+}
 export async function generateStaticParams() {
   return locations.map((job) => ({
     slug: job.slug,
@@ -21,6 +27,9 @@ export async function generateStaticParams() {
 
 export default async function Job({ params }: { params: { slug: string } }) {
   const job = locations.find((j) => j.slug === params.slug);
+  if (!job) {
+    NotFoundCatchAll();
+  }
   return (
     <div>
       <div className='relative'>
