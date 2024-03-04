@@ -106,8 +106,8 @@ export default async function Job({ params }: { params: { slug: string } }) {
             ))}
         </div>
 
-        <div className='container mx-auto mt-10 mb-10'>
-          <div className='grid grid-cols-1 md:grid-cols-2 items-center'>
+        <div className='container mx-auto mt-10 mb-10 '>
+          <div className='grid grid-cols-1 md:grid-cols-2'>
             <BookTour />
 
             <div className='relative flex flex-col items-center max-w-md mt-10 md:mt-0'>
