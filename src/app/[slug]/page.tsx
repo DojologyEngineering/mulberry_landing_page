@@ -1,32 +1,26 @@
-import { getJobs } from '@/app/db/data-store';
-import { GoogleMap, Marker } from '@react-google-maps/api';
-import ImageGallery from 'react-image-gallery';
-
 import Image from 'next/image';
-import Link from 'next/link';
 
 import { FaRegHeart } from 'react-icons/fa';
 import { FiEdit3 } from 'react-icons/fi';
 import { LiaCalendarCheckSolid } from 'react-icons/lia';
 
+import { BookTour, ButtonBookTour } from '@/components/BookTour';
 import { ImagePreview } from '@/components/ImagePreview';
 import Map from '@/components/Map';
 
-import { bookTour, promote } from '@/utils/location-util';
+import { bookTour, locations, promote } from '@/utils/location-util';
 
 import center from '/public/img/center.webp';
 import profilePic from '/public/img/curve.webp';
 
 export async function generateStaticParams() {
-  const jobs = await getJobs();
-  return jobs.map((job) => ({
+  return locations.map((job) => ({
     slug: job.slug,
   }));
 }
 
 export default async function Job({ params }: { params: { slug: string } }) {
-  const [job] = await getJobs(params.slug);
-
+  const job = locations.find((j) => j.slug === params.slug);
   return (
     <div>
       <div className='relative'>
@@ -34,7 +28,7 @@ export default async function Job({ params }: { params: { slug: string } }) {
           src={center}
           alt='Picture of the author'
           priority
-          className='h-60 w-full'
+          className='h-48 md:h-60 w-full object-center'
         />
         <Image
           src={profilePic}
@@ -43,88 +37,100 @@ export default async function Job({ params }: { params: { slug: string } }) {
           className='h-28 w-full absolute bottom-0 left-0'
         />
         <div className='flex justify-center top-10 absolute left-0 right-0'>
-          <h1 className='md:text-4xl text-xl font-bold text-white font-avenir bg-primary-light px-4 py-2'>
+          <h1 className='md:text-[40px] text-[18px] font-bold text-white font-raleway bg-primary-light px-4 py-2'>
             Mulberry Learning Centers
           </h1>
         </div>
       </div>
-      <div className='container mx-auto'>
-        {params.slug === 'mulberry-learning-greenhills' ? (
-          <h1 className='md:text-4xl text-xl font-bold font-avenir text-primary-main mt-10'>
-            Mulberry Learning
-            <span className='text-primary-hight-light'> @ Greenhills</span>
-          </h1>
-        ) : (
-          <h1 className='md:text-4xl text-xl font-bold font-avenir text-primary-main mt-10'>
-            Mulberry Learning
-            <span className='text-primary-hight-light'> @ BGC</span>
-          </h1>
-        )}
-      </div>
-      <div className='container mx-auto'>
-        <p className='text-xl'>{job.location}</p>
-      </div>
-      <div className='container mx-auto '>
-        <Image src={job.logo} alt='logo' priority className='h-30 pt-10 ' />
-        <p className='mt-10'>{job.description}</p>
-      </div>
-      <div className='container mx-auto mt-2'>
-        {job.feature &&
-          job.feature.map((feature) => (
-            <div key={feature.title}>
-              <p className='text-[26px]'>{feature.title}</p>
+      <div className='px-5'>
+        <div className='container mx-auto'>
+          {params.slug === 'mulberry-learning-greenhills' ? (
+            <p className='text-[18px] md:text-[26px] font-bold font-raleway text-primary-main mt-10'>
+              Mulberry Learning
+              <span className='text-primary-hight-light text-[18px] md:text-[26px]'>
+                @ Greenhills
+              </span>
+            </p>
+          ) : (
+            <h1 className='text-[18px] md:text-[26px] font-bold font-raleway text-primary-main mt-10'>
+              Mulberry Learning
+              <span className='text-primary-hight-light text-[18px] md:text-[26px] '>
+                @ BGC
+              </span>
+            </h1>
+          )}
+        </div>
+        <div className='container mx-auto '>
+          <p className='text-[15px] md:text-[20px] font-avenir'>
+            {job?.location}
+          </p>
+        </div>
+        <div className='container mx-auto '>
+          <Image
+            src={job?.logo || ''}
+            alt='logo'
+            priority
+            className='h-30 pt-10 object-cover w-full'
+          />
+          <p className='mt-10 text-secondary font-light font-avenir text-[15px] md:text-[16px]'>
+            {job?.description}
+          </p>
+        </div>
+        <div className='container mx-auto mt-2'>
+          {job?.feature &&
+            job.feature.map((feature) => (
+              <div key={feature.title}>
+                <p className='text-[24px] md:text-[26px] text-primary-main'>
+                  {feature.title}
+                </p>
 
-              {feature.featuretype.map((featureType) => (
-                <div key={featureType.title}>
-                  <li className='text-base'>{featureType.title}</li>
-                  <ul className='ml-12'>
-                    {featureType.description &&
-                      featureType.description.map((description, index) => (
-                        <li key={index} className='list-disc'>
-                          {description}
-                        </li>
-                      ))}
-                  </ul>
+                {feature.featuretype.map((featureType) => (
+                  <div key={featureType.title}>
+                    <li className='text-base text-[15px] md:text-[16px]'>
+                      {featureType.title}
+                    </li>
+                    <ul className='ml-12'>
+                      {featureType.description &&
+                        featureType.description.map((description, index) => (
+                          <li
+                            key={index}
+                            className='list-disc text-secondary font-light text-[15px] md:text-[16px]'
+                          >
+                            {description}
+                          </li>
+                        ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            ))}
+        </div>
+
+        <div className='container mx-auto mt-10 mb-10'>
+          <div className='grid grid-cols-1 md:grid-cols-2 items-center'>
+            <BookTour />
+
+            <div className='relative flex flex-col items-center max-w-md mt-10 md:mt-0'>
+              <div className='rounded-full text-primary-hight-light w-36 md:w-20 h-20 border-4 border-primary-hight-light flex items-center justify-center hover:bg-primary-hight-light hover:text-white'>
+                <div>
+                  <FaRegHeart className='w-10 h-10 ' />
                 </div>
-              ))}
-            </div>
-          ))}
-      </div>
-
-      <div className='container mx-auto mt-10 mb-10'>
-        <div className='grid grid-cols-1 md:grid-cols-2 gap-4 '>
-          <div className='relative flex flex-col items-center max-w-md'>
-            <div className='rounded-full text-primary-hight-light w-20 h-20 border-4 border-primary-hight-light flex items-center justify-center hover:bg-primary-hight-light hover:text-white'>
-              <div>
-                <LiaCalendarCheckSolid className='w-10 h-10 ' />
               </div>
+              <p className='text-primary-hight-light'>Center Promotion</p>
+              <p className='mt-5 text-secondary font-light font-avenir text-[15px] md:text-[16px]'>
+                {promote}
+              </p>
             </div>
-            <p className='text-primary-hight-light'> Book a School Tour</p>
-            <p className='mt-5'>{bookTour}</p>
-          </div>
-
-          <div className='relative flex flex-col items-center max-w-md'>
-            <div className='rounded-full text-primary-hight-light w-20 h-20 border-4 border-primary-hight-light flex items-center justify-center hover:bg-primary-hight-light hover:text-white'>
-              <div>
-                <FaRegHeart className='w-10 h-10 ' />
-              </div>
-            </div>
-            <p className='text-primary-hight-light'>Center Promotion</p>
-            <p className='mt-5'>{promote}</p>
           </div>
         </div>
       </div>
       <div className='w-full bg-primary-light flex justify-center h-20 items-center '>
-        <button className='flex items-center justify-center min-w-96 font-patrick h-12 px-3 text-white transition duration-200 bg-primary-light hover:bg-primary-hight-light rounded-full border-2'>
-          <div className='flex text-xl hover:text-3xl transition duration-200 w-full items-center justify-center'>
-            <span>Book a School Tour</span>
-            <FiEdit3 className='ml-2' size={24} />
-          </div>
-        </button>
+        <ButtonBookTour />
       </div>
-      <div>
+      <div className='bg-white'>
         <ImagePreview />
       </div>
+
       <div className='min-h-72'>
         <Map />
       </div>
