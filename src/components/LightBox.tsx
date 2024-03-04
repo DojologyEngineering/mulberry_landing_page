@@ -70,6 +70,13 @@ export default function BasicExample({ img }: Iprops) {
         )}
       </div>
 
+      <style>{`
+        .yarl__button:hover,
+        .yarl__button:focus {
+          color: black !important;
+        }
+      `}</style>
+
       {/* <button onClick={() => setBasicExampleOpen(true)}>Open Lightbox</button> */}
     </>
   );
