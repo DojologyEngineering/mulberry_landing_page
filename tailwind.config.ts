@@ -8,6 +8,29 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      animation: {
+        'left-to-right': 'leftToRight 0.5s ease-out',
+        'right-to-left': 'rightToLeft 0.5s ease-out',
+      },
+      keyframes: {
+        rightToLeft: {
+          from: {
+            transform: 'translateX(100%)',
+          },
+          to: {
+            transform: 'translateX(0)',
+          },
+        },
+
+        leftToRight: {
+          from: {
+            transform: 'translateX(-100%)',
+          },
+          to: {
+            transform: 'translateX(0)',
+          },
+        },
+      },
       colors: {
         primary: {
           main: '#8A549F',
@@ -37,9 +60,11 @@ const config: Config = {
           main: '#FEE5F3',
         },
         footer: '#EAEAEA',
+        siliver: '#C74300',
       },
       textColor: {
         secondary: '#333333',
+        light: '#FFCE04',
       },
       borderColor: {
         grey: '#59595A',

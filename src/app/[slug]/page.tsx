@@ -5,7 +5,7 @@ import { FiEdit3 } from 'react-icons/fi';
 import { LiaCalendarCheckSolid } from 'react-icons/lia';
 
 import { BookTour, ButtonBookTour } from '@/components/BookTour';
-import ImagePreview from '@/components/ImagePreview';
+import { ImagePreview } from '@/components/ImagePreview';
 import Map from '@/components/Map';
 
 import { bookTour, locations, promote } from '@/utils/location-util';
@@ -28,7 +28,7 @@ export default async function Job({ params }: { params: { slug: string } }) {
           src={center}
           alt='Picture of the author'
           priority
-          className='h-48 md:h-60 w-full'
+          className='h-48 md:h-60 w-full object-center'
         />
         <Image
           src={profilePic}
