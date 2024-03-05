@@ -4,10 +4,12 @@ import Image from 'next/image';
 
 import Girl from '../../../../public/img/Girl.webp';
 import LANBanner from '../../../../public/img/LNNbanner.webp';
+import Kid from '../../../../public/img/Kid.webp';
 import Gallery from '../../../../public/img/gallery.png';
 import { AwardWinning } from '../habits-of-mind/page';
+import ImageBanner from '@/components/ImageBanner';
 
-const textCover = 'Literacy and Numeracy';
+const textCover1 = 'Literacy and Numeracy';
 
 const headData = {
   headTittle:
@@ -53,7 +55,7 @@ function LiteracyAndNumeracy() {
   return (
     <main>
       <div className='flex justify-center align-middle flex-col'>
-        <div
+        {/* <div
           className='relative'
           style={{ width: '100%', paddingBottom: '20.59%' }}
         >
@@ -67,7 +69,8 @@ function LiteracyAndNumeracy() {
           <span className='absolute top-1/2 left-[38%] transform -translate-x-1/2 -translate-y-1/2 sm:whitespace-nowrap lg:mr-[320px] text-[16px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'>
             {textCover}
           </span>
-        </div>
+        </div> */}
+        <ImageBanner textCover1={textCover1} img={LANBanner} imgReponsive={Kid}/>
 
         <Image
           src={Gallery}

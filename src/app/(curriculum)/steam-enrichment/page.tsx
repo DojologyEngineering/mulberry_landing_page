@@ -9,6 +9,8 @@ import { LuCakeSlice } from 'react-icons/lu';
 import { MdOutlineScience } from 'react-icons/md';
 import { RiComputerLine } from 'react-icons/ri';
 
+import ImageBanner from '@/components/ImageBanner';
+
 import SteamBanner from '../../../../public/img/SteamBanner.webp';
 import SteamBannerReponsive from '../../../../public/img/SteamBannerReponsive.webp';
 import Gallery from '../../../../public/img/gallery.png';
@@ -81,7 +83,7 @@ function SteamEnrichment() {
   return (
     <main>
       <div className='flex justify-center align-middle flex-col'>
-        <div className='relative flex justify-center items-center'>
+        {/* <div className='relative flex justify-center items-center'>
           <Image
             src={SteamBanner}
             alt='logo'
@@ -100,7 +102,14 @@ function SteamEnrichment() {
           <span className='absolute   md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[90px] sm:mt-[50px] mt-[60px]'>
             {textCover2}
           </span>
-        </div>
+        </div> */}
+
+        <ImageBanner
+          textCover1={textCover1}
+          textCover2={textCover2}
+          img={SteamBanner}
+          imgReponsive={SteamBannerReponsive}
+        />
 
         <Image
           src={Gallery}

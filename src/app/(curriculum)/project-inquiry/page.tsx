@@ -11,6 +11,7 @@ import ProjectInquiryBanner from '../../../../public/img/ProjectInquiryBanner.we
 import ProjectInquiryBannerReponsive from '../../../../public/img/ProjectInquiryBannerReponsive.webp';
 import Gallery from '../../../../public/img/gallery.png';
 import { AwardWinning } from '../habits-of-mind/page';
+import ImageBanner from '@/components/ImageBanner';
 
 const textCover1 = 'Reggio-Inspired';
 const textCover2 = 'Project Inquiry Program';
@@ -97,26 +98,33 @@ function ProjectInquiry() {
   return (
     <main>
       <div className='flex justify-center align-middle flex-col'>
-        <div className='relative flex justify-center items-center'>
+        {/* <div className='relative flex justify-center items-center'>
           <Image
             src={ProjectInquiryBannerReponsive}
             alt='logo'
             priority
             className='w-full max-h-[399px] object-cover'
           />
-          {/* <Image
+          <Image
             src={ProjectInquiryBanner}
             alt='logo'
             priority
             className='w-full h-[140px] sm:h-auto sm:block hidden'
-          /> */}
+          />
           <span className='absolute  md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mb-[40px] sm:mb-[40px]'>
             {textCover1}
           </span>
           <span className='absolute   md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[90px] sm:mt-[50px] mt-[60px]'>
             {textCover2}
           </span>
-        </div>
+        </div> */}
+
+        <ImageBanner
+          textCover1={textCover1}
+          textCover2={textCover2}
+          img={ProjectInquiryBanner}
+          imgReponsive={ProjectInquiryBannerReponsive}
+        />
 
         <Image
           src={Gallery}
@@ -134,13 +142,21 @@ function ProjectInquiry() {
 
       <section className='flex flex-col gap-5 justify-center items-center py-10 my-10 bg-grey-main'>
         <div className='max-w-[990px] mx-auto px-[20px]'>
-          <iframe
-            className='w-full min-h-[400px] px-[50px]'
-            src={headData.yt}
-            title='YouTube video player'
-            // allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
-            allowFullScreen
-          ></iframe>
+          <div
+            style={{
+              position: 'relative',
+              width: '100%',
+              paddingTop: '45%',
+            }}
+          >
+            <iframe
+              className='absolute top-0 left-0 w-full h-full md:px-10'
+              src={headData.yt}
+              title='YouTube video player'
+              // allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
+              allowFullScreen
+            ></iframe>
+          </div>
           <div className='flex flex-col gap-5 pt-10'>
             {headData.desArr.map((item) => (
               <p className='text-base font-avenir font-light'>{item.des}</p>

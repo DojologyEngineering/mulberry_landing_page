@@ -270,7 +270,7 @@ function HabitOfMine() {
           </div>
         </section>
 
-        <section className='flex flex-col gap-5 justify-center items-center py-10 my-10 bg-grey-main'>
+        <section className='flex flex-col gap-5 justify-center items-center py-10 mt-10 bg-grey-main'>
           <div className='max-w-[990px] mx-auto px-[20px]'>
             {footer.headTitleArr.map((item) => (
               <h3 className='text-[22px] font-raleway text-center py-5'>
