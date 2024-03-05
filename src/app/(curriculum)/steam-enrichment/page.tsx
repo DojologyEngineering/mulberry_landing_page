@@ -10,6 +10,7 @@ import { MdOutlineScience } from 'react-icons/md';
 import { RiComputerLine } from 'react-icons/ri';
 
 import SteamBanner from '../../../../public/img/SteamBanner.webp';
+import SteamBannerReponsive from '../../../../public/img/SteamBannerReponsive.webp';
 import Gallery from '../../../../public/img/gallery.png';
 import { AwardWinning } from '../habits-of-mind/page';
 
@@ -80,15 +81,23 @@ function SteamEnrichment() {
   return (
     <main>
       <div className='flex justify-center align-middle flex-col'>
-        <div
-          className='relative'
-          style={{ width: '100%', paddingBottom: '18%' }}
-        >
-          <Image src={SteamBanner} alt='logo' priority fill />
-          <span className='absolute  top-[30%] left-[26%]  sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'>
+        <div className='relative flex justify-center items-center'>
+          <Image
+            src={SteamBanner}
+            alt='logo'
+            priority
+            className='w-full sm:h-auto sm:block hidden'
+          />
+          <Image
+            src={SteamBannerReponsive}
+            alt='logo'
+            priority
+            className='w-full max-h-[140px] sm:h-auto sm:hidden object-cover'
+          />
+          <span className='absolute  md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mb-[40px] sm:mb-[40px]'>
             {textCover1}
           </span>
-          <span className='absolute top-[30%] left-[26%] sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[80px] sm:mt-[50px] mt-[30px] whitespace-nowrap'>
+          <span className='absolute   md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[90px] sm:mt-[50px] mt-[60px]'>
             {textCover2}
           </span>
         </div>

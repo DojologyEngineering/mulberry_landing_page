@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { PiTelegramLogo } from 'react-icons/pi';
 
 import HabitsOfMineBanner from '../../../../public/img/HabitsOfMineBanner.webp';
+import HabitsOfMineBannerReposive from '../../../../public/img/HabitsOfMineBannerReposive.webp';
 import Kid from '../../../../public/img/Kid.webp';
 import Kids from '../../../../public/img/Kids.webp';
 import footerAbout1 from '../../../../public/img/footerAbout1.jpg';
@@ -136,12 +137,18 @@ function HabitOfMine() {
             src={HabitsOfMineBanner}
             alt='logo'
             priority
-            className='w-full h-[140px] sm:h-auto'
+            className='w-full h-[140px] sm:h-auto sm:block hidden'
           />
-          <span className='absolute  left-[25%] sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'>
+          <Image
+            src={HabitsOfMineBannerReposive}
+            alt='logo'
+            priority
+            className='w-full max-h-[140px] sm:h-auto sm:hidden object-cover'
+          />
+          <span className='absolute  md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mb-[40px] sm:mb-[40px]'>
             {textCover1}
           </span>
-          <span className='absolute   left-[25%] sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[150px] sm:mt-[100px] mt-[60px]'>
+          <span className='absolute   md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[90px] sm:mt-[50px] mt-[60px]'>
             {textCover2}
           </span>
         </div>
@@ -271,11 +278,11 @@ function HabitOfMine() {
               </h3>
             ))}
           </div>
-          <div className='grid sm:grid-cols-2 grid-cols-1 gap-y-10 gap-x-[450px] align-middle max-w-[1500px] px-[20px] justify-center'>
+          <div className='grid sm:grid-cols-2 grid-cols-1 gap-y-10 lg:gap-x-[20%] gap-x-[10%]  align-middle max-w-[1500px] lg:px-[100px] px-[20px] justify-center'>
             {footer.footDes.map((item) => (
               <div className='flex flex-col gap-5'>
                 <div>
-                  <p className='text-[20px]  font-raleway font-bold'>
+                  <p className='text-[20px] font-raleway font-bold'>
                     {item.headFoot}
                   </p>
                   <p className='font-avenir text-[16px] font-light'>

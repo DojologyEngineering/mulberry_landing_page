@@ -8,6 +8,7 @@ import { IoHomeOutline } from 'react-icons/io5';
 import GirlDiscuss from '../../../../public/img/GirlDiscuss.webp';
 import GirlMagnifier from '../../../../public/img/GirlMagnifier.webp';
 import ProjectInquiryBanner from '../../../../public/img/ProjectInquiryBanner.webp';
+import ProjectInquiryBannerReponsive from '../../../../public/img/ProjectInquiryBannerReponsive.webp';
 import Gallery from '../../../../public/img/gallery.png';
 import { AwardWinning } from '../habits-of-mind/page';
 
@@ -96,27 +97,23 @@ function ProjectInquiry() {
   return (
     <main>
       <div className='flex justify-center align-middle flex-col'>
-        <div
-          className='relative'
-          style={{ width: '100%', paddingBottom: '20.59%' }}
-        >
+        <div className='relative flex justify-center items-center'>
           <Image
+            src={ProjectInquiryBannerReponsive}
+            alt='logo'
+            priority
+            className='w-full max-h-[399px] object-cover'
+          />
+          {/* <Image
             src={ProjectInquiryBanner}
             alt='logo'
             priority
-            fill
-            className='object-cover'
-          />
-          <span
-            className='absolute top-[40%] left-[25%] sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'
-            // style={{ transform: 'translate(-50%, -50%) translateX(-80%)' }}
-          >
+            className='w-full h-[140px] sm:h-auto sm:block hidden'
+          /> */}
+          <span className='absolute  md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mb-[40px] sm:mb-[40px]'>
             {textCover1}
           </span>
-          <span
-            className='absolute top-[38%] left-[25%]  sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[80px] sm:mt-[50px] mt-[30px] whitespace-nowrap'
-            // style={{ transform: 'translate(-50%, -50%) translateX(-42%) ' }}
-          >
+          <span className='absolute   md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[90px] sm:mt-[50px] mt-[60px]'>
             {textCover2}
           </span>
         </div>
