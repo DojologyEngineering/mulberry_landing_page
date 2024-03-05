@@ -5,6 +5,8 @@ import Image from 'next/image';
 
 import { PiTelegramLogo } from 'react-icons/pi';
 
+import ImageBanner from '@/components/ImageBanner';
+
 import HabitsOfMineBanner from '../../../../public/img/HabitsOfMineBanner.webp';
 import HabitsOfMineBannerReposive from '../../../../public/img/HabitsOfMineBannerReposive.webp';
 import Kid from '../../../../public/img/Kid.webp';
@@ -132,7 +134,7 @@ function HabitOfMine() {
     <main>
       <div className='flex justify-center align-middle flex-col'>
         {/* <div className='sm:h-[350px] h-[150px] relative'> */}
-        <div className='relative flex justify-center items-center'>
+        {/* <div className='relative flex justify-center items-center'>
           <Image
             src={HabitsOfMineBanner}
             alt='logo'
@@ -151,7 +153,14 @@ function HabitOfMine() {
           <span className='absolute   md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mt-[90px] sm:mt-[50px] mt-[60px]'>
             {textCover2}
           </span>
-        </div>
+        </div> */}
+
+        <ImageBanner
+          textCover1={textCover1}
+          textCover2={textCover2}
+          img={HabitsOfMineBanner}
+          imgReponsive={HabitsOfMineBannerReposive}
+        />
 
         <Image
           src={Gallery}
