@@ -5,13 +5,14 @@ import Image from 'next/image';
 import { GoPeople } from 'react-icons/go';
 import { IoHomeOutline } from 'react-icons/io5';
 
+import ImageBanner from '@/components/ImageBanner';
+
 import GirlDiscuss from '../../../../public/img/GirlDiscuss.webp';
 import GirlMagnifier from '../../../../public/img/GirlMagnifier.webp';
 import ProjectInquiryBanner from '../../../../public/img/ProjectInquiryBanner.webp';
 import ProjectInquiryBannerReponsive from '../../../../public/img/ProjectInquiryBannerReponsive.webp';
 import Gallery from '../../../../public/img/gallery.png';
 import { AwardWinning } from '../habits-of-mind/page';
-import ImageBanner from '@/components/ImageBanner';
 
 const textCover1 = 'Reggio-Inspired';
 const textCover2 = 'Project Inquiry Program';
@@ -143,14 +144,15 @@ function ProjectInquiry() {
       <section className='flex flex-col gap-5 justify-center items-center py-10 my-10 bg-grey-main'>
         <div className='max-w-[990px] mx-auto px-[20px]'>
           <div
+            className='md:aspect-[1200/500] aspect-[1200/650]'
             style={{
               position: 'relative',
               width: '100%',
-              paddingTop: '45%',
+              // paddingTop: '45%',
             }}
           >
             <iframe
-              className='absolute top-0 left-0 w-full h-full md:px-10'
+              className='absolute top-0 left-0 w-full h-full md:px-14 '
               src={headData.yt}
               title='YouTube video player'
               // allow='accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture'
@@ -158,8 +160,10 @@ function ProjectInquiry() {
             ></iframe>
           </div>
           <div className='flex flex-col gap-5 pt-10'>
-            {headData.desArr.map((item) => (
-              <p className='text-base font-avenir font-light'>{item.des}</p>
+            {headData.desArr.map((item, index) => (
+              <div key={index}>
+                <p className='text-base font-avenir font-light'>{item.des}</p>
+              </div>
             ))}
           </div>
         </div>
@@ -191,10 +195,12 @@ function ProjectInquiry() {
                   {bodyData.desTittle}
                 </h3>
 
-                {bodyData.desArr.map((data) => (
-                  <p className=' text-base py-4 font-avenir font-light'>
-                    {data.des}
-                  </p>
+                {bodyData.desArr.map((data, index) => (
+                  <div key={index}>
+                    <p className='text-base py-4 font-avenir font-light'>
+                      {data.des}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>
@@ -218,8 +224,11 @@ function ProjectInquiry() {
                 {bodyData.subDesTittle}
               </h3>
 
-              {bodyData.subDesArr.map((data) => (
-                <div className='flex flex-row align-middle justify-center gap-5 pt-10'>
+              {bodyData.subDesArr.map((data, index) => (
+                <div
+                  className='flex flex-row align-middle justify-center gap-5 pt-10'
+                  key={index}
+                >
                   <span className=''>
                     {
                       <data.icon
@@ -282,10 +291,12 @@ function ProjectInquiry() {
                 />
               </div>
               <div className='flex flex-col mt-16'>
-                {footData.desArr.map((data) => (
-                  <p className=' text-base font-avenir font-light py-3'>
-                    {data.des}
-                  </p>
+                {footData.desArr.map((data, index) => (
+                  <div key={index}>
+                    <p className='text-base font-avenir font-light py-3'>
+                      {data.des}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>
@@ -309,14 +320,16 @@ function ProjectInquiry() {
                 {footData.subFoot}
               </h3>
               <div className='flex flex-col'>
-                {footData.subDesArr.map((data) => (
-                  <div>
-                    <h3 className='text-[20px] font-bold font-raleway pt-5'>
-                      {data.subDesTittle}
-                    </h3>
-                    <p className='text-base  font-avenir font-light'>
-                      {data.subDes}
-                    </p>
+                {footData.subDesArr.map((data, index) => (
+                  <div key={index}>
+                    <div>
+                      <h3 className='text-[20px] font-bold font-raleway pt-5'>
+                        {data.subDesTittle}
+                      </h3>
+                      <p className='text-base font-avenir font-light'>
+                        {data.subDes}
+                      </p>
+                    </div>
                   </div>
                 ))}
               </div>

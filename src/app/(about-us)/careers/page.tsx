@@ -99,10 +99,12 @@ function Careers() {
             <h3 className='text-[26px]  font-bold text-primary-hight-light font-raleway'>
               {HeadContent.textHead}
             </h3>
-            {HeadContent.paragraphArr.map((item) => (
-              <p className='text-base font-avenir font-light'>
-                {item.paragraph}
-              </p>
+            {HeadContent.paragraphArr.map((item, index) => (
+              <div key={index}>
+                <p className='text-base font-avenir font-light'>
+                  {item.paragraph}
+                </p>
+              </div>
             ))}
           </section>
           <section className='flex flex-col gap-5  justify-center align-middle max-w-[970px] ml-auto mr-auto py-10 px-[20px]'>
@@ -123,12 +125,14 @@ function Careers() {
                 {FootContent.description}
               </h3>
             </div>
-            {FootContent.paragraphArr.map((item) => (
-              <p className='text-base font-avenir font-light'>
-                {item.paragraph1}
-                <span className='text-primary-hight-light'>{item.span}</span>
-                {item.paragraph2}
-              </p>
+            {FootContent.paragraphArr.map((item, index) => (
+              <div key={index}>
+                <p className='text-base font-avenir font-light'>
+                  {item.paragraph1}
+                  <span className='text-primary-hight-light'>{item.span}</span>
+                  {item.paragraph2}
+                </p>
+              </div>
             ))}
           </section>
         </div>
@@ -155,13 +159,12 @@ function Careers() {
                 sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
               />
             </div>
-            {BodyContent.paragraphArr.map((item) => (
-              <p
-                key={item.paragraph}
-                className=' text-base py-4 font-avenir font-light'
-              >
-                {item.paragraph}
-              </p>
+            {BodyContent.paragraphArr.map((item, index) => (
+              <div key={index}>
+                <p className=' text-base py-4 font-avenir font-light'>
+                  {item.paragraph}
+                </p>
+              </div>
             ))}
             <div className='flex flex-col justify-center align-middle text-center gap-5'>
               <Link href={contact?.href || ''}>

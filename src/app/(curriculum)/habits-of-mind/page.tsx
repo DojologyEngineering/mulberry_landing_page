@@ -113,10 +113,12 @@ const footer = {
     {
       headFoot: 'Gathering Data through All Senses',
       des: 'Children learn better and form stronger memory connections when they engage with more senses in their learning process. Through the various carefully-crafted learning spaces in our preschools, we encourage open, acute and alert sensory environments, allowing the little ones to absorb and retain much more information.',
+      yt: 'https://www.youtube.com/embed/C2h2qpmN5Lw',
     },
     {
       headFoot: 'Striving for Accuracy',
       des: 'As much as we provide a safe space for children to make mistakes, Mulberry Learning also encourages kids to strive for accuracy and take pride in their work. This could be done by asking students follow-up questions when we notice an error in their work. Sometimes, a check-list could also help them to ensure accuracy in their tasks.',
+      yt: 'https://www.youtube.com/embed/MAp8d9P7PBI',
     },
     {
       headFoot: 'Thinking Flexibly',
@@ -173,8 +175,10 @@ function HabitOfMine() {
           <h3 className='text-[26px]  font-bold text-primary-hight-light font-raleway'>
             {HeadData?.headTittle}
           </h3>
-          {HeadData.desArr.map((item) => (
-            <p className='text-base font-avenir font-light'>{item.des}</p>
+          {HeadData.desArr.map((item, index) => (
+            <div key={index}>
+              <p className='text-base font-avenir font-light'>{item.des}</p>
+            </div>
           ))}
         </section>
 
@@ -187,10 +191,13 @@ function HabitOfMine() {
                 <h3 className='text-[26px] font-bold text-primary-main font-raleway'>
                   {bodyData.headTitle}
                 </h3>
-                {bodyData.desArr.map((item) => (
-                  <p className=' text-base py-4 font-avenir font-light'>
-                    {item.des}
-                  </p>
+                {bodyData.desArr.map((item, index) => (
+                  <div key={index}>
+                    {' '}
+                    <p className=' text-base py-4 font-avenir font-light'>
+                      {item.des}
+                    </p>
+                  </div>
                 ))}
               </div>
 
@@ -233,8 +240,11 @@ function HabitOfMine() {
         </section>
 
         <section className='flex flex-col gap-5 justify-center align-middle max-w-[990px] mx-auto px-[20px] relative pb-10'>
-          {DataMid.footListArr.map((item) => (
-            <div className='flex flex-row align-middle justify-center gap-5'>
+          {DataMid.footListArr.map((item, index) => (
+            <div
+              className='flex flex-row align-middle justify-center gap-5'
+              key={index}
+            >
               <span className=''>
                 {
                   <item.icon
@@ -281,15 +291,18 @@ function HabitOfMine() {
 
         <section className='flex flex-col gap-5 justify-center items-center py-10 mt-10 bg-grey-main'>
           <div className='max-w-[990px] mx-auto px-[20px]'>
-            {footer.headTitleArr.map((item) => (
-              <h3 className='text-[22px] font-raleway text-center py-5'>
-                {item.tittle}
-              </h3>
+            {footer.headTitleArr.map((item, index) => (
+              <div key={index}>
+                {' '}
+                <h3 className='text-[22px] font-raleway text-center py-5'>
+                  {item.tittle}
+                </h3>
+              </div>
             ))}
           </div>
           <div className='grid sm:grid-cols-2 grid-cols-1 gap-y-10 lg:gap-x-[20%] gap-x-[10%]  align-middle max-w-[1500px] lg:px-[100px] px-[20px] justify-center'>
-            {footer.footDes.map((item) => (
-              <div className='flex flex-col gap-5'>
+            {footer.footDes.map((item,index) => (
+              <div className='flex flex-col gap-5' key={index}>
                 <div>
                   <p className='text-[20px] font-raleway font-bold'>
                     {item.headFoot}

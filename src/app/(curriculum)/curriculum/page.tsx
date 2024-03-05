@@ -88,8 +88,12 @@ function Curriculum() {
               />
             </span>
             <div className='flex flex-col'>
-              {description.desArr.map((item) => (
-                <p className='text-base font-light font-avenir'>{item?.des}</p>
+              {description.desArr.map((item, index) => (
+                <div key={index}>
+                  <p className='text-base font-light font-avenir'>
+                    {item?.des}
+                  </p>
+                </div>
               ))}
             </div>
           </div>

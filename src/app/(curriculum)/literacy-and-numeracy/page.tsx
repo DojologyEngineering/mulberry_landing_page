@@ -102,18 +102,20 @@ function LiteracyAndNumeracy() {
             <div className='max-w-[450px] sm:ml-[10vw]'>
               {' '}
               {/* Adjust max width as needed */}
-              {midData.desArr.map((item) => (
-                <div className='flex flex-col'>
+              {midData.desArr.map((item,index) => (
+                <div className='flex flex-col' key={index}>
                   <h3 className='text-[26px] font-bold text-primary-hight-light font-raleway'>
                     {item.tittle}
                   </h3>
                   <p className=' text-base py-4 font-avenir font-bold'>
                     {item.des}
                   </p>
-                  {item.subDesArr.map((data) => (
-                    <p className=' text-base py-4 font-avenir font-light'>
+                  {item.subDesArr.map((data,index) => (
+                   <div key={index}>
+                     <p className=' text-base py-4 font-avenir font-light'>
                       {data.subDdes}
                     </p>
+                   </div>
                   ))}
                 </div>
               ))}

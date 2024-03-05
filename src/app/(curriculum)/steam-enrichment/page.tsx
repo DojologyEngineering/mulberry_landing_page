@@ -136,10 +136,12 @@ function SteamEnrichment() {
               </h3>
 
               <div className='flex flex-col'>
-                {headData.desArr.map((data) => (
-                  <p className=' text-base font-avenir font-light py-3'>
+                {headData.desArr.map((data,index) => (
+                 <div key={index}>
+                   <p className=' text-base font-avenir font-light py-3'>
                     {data.des}
                   </p>
+                 </div>
                 ))}
               </div>
             </div>
@@ -184,8 +186,8 @@ function SteamEnrichment() {
                 {footData.des}
               </p>
 
-              {footData.desArr.map((data) => (
-                <div className='flex flex-row align-middle justify-center gap-5 pt-10'>
+              {footData.desArr.map((data,index) => (
+                <div className='flex flex-row align-middle justify-center gap-5 pt-10' key={index}>
                   <span className=''>
                     {
                       <data.icon

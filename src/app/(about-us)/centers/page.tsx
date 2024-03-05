@@ -160,10 +160,12 @@ export function Centers() {
                   {BodyAbout.headTextPink}
                 </span>
               </h3>
-              {BodyAbout.paragraohArr.map((item) => (
-                <p className=' text-base py-4 font-avenir font-light'>
+              {BodyAbout.paragraohArr.map((item,index) => (
+               <div key={index}>
+                 <p className=' text-base py-4 font-avenir font-light'>
                   {item.paragraph}
                 </p>
+               </div>
               ))}
             </div>
           </section>
