@@ -1,5 +1,5 @@
-import { ClassroomGrid } from '@/app/(about-us)/centers/page';
 
+import { ClassroomGrid } from '@/utils/about-util';
 import Image, { StaticImageData } from 'next/image';
 
 interface IImgClass {

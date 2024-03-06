@@ -1,4 +1,3 @@
-import { FootContent } from '@/app/(about-us)/careers/page';
 import React from 'react';
 
 import Image from 'next/image';
