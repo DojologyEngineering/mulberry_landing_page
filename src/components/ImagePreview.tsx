@@ -6,86 +6,9 @@ import 'react-image-gallery/styles/css/image-gallery.css';
 
 import Link from 'next/link';
 
-import image1 from '/public/img/image1.webp';
+import { images, mediumScreen, smallScreen } from '@/utils/home-util';
 
-const images = [
-  {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-  },
-];
-const mediumScreen = [
-  {
-    original: '/img/homepageslide.webp',
-  },
-  {
-    original: '/img/homepageslide2.webp',
-  },
-];
-const smallScreen = [
-  {
-    original: '/img/homeslide3.webp',
-  },
-  {
-    original: '/img/homeslide4.webp',
-  },
-];
+import image1 from '/public/img/image1.webp';
 
 export const ImagePreview = () => {
   return (
@@ -100,26 +23,19 @@ export const ImagePreview = () => {
 };
 export const HomePreview = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
-  const [screenSize, setScreenSize] = useState('small');
   const handleSlide = (index: number) => {
     setActiveSlideIndex(index);
   };
-
-  const images = screenSize === 'small' ? smallScreen : mediumScreen;
   const [fontSize, setFontSize] = useState('text-[26px]');
-
   useEffect(() => {
     const handleResize = () => {
       const screenWidth = window.innerWidth;
       if (screenWidth >= 320 && screenWidth <= 768) {
         setFontSize('text-[26px]');
-        setScreenSize('small');
       } else if (screenWidth >= 768 && screenWidth <= 1024) {
         setFontSize('text-[45px]');
-        setScreenSize('medium');
       } else if (screenWidth > 1024) {
         setFontSize('text-[60px]');
-        setScreenSize('medium');
       }
     };
     handleResize();
@@ -132,20 +48,39 @@ export const HomePreview = () => {
   return (
     <>
       <div className='relative w-full'>
-        <ImageGallery
-          items={images}
-          infinite={true}
-          autoPlay={true}
-          showThumbnails={false}
-          showFullscreenButton={false}
-          showPlayButton={false}
-          onSlide={(index) => {
-            handleSlide(index);
-          }}
-          onBeforeSlide={(newIndex) => {
-            setActiveSlideIndex(newIndex);
-          }}
-        />
+        <div className='md:hidden flex'>
+          <ImageGallery
+            items={smallScreen}
+            infinite={true}
+            autoPlay={true}
+            showThumbnails={false}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            onSlide={(index) => {
+              handleSlide(index);
+            }}
+            onBeforeSlide={(newIndex) => {
+              setActiveSlideIndex(newIndex);
+            }}
+          />
+        </div>
+        <div className='md:flex hidden'>
+          <ImageGallery
+            items={mediumScreen}
+            additionalClass='w-full'
+            infinite={true}
+            autoPlay={true}
+            showThumbnails={false}
+            showFullscreenButton={false}
+            showPlayButton={false}
+            onSlide={(index) => {
+              handleSlide(index);
+            }}
+            onBeforeSlide={(newIndex) => {
+              setActiveSlideIndex(newIndex);
+            }}
+          />
+        </div>
         <div className='absolute mt-5 top-1/3 left-1/3 md:ml-36 ml-9 transform -translate-x-1/2 -translate-y-1/2 '>
           <h2
             className={`${fontSize} text-primary-hight-light font-raleway font-bold  ${

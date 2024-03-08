@@ -41,6 +41,9 @@ const config: Config = {
         errorborder: {
           light: '#FF512E',
         },
+        skyblue: {
+          main: '#3DB8EB',
+        },
       },
       backgroundColor: {
         errorbg: {

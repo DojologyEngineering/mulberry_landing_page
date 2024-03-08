@@ -1,4 +1,7 @@
+import NotFoundLocation from '@/app/not-found';
+
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
 import { FaRegHeart } from 'react-icons/fa';
 import { FiEdit3 } from 'react-icons/fi';
@@ -13,6 +16,7 @@ import { bookTour, locations, promote } from '@/utils/location-util';
 import center from '/public/img/center.webp';
 import profilePic from '/public/img/curve.webp';
 
+export const dynamicParams = false;
 export async function generateStaticParams() {
   return locations.map((job) => ({
     slug: job.slug,
@@ -21,6 +25,7 @@ export async function generateStaticParams() {
 
 export default async function Job({ params }: { params: { slug: string } }) {
   const job = locations.find((j) => j.slug === params.slug);
+
   return (
     <div>
       <div className='relative'>
@@ -106,8 +111,8 @@ export default async function Job({ params }: { params: { slug: string } }) {
             ))}
         </div>
 
-        <div className='container mx-auto mt-10 mb-10'>
-          <div className='grid grid-cols-1 md:grid-cols-2 items-center'>
+        <div className='container mx-auto mt-10 mb-10 '>
+          <div className='grid grid-cols-1 md:grid-cols-2'>
             <BookTour />
 
             <div className='relative flex flex-col items-center max-w-md mt-10 md:mt-0'>
