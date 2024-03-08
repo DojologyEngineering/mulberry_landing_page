@@ -1,6 +1,8 @@
 import Image from 'next/image';
+import { notFound } from 'next/navigation';
 
 import LightBoxCom from '@/components/LightBox';
+import NotFoundPost from '@/components/NotFoundPost';
 
 import Gallery from '../../../../../public/img/gallery.png';
 import NewBanner from '../../../../../public/img/newsBanner.webp';
@@ -41,14 +43,13 @@ export default function Page({ params }: { params: { slug: string } }) {
         </section>
 
         <section className='flex flex-col gap-5 justify-center align-middle max-w-[780px] ml-auto mr-auto px-[20px] md:bottom-10 relative '>
-          {/* <Image
-            src={dataDetails?.img || ''}
-            alt='bannerImg'
-            priority
-            className='w-[740px]'
-          /> */}
-          {/* <CardPreview img={dataDetails?.imgDetail} /> */}
-          <LightBoxCom img={dataDetails?.imgDetail} />
+          {dataDetails ? (
+            <>
+              <LightBoxCom img={dataDetails.imgDetail} />
+            </>
+          ) : (
+            notFound()
+          )}
         </section>
       </div>
     </main>
