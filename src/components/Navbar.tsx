@@ -33,6 +33,9 @@ export default function Navbar() {
     if (!menu.subMenu) {
       return pathname === menu.value;
     } else {
+      if (pathname === menu.value) {
+        return true;
+      }
       const isSubActive = menu.subMenu.findIndex((sm) => sm.value === pathname);
       if (isSubActive !== -1) {
         return true;
@@ -135,13 +138,21 @@ export default function Navbar() {
                   onMouseEnter={() => setOpenSubmenu(m.value)}
                   onMouseLeave={() => setOpenSubmenu('')}
                 >
-                  <div>
-                    <Menu.Button
-                      className={`h-10 flex px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
+                  {/* <div> */}
+                  <Menu.Button
+                    className={`h-10 flex`}
+                    // className={`h-10 flex px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
+                  >
+                    <Link
+                      key={i}
+                      href={m.value}
+                      className={`h-full px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
                     >
                       {m.title}
-                    </Menu.Button>
-                  </div>
+                    </Link>
+                    {/* {m.title} */}
+                  </Menu.Button>
+                  {/* </div> */}
                   <Transition
                     as={Fragment}
                     show={openSubmenu === m.value}

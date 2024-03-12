@@ -49,7 +49,7 @@ export const menu = [
   { title: 'News & Events', value: '/latest-news' },
   {
     title: 'Locations',
-    value: '/center',
+    value: '/centers',
     subMenu: [
       { title: 'Mulberry Learning @ BGC', value: '/mulberry-learning-bgc' },
       {
