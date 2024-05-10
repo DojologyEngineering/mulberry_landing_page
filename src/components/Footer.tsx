@@ -39,9 +39,18 @@ export default function Footer() {
                 <div className='text-left min-w-8'>
                   <loc.icon size={20} />
                 </div>
-                <p className='text-secondary font-avenir font-light'>
-                  {loc.text}
-                </p>
+                <div className='flex flex-col'>
+                  <p className='text-secondary font-avenir font-light'>
+                    {loc.text}
+                  </p>
+                  <a
+                    href={loc.href}
+                    className='text-secondary font-avenir font-light hover:underline hover:text-primary-hight-light'
+                    target='_blank'
+                  >
+                    {loc.href}
+                  </a>
+                </div>
               </div>
             ))}
             {contactData.map((con, i) => (

@@ -3,7 +3,11 @@ import { PiMapPinLineFill } from 'react-icons/pi';
 import { TbMailFilled, TbPhoneFilled } from 'react-icons/tb';
 
 export const contactData = [
-  { icon: TbPhoneFilled, text: '+855 12 123 123', href: 'tel:+85512123123' },
+  {
+    icon: TbPhoneFilled,
+    text: '+85578 553 778 / +85516 509 278',
+    href: 'tel:+85578 553 778 / +85516 509 278',
+  },
   { icon: TbMailFilled, text: 'test@gmail.com', href: 'mailto:test@gmail.com' },
 ];
 
@@ -34,6 +38,7 @@ export const menu = [
       { title: 'Mulberry Learning Credo', value: '/about' },
       { title: 'Center Enviroment', value: '/centers' },
       { title: 'Careers', value: '/careers' },
+      { title: 'Our Campus in Cambodia', value: '/ourCampus' },
     ],
   },
   {
@@ -64,11 +69,14 @@ export const menu = [
 export const location = [
   {
     icon: PiMapPinLineFill,
-    text: 'Mulberry Learning @ BGC 7/F, GSC Corporate Tower, Triangle Drive, Bonifacio Global City, Taguig City, Metro Manila',
+    text: 'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
+    href: 'https://maps.app.goo.gl/63c9WtJHULsmnZ289?g_st=ic',
   },
+
   {
     icon: PiMapPinLineFill,
-    text: 'Mulberry Learning @ Greenhills 297 Connecticut St., Greenhills East, Mandaluyong City, Metro Manila',
+    text: 'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
+    href: 'https://maps.app.goo.gl/63c9WtJHULsmnZ289?g_st=ic',
   },
 ];
 

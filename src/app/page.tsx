@@ -1,20 +1,12 @@
-import { Background, Parallax } from 'react-parallax';
-import { ParallaxBanner } from 'react-scroll-parallax';
-
 import Image from 'next/image';
 
 import HomeCard from '@/components/HomeCard';
 import HomeImageSlider from '@/components/HomeImageSlider';
-import { HomePreview } from '@/components/ImagePreview';
 import LocationCard from '@/components/LocationCard';
-import ParallelImage from '@/components/ParallelImage';
 
-import { location } from '@/utils/contact-util';
 import { centerHighlight, homeBlog, learnEdge } from '@/utils/home-util';
 
 import ImageParallax from '../components/ImageParallax';
-import children1 from '/public/img/children.jpeg';
-import profilePic from '/public/img/curve.webp';
 import partner2 from '/public/img/partner1.webp';
 import partner1 from '/public/img/partner2.webp';
 
