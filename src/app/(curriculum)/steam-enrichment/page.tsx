@@ -11,9 +11,9 @@ import { RiComputerLine } from 'react-icons/ri';
 
 import ImageBanner from '@/components/ImageBanner';
 
-import SteamBanner from '../../../../public/img/SteamBanner.webp';
-import SteamBannerReponsive from '../../../../public/img/SteamBannerReponsive.webp';
+// import SteamBanner from '../../../../public/img/SteamBannerReponsive.webp';
 import Gallery from '../../../../public/img/gallery.png';
+import SteamBanner from '../../../../public/img/newImg/DSC00654.jpg';
 import { AwardWinning } from '../habits-of-mind/page';
 
 const textCover1 = 'Preparing For The Future';
@@ -108,7 +108,7 @@ function SteamEnrichment() {
           textCover1={textCover1}
           textCover2={textCover2}
           img={SteamBanner}
-          imgReponsive={SteamBannerReponsive}
+          imgReponsive={SteamBanner}
         />
 
         <Image
@@ -136,12 +136,12 @@ function SteamEnrichment() {
               </h3>
 
               <div className='flex flex-col'>
-                {headData.desArr.map((data,index) => (
-                 <div key={index}>
-                   <p className=' text-base font-avenir font-light py-3'>
-                    {data.des}
-                  </p>
-                 </div>
+                {headData.desArr.map((data, index) => (
+                  <div key={index}>
+                    <p className=' text-base font-avenir font-light py-3'>
+                      {data.des}
+                    </p>
+                  </div>
                 ))}
               </div>
             </div>
@@ -186,8 +186,11 @@ function SteamEnrichment() {
                 {footData.des}
               </p>
 
-              {footData.desArr.map((data,index) => (
-                <div className='flex flex-row align-middle justify-center gap-5 pt-10' key={index}>
+              {footData.desArr.map((data, index) => (
+                <div
+                  className='flex flex-row align-middle justify-center gap-5 pt-10'
+                  key={index}
+                >
                   <span className=''>
                     {
                       <data.icon

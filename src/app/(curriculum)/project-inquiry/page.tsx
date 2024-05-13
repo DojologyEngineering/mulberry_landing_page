@@ -9,9 +9,9 @@ import ImageBanner from '@/components/ImageBanner';
 
 import GirlDiscuss from '../../../../public/img/GirlDiscuss.webp';
 import GirlMagnifier from '../../../../public/img/GirlMagnifier.webp';
-import ProjectInquiryBanner from '../../../../public/img/ProjectInquiryBanner.webp';
-import ProjectInquiryBannerReponsive from '../../../../public/img/ProjectInquiryBannerReponsive.webp';
 import Gallery from '../../../../public/img/gallery.png';
+import ProjectInquiryBanner from '../../../../public/img/newImg/DSC09939-Edit.jpg';
+// import ProjectInquiryBanner from '../../../../public/newimg/DSC09939-Edit.webp';
 import { AwardWinning } from '../habits-of-mind/page';
 
 const textCover1 = 'Reggio-Inspired';
@@ -66,7 +66,7 @@ const bodyData = {
 
 const footData = {
   headFoot: 'Our Reggio-Inspired Project Inquiry™ Program',
-  img: GirlDiscuss,
+  img: ProjectInquiryBanner,
   desArr: [
     {
       des: 'Unlike regular project work, our Reggio-Inspired Project Inquiry™ is initiated and led by preschoolers, while teachers act as guides and facilitators. Instead of being seen as the object of instruction, kids are viewed as active participants and the Project Inquiry process serves as an “infrastructure” for children to observe, experiment and unravel important concepts.',
@@ -124,7 +124,7 @@ function ProjectInquiry() {
           textCover1={textCover1}
           textCover2={textCover2}
           img={ProjectInquiryBanner}
-          imgReponsive={ProjectInquiryBannerReponsive}
+          imgReponsive={ProjectInquiryBanner}
         />
 
         <Image
@@ -287,7 +287,7 @@ function ProjectInquiry() {
                   src={footData.img}
                   alt='logo'
                   priority
-                  className='w-full h-auto relative'
+                  className='w-[600px] h-auto relative'
                 />
               </div>
               <div className='flex flex-col mt-16'>

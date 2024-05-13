@@ -12,7 +12,7 @@ import Kids from '../../../../public/img/Kids.webp';
 import footerAbout1 from '../../../../public/img/footerAbout1.jpg';
 import footerAbout2 from '../../../../public/img/footerAbout2.jpg';
 import Gallery from '../../../../public/img/gallery.png';
-import HabitsOfMineBanner from '../../../../public/newimg/DSC02826.jpg';
+import HabitsOfMineBanner from '../../../../public/img/newImg/DSC02826.jpg';
 
 export const textCover1 = 'Intelligent Thinking';
 

@@ -3,7 +3,7 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 
 interface Iprops {
-  textCover1: string;
+  textCover1?: string;
   textCover2?: string;
   img: StaticImageData;
   imgReponsive: StaticImageData;

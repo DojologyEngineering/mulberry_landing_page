@@ -1,12 +1,19 @@
 import Image from 'next/image';
 import Link from 'next/link';
 
+import ImageBanner from '@/components/ImageBanner';
+
+import {
+  BodyContent,
+  FootContent,
+  HeadContent,
+  Links,
+  textCover,
+} from '@/utils/about-util';
 import { contactData } from '@/utils/data-util';
 
-import CareerBanner from '../../../../public/img/CareerBanner.webp';
-
 import Gallery from '../../../../public/img/gallery.png';
-import { BodyContent, FootContent, HeadContent, Links, textCover } from '@/utils/about-util';
+import CareerBanner from '../../../../public/img/newImg/DSC02077.jpg';
 
 function Careers() {
   const contact = contactData.find((item) => item.text === 'test@gmail.com');
@@ -14,12 +21,18 @@ function Careers() {
     <main>
       <div className='flex justify-center align-middle flex-col'>
         {/* <div className='sm:h-[350px] h-[150px] relative'> */}
-        <div className='relative flex justify-center items-center'>
+        {/* <div className='relative flex justify-center items-center'>
           <Image src={CareerBanner} alt='logo' priority className='w-full' />
           <span className='absolute sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start'>
             {textCover}
           </span>
-        </div>
+        </div> */}
+        <ImageBanner
+          // textCover1={textCover1}
+          // textCover2={textCover2}
+          img={CareerBanner}
+          imgReponsive={CareerBanner}
+        />
 
         {/* </div> */}
         {/* <div className='relative sm:h-[140px] h-[30px] w-100% sm:bottom-16 bottom-4'> */}
