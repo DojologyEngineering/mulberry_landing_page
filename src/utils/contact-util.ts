@@ -1,5 +1,5 @@
-import schoolLocatio1 from '/public/img/newImg/DSC00300-Edit.jpg';
-import schoolLocatio2 from '/public/img/newImg/DSC00348-Edit.jpg';
+import schoolLocatio1 from '/public/img/new-img/DSC00300-Edit.jpg';
+import schoolLocatio2 from '/public/img/new-img/DSC00348-Edit.jpg';
 
 export const help =
   'Choosing the right educational childcare and preschool for your family is a big decision. We know you have questions, so we have compiled our most frequently asked questions below.';

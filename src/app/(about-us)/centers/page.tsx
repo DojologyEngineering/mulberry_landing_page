@@ -11,7 +11,7 @@ import {
 } from '@/utils/about-util';
 
 import Gallery from '../../../../public/img/gallery.png';
-import LearningCentersMedia from '../../../../public/img/newImg/DSC00300-Edit.jpg';
+import LearningCentersMedia from '../../../../public/img/new-img/DSC00300-Edit.jpg';
 
 function Centers() {
   return (

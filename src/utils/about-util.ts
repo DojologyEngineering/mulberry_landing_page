@@ -9,8 +9,8 @@ import ReadingImg from '../../public/img/Centre-Reading-Nook.webp';
 import GrowthModelImg from '../../public/img/MBR-TGM-Model_V6-01.webp';
 import footerAbout1 from '../../public/img/footerAbout1.jpg';
 import footerAbout2 from '../../public/img/footerAbout2.jpg';
-import TeacherHighFive from '../../public/img/newImg/DSC02077.jpg';
-import TeacherTech from '../../public/img/newImg/DSC02717.jpg';
+import TeacherHighFive from '../../public/img/new-img/DSC02077.jpg';
+import TeacherTech from '../../public/img/new-img/DSC02717.jpg';
 
 export const AboutUsData = {
   textHead:

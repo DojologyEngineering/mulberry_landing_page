@@ -13,7 +13,7 @@ import ImageBanner from '@/components/ImageBanner';
 
 // import SteamBanner from '../../../../public/img/SteamBannerReponsive.webp';
 import Gallery from '../../../../public/img/gallery.png';
-import SteamBanner from '../../../../public/img/newImg/DSC00654.jpg';
+import SteamBanner from '../../../../public/img/new-img/DSC00654.jpg';
 import { AwardWinning } from '../habits-of-mind/page';
 
 const textCover1 = 'Preparing For The Future';

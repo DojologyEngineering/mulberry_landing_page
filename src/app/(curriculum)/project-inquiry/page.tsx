@@ -10,7 +10,7 @@ import ImageBanner from '@/components/ImageBanner';
 import GirlDiscuss from '../../../../public/img/GirlDiscuss.webp';
 import GirlMagnifier from '../../../../public/img/GirlMagnifier.webp';
 import Gallery from '../../../../public/img/gallery.png';
-import ProjectInquiryBanner from '../../../../public/img/newImg/DSC09939-Edit.jpg';
+import ProjectInquiryBanner from '../../../../public/img/new-img/DSC09939-Edit.jpg';
 // import ProjectInquiryBanner from '../../../../public/newimg/DSC09939-Edit.webp';
 import { AwardWinning } from '../habits-of-mind/page';
 

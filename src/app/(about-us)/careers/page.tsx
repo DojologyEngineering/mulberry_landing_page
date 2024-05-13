@@ -13,7 +13,7 @@ import {
 import { contactData } from '@/utils/data-util';
 
 import Gallery from '../../../../public/img/gallery.png';
-import CareerBanner from '../../../../public/img/newImg/DSC02077.jpg';
+import CareerBanner from '../../../../public/img/new-img/DSC02077.jpg';
 
 function Careers() {
   const contact = contactData.find((item) => item.text === 'test@gmail.com');

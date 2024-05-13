@@ -5,8 +5,8 @@ import { TbUsersGroup } from 'react-icons/tb';
 import media1 from '/public/img/media1.webp';
 import media2 from '/public/img/media2.webp';
 import media from '/public/img/media.webp';
-import center1 from '/public/img/newImg/DSC00300-Edit.jpg';
-import center2 from '/public/img/newImg/DSC00348-Edit.jpg';
+import center1 from '/public/img/new-img/DSC00300-Edit.jpg';
+import center2 from '/public/img/new-img/DSC00348-Edit.jpg';
 
 export const homeBlog = [
   {
@@ -72,32 +72,32 @@ export const centerHighlight = [
 ];
 export const images = [
   {
-    original: '/img/newImg/DSC00285-Edit.jpg',
-    thumbnail: '/img/newImg/DSC00285-Edit.jpg',
+    original: '/img/new-img/DSC00285-Edit.jpg',
+    thumbnail: '/img/new-img/DSC00285-Edit.jpg',
   },
   {
-    original: '/img/newImg/DSC00292-Edit.jpg',
-    thumbnail: '/img/newImg/DSC00292-Edit.jpg',
+    original: '/img/new-img/DSC00292-Edit.jpg',
+    thumbnail: '/img/new-img/DSC00292-Edit.jpg',
   },
   {
-    original: '/img/newImg/DSC00300-Edit.jpg',
-    thumbnail: '/img/newImg/DSC00300-Edit.jpg',
+    original: '/img/new-img/DSC00300-Edit.jpg',
+    thumbnail: '/img/new-img/DSC00300-Edit.jpg',
   },
   {
-    original: '/img/newImg/DSC00320-Edit.jpg',
-    thumbnail: '/img/newImg/DSC00320-Edit.jpg',
+    original: '/img/new-img/DSC00320-Edit.jpg',
+    thumbnail: '/img/new-img/DSC00320-Edit.jpg',
   },
   {
-    original: '/img/newImg/DSC00348-Edit.jpg',
-    thumbnail: '/img/newImg/DSC00348-Edit.jpg',
+    original: '/img/new-img/DSC00348-Edit.jpg',
+    thumbnail: '/img/new-img/DSC00348-Edit.jpg',
   },
   {
-    original: '/img/newImg/DSC09921-Edit.jpg',
-    thumbnail: '/img/newImg/DSC09921-Edit.jpg',
+    original: '/img/new-img/DSC09921-Edit.jpg',
+    thumbnail: '/img/new-img/DSC09921-Edit.jpg',
   },
   {
-    original: '/img/newImg/DSC09919-Edit.jpg',
-    thumbnail: '/img/newImg/DSC09919-Edit.jpg',
+    original: '/img/new-img/DSC09919-Edit.jpg',
+    thumbnail: '/img/new-img/DSC09919-Edit.jpg',
   },
 ];
 export const mediumScreen = [

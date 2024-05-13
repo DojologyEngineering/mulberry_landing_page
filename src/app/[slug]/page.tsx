@@ -14,7 +14,7 @@ import Map from '@/components/Map';
 import { bookTour, locations, promote } from '@/utils/location-util';
 
 import profilePic from '/public/img/curve.webp';
-import center from '/public/img/newImg/DSC00300-Edit.jpg';
+import center from '/public/img/new-img/DSC00300-Edit.jpg';
 
 export const dynamicParams = false;
 export async function generateStaticParams() {

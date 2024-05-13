@@ -31,7 +31,7 @@ export default function ImageParallax() {
     <div>
       <Parallax
         strength={strength}
-        bgImage='/img/newImg/DSC05776.jpg'
+        bgImage='/img/new-img/DSC05776.jpg'
         bgImageStyle={{ height: 'auto', width: '100%' }}
       >
         <div className='bg-black bg-opacity-50'>

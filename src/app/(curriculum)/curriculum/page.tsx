@@ -10,7 +10,7 @@ import FourthCurriculum from '../../../../public/img/FourthCurriculum.webp';
 import SecondCurriculum from '../../../../public/img/SecondCurriculum.webp';
 import ThirdCurriculum from '../../../../public/img/ThirdCurriculum.webp';
 import Gallery from '../../../../public/img/gallery.png';
-import CurriculumBanner from '../../../../public/img/newImg/DSC05803.jpg';
+import CurriculumBanner from '../../../../public/img/new-img/DSC05803.jpg';
 
 const textCover = 'Our Programs';
 
