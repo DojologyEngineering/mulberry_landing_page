@@ -6,10 +6,10 @@ import { PiTelegramLogo } from 'react-icons/pi';
 
 import ImageBanner from '@/components/ImageBanner';
 
-import HabitsOfMineBanner from '../../../../public/img/HabitsOfMineBanner.webp';
 import HabitsOfMineBannerReposive from '../../../../public/img/HabitsOfMineBannerReposive.webp';
 import Kid from '../../../../public/img/Kid.webp';
 import Kids from '../../../../public/img/Kids.webp';
+import HabitsOfMineBanner from '../../../../public/img/children.jpg';
 import footerAbout1 from '../../../../public/img/footerAbout1.jpg';
 import footerAbout2 from '../../../../public/img/footerAbout2.jpg';
 import Gallery from '../../../../public/img/gallery.png';
@@ -300,7 +300,7 @@ function HabitOfMine() {
             ))}
           </div>
           <div className='grid sm:grid-cols-2 grid-cols-1 gap-y-10 lg:gap-x-[20%] gap-x-[10%]  align-middle max-w-[1500px] lg:px-[100px] px-[20px] justify-center'>
-            {footer.footDes.map((item,index) => (
+            {footer.footDes.map((item, index) => (
               <div className='flex flex-col gap-5' key={index}>
                 <div>
                   <p className='text-[20px] font-raleway font-bold'>
