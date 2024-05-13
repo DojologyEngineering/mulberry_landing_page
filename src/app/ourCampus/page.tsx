@@ -1,0 +1,105 @@
+import React from 'react';
+
+import Image from 'next/image';
+
+import {
+  Aware,
+  Learning,
+  Over,
+  Parent,
+  Spaces,
+  awards,
+  imagePaths,
+  location,
+  mapLocatio,
+  visit,
+} from '@/utils/campus-util';
+
+function page() {
+  return (
+    <div className=''>
+      <div className='bg-primary-light w-full pl-4 md:pl-0'>
+        <h1 className='md:text-3xl text-xl  text-white font-avenir py-10 container mx-auto '>
+          Our Campus in Cambodia
+        </h1>
+      </div>
+      <div className=' flex justify-center '>
+        <div className='flex items-center flex-col mt-4'>
+          <h1 className='md:text-4xl text-xl font-bold text-black font-avenir'>
+            <span className='text-primary-hight-light'>An Award Winning</span>{' '}
+            <span className='text-primary-light'>Brand</span>
+          </h1>
+          <div className='w-20 h-[2px] bg-grey-main mt-4'></div>
+        </div>
+      </div>
+
+      <div className='flex justify-center mt-3 px-4 md:px-0 text-center'>
+        <h1 className='md:text-xl text-xl font-bold text-black font-avenir italic'>
+          <span className='text-primary-hight-light'> ‘Unique Boutique’ </span>
+          Singaporean Franchise Preschool Opens its doors in Pheng Huot, Chbar
+          Ampov
+        </h1>
+      </div>
+      <div className='mt-4 mb-4 container mx-auto px-4 md:px-0'>
+        <p className='font-avenir font-light text-center'>{Learning}</p>
+      </div>
+      <div className='mt-4 mb-4 container mx-auto px-4 md:px-0'>
+        <p className='font-avenir font-light text-center'>{Over}</p>
+      </div>
+      <div className='mt-4 mb-4 container mx-auto px-4 md:px-0'>
+        <p className='font-avenir font-light text-center'>{Spaces}</p>
+      </div>
+      <div className='mt-4 mb-4 container mx-auto px-4 md:px-0'>
+        <p className='font-avenir font-light text-center'>{Parent}</p>
+      </div>
+
+      <div className='flex justify-center'>
+        <h1 className='md:text-4xl text-xl font-bold text-primary-hight-light font-avenir'>
+          Awards
+        </h1>
+      </div>
+      <div className='flex flex-col items-center font-avenir px-4 md:px-0'>
+        {awards.map((award, index) => (
+          <div key={index} className='flex flex-row justify-start font-light '>
+            <span className='mr-2'>
+              &bull;{' '}
+              {/* Use a span with bullet character instead of <li> for custom bullet */}
+            </span>
+            <p className='ml-2'>
+              {award.title}
+              <span className='ml-2'> {award.year}</span>
+            </p>
+            {/* {award.year && <span>, {award.year}</span>} */}
+          </div>
+        ))}
+      </div>
+
+      <div className='grid grid-cols-1 md:grid-cols-3 justify-items-center container mx-auto'>
+        {imagePaths.map((imagePath, index) => (
+          <div key={index}>
+            <Image
+              src={imagePath}
+              alt={`Image ${index}`}
+              width={150}
+              height={150}
+            />
+          </div>
+        ))}
+      </div>
+      <div className='flex justify-center text-center mt-5 container mx-auto px-4 md:px-0'>
+        <p className='font-avenir  font-light'>{location}</p>
+      </div>
+      <div className='flex justify-center text-center mt-5 container mx-auto mb-8 md:flex-row flex-col px-4 md:px-0'>
+        <p className='font-avenir font-light'>{visit}</p>
+        <a
+          href={mapLocatio}
+          className='font-avenir font-light ml-1 text-primary-hight-light hover:underline hover:decoration-black'
+        >
+          {mapLocatio}
+        </a>
+      </div>
+    </div>
+  );
+}
+
+export default page;

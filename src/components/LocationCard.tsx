@@ -20,6 +20,8 @@ import { useRouter } from 'next/navigation';
 
 // LocationCard.tsx
 
+// LocationCard.tsx
+
 interface LocationCardProps {
   id: number;
   logo: StaticImageData | string;
