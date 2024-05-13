@@ -3,7 +3,7 @@ import React from 'react';
 import Image, { StaticImageData } from 'next/image';
 
 interface Iprops {
-  textCover1: string;
+  textCover1?: string;
   textCover2?: string;
   img: StaticImageData;
   imgReponsive: StaticImageData;
@@ -16,7 +16,7 @@ function ImageBanner({ img, textCover1, imgReponsive, textCover2 }: Iprops) {
         src={img}
         alt='logo'
         priority
-        className='w-full h-[140px] sm:h-auto sm:block hidden object-cover'
+        className='w-full h-[140px] sm:h-[250px] sm:block hidden object-cover'
       />
       <Image
         src={imgReponsive}

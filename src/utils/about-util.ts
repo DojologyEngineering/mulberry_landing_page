@@ -1,8 +1,3 @@
-import footerAbout1 from '../../public/img/footerAbout1.jpg';
-import footerAbout2 from '../../public/img/footerAbout2.jpg';
-import TeacherHighFive from '../../public/img/FB-teacher-high5.webp';
-import GrowthModelImg from '../../public/img/MBR-TGM-Model_V6-01.webp';
-import TeacherTech from '../../public/img/fb-teacher-teach-words.webp';
 import ArtImg from '../../public/img/Centre-Art-Atelier.webp';
 import BusyImg from '../../public/img/Centre-Busy-Baker.webp';
 import ConstructionImg from '../../public/img/Centre-Construction-Piazza.webp';
@@ -11,53 +6,58 @@ import FingerImg from '../../public/img/Centre-Finger-Gym.webp';
 import ImaginaryImg from '../../public/img/Centre-Imaginary-Playscape.webp';
 import LightImg from '../../public/img/Centre-Light-Atelier.webp';
 import ReadingImg from '../../public/img/Centre-Reading-Nook.webp';
+import GrowthModelImg from '../../public/img/MBR-TGM-Model_V6-01.webp';
+import footerAbout1 from '../../public/img/footerAbout1.jpg';
+import footerAbout2 from '../../public/img/footerAbout2.jpg';
+import TeacherHighFive from '../../public/img/newImg/DSC02077.jpg';
+import TeacherTech from '../../public/img/newImg/DSC02717.jpg';
+
 export const AboutUsData = {
-    textHead:
-      "Mulberry Learning Philippines is a proud partner of Singapore's Award-Winning Preschool Brand - Mulberry Learning.",
-    paragraph:
-      'Mulberry Learning started out with the dream of creating well-rounded children with imaginative young minds, positive attitudes and strength of character. Over the years, our unique pedagogy has touched the lives of many children and parents. We are recognized for our vibrant Reggio Emilia-inspired learning spaces, comprehensive bilingual programs, holistic development outcomes, and strengths in character development via Habits of Mind™. We have won multiple awards in Singapore, and we are the ﬁrst ever preschool network in the world to be certiﬁed by The Institute for Habits of Mind from the USA.',
-    awards: 'Awards',
-    awardLists: [
-      {
-        textList:
-          'Winner of the Singapore Prestige Brand Award (Established Brands), 2020 / 21',
-      },
-      {
-        textList: 'Best Early Learning Program (aged 0 – 6 years old), 2021',
-      },
-      {
-        textList: 'Best Holistic Curriculum, 2019 to 2020',
-      },
-      {
-        textList: 'Best Reggio Emilia Preschool, 2017 to 2018',
-      },
-      {
-        textList: 'Best Holistic Learning Programs, 2016 – 2019',
-      },
-      {
-        textList: 'Singapore Preschool Accreditation Framework (SPARK)',
-      },
-      {
-        textList: 'Healthy Preschool Accreditation (HPS)',
-      },
-      {
-        textList:
-          'World’s first and only preschool network certified by the USA for the Habits of Mind™',
-      },
-    ],
-  };
-  
- export const ImgFooter = [
-    { 
-      img: footerAbout1,
+  textHead:
+    "Mulberry Learning Philippines is a proud partner of Singapore's Award-Winning Preschool Brand - Mulberry Learning.",
+  paragraph:
+    'Mulberry Learning started out with the dream of creating well-rounded children with imaginative young minds, positive attitudes and strength of character. Over the years, our unique pedagogy has touched the lives of many children and parents. We are recognized for our vibrant Reggio Emilia-inspired learning spaces, comprehensive bilingual programs, holistic development outcomes, and strengths in character development via Habits of Mind™. We have won multiple awards in Singapore, and we are the ﬁrst ever preschool network in the world to be certiﬁed by The Institute for Habits of Mind from the USA.',
+  awards: 'Awards',
+  awardLists: [
+    {
+      textList:
+        'Winner of the Singapore Prestige Brand Award (Established Brands), 2020 / 21',
     },
     {
-      img: footerAbout2,
+      textList: 'Best Early Learning Program (aged 0 – 6 years old), 2021',
     },
-  ];
+    {
+      textList: 'Best Holistic Curriculum, 2019 to 2020',
+    },
+    {
+      textList: 'Best Reggio Emilia Preschool, 2017 to 2018',
+    },
+    {
+      textList: 'Best Holistic Learning Programs, 2016 – 2019',
+    },
+    {
+      textList: 'Singapore Preschool Accreditation Framework (SPARK)',
+    },
+    {
+      textList: 'Healthy Preschool Accreditation (HPS)',
+    },
+    {
+      textList:
+        'World’s first and only preschool network certified by the USA for the Habits of Mind™',
+    },
+  ],
+};
 
+export const ImgFooter = [
+  {
+    img: footerAbout1,
+  },
+  {
+    img: footerAbout2,
+  },
+];
 
-  export const textCover = 'Careers at Mulberry Learning';
+export const textCover = 'Careers at Mulberry Learning';
 
 export const HeadContent = {
   textHead: 'Learning is Engaging, Teaching is Vibrant, Respect for All!',

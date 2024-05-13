@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import ClassroomGridCenter from '@/components/ClassroomGridCenter';
+import ImageBanner from '@/components/ImageBanner';
 
 import {
   BodyAbout,
@@ -10,14 +11,14 @@ import {
 } from '@/utils/about-util';
 
 import Gallery from '../../../../public/img/gallery.png';
-import LearningCentersMedia from '../../../../public/img/learningCentersMedia.webp';
+import LearningCentersMedia from '../../../../public/img/newImg/DSC00300-Edit.jpg';
 
 function Centers() {
   return (
     <main className='pb-10'>
       <div className='flex justify-center align-middle flex-col'>
         {/* <div className='h-[157px] w-100% relative'> */}
-        <div className='relative'>
+        {/* <div className='relative'>
           <Image
             src={LearningCentersMedia}
             alt='logo'
@@ -27,7 +28,13 @@ function Centers() {
           <span className='absolute whitespace-nowrap top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2  bg-primary-main text-white font-raleway font-bold px-5 text-[18px] md:text-[26px] xl:text-[40px]  rounded'>
             {textCoverCenters}
           </span>
-        </div>
+        </div> */}
+        <ImageBanner
+          // textCover1={textCover1}
+          // textCover2={textCover2}
+          img={LearningCentersMedia}
+          imgReponsive={LearningCentersMedia}
+        />
 
         {/* </div> */}
         <Image

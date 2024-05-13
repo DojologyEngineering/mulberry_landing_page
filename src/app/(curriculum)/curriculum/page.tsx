@@ -5,12 +5,12 @@ import Link from 'next/link';
 
 import { FaStar } from 'react-icons/fa';
 
-import CurriculumBanner from '../../../../public/img/CurriculumBanner.webp';
 import FirstCurriculum from '../../../../public/img/FirstCurriculum.webp';
 import FourthCurriculum from '../../../../public/img/FourthCurriculum.webp';
 import SecondCurriculum from '../../../../public/img/SecondCurriculum.webp';
 import ThirdCurriculum from '../../../../public/img/ThirdCurriculum.webp';
 import Gallery from '../../../../public/img/gallery.png';
+import CurriculumBanner from '../../../../public/img/newImg/DSC05803.jpg';
 
 const textCover = 'Our Programs';
 

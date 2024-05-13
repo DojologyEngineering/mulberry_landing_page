@@ -1,11 +1,12 @@
-import schoolLocation from '/public/img/school.jpg';
+import schoolLocatio1 from '/public/img/newImg/DSC00300-Edit.jpg';
+import schoolLocatio2 from '/public/img/newImg/DSC00348-Edit.jpg';
 
 export const help =
   'Choosing the right educational childcare and preschool for your family is a big decision. We know you have questions, so we have compiled our most frequently asked questions below.';
 export const location = [
   {
     id: 0,
-    logo: schoolLocation,
+    logo: schoolLocatio1,
     nameLocation: 'Mulberry Learning @ BGC',
     locationDetail:
       '7/F, GSC Corporate Tower, Triangle Drive, Bonifacio Global City, Taguig City, 1630 Metro Manila',
@@ -13,20 +14,20 @@ export const location = [
   },
   {
     id: 1,
-    logo: schoolLocation,
+    logo: schoolLocatio2,
     nameLocation: 'Mulberry Learning @ Greenhills',
     locationDetail:
       '297 Connecticut St., Greenhills East, Mandaluyong City, Metro Manila',
     value: '',
   },
-  {
-    id: 2,
-    logo: schoolLocation,
-    nameLocation: 'Mulberry Learning @ Greenhills',
-    locationDetail:
-      '297 Connecticut St., Greenhills East, Mandaluyong City, Metro Manila',
-    value: '',
-  },
+  // {
+  //   id: 2,
+  //   logo: schoolLocation,
+  //   nameLocation: 'Mulberry Learning @ Greenhills',
+  //   locationDetail:
+  //     '297 Connecticut St., Greenhills East, Mandaluyong City, Metro Manila',
+  //   value: '',
+  // },
 ];
 export const parentsData = [
   {
