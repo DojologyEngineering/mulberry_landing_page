@@ -2,22 +2,22 @@ import { GrCertificate } from 'react-icons/gr';
 import { RiSchoolLine } from 'react-icons/ri';
 import { TbUsersGroup } from 'react-icons/tb';
 
-import center1 from '/public/img/center1.webp';
-import center2 from '/public/img/center2.webp';
 import media1 from '/public/img/media1.webp';
 import media2 from '/public/img/media2.webp';
 import media from '/public/img/media.webp';
+import center1 from '/public/img/new-img/DSC00300-Edit.jpg';
+import center2 from '/public/img/new-img/DSC00348-Edit.jpg';
 
 export const homeBlog = [
   {
     id: 0,
-    img: media,
+    img: media1,
     title: 'Mulberry Learning Annual Teachers` Training 2023',
     value: '',
   },
   {
     id: 1,
-    img: media1,
+    img: media2,
     title: 'Importance of Good Nutrition For Preschoolers',
     value: '',
   },
@@ -72,64 +72,32 @@ export const centerHighlight = [
 ];
 export const images = [
   {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+    original: '/img/new-img/DSC00285-Edit.jpg',
+    thumbnail: '/img/new-img/DSC00285-Edit.jpg',
   },
   {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
+    original: '/img/new-img/DSC00292-Edit.jpg',
+    thumbnail: '/img/new-img/DSC00292-Edit.jpg',
   },
   {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+    original: '/img/new-img/DSC00300-Edit.jpg',
+    thumbnail: '/img/new-img/DSC00300-Edit.jpg',
   },
   {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
+    original: '/img/new-img/DSC00320-Edit.jpg',
+    thumbnail: '/img/new-img/DSC00320-Edit.jpg',
   },
   {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
+    original: '/img/new-img/DSC00348-Edit.jpg',
+    thumbnail: '/img/new-img/DSC00348-Edit.jpg',
   },
   {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+    original: '/img/new-img/DSC09921-Edit.jpg',
+    thumbnail: '/img/new-img/DSC09921-Edit.jpg',
   },
   {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1018/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1018/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1015/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1015/250/150/',
-  },
-  {
-    original: 'https://picsum.photos/id/1019/1000/600/',
-    thumbnail: 'https://picsum.photos/id/1019/250/150/',
+    original: '/img/new-img/DSC09919-Edit.jpg',
+    thumbnail: '/img/new-img/DSC09919-Edit.jpg',
   },
 ];
 export const mediumScreen = [

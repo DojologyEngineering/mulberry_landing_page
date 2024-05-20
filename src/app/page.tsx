@@ -15,7 +15,7 @@ export default function Home() {
     <div>
       <HomeImageSlider />
       <div className='px-4 '>
-        <div className='container mx-auto flex justify-center flex-col items-center'>
+        <div className='container flex flex-col items-center justify-center mx-auto'>
           <p className='md:text-[40px] text-[24px] mt-10 font-raleway font-bold text-primary-main'>
             WHAT&apos;S NEW
           </p>
@@ -32,28 +32,28 @@ export default function Home() {
             />
           ))}
         </div>
-        <div className='container mx-auto flex justify-center flex-col items-center'>
+        <div className='container flex flex-col items-center justify-center mx-auto'>
           <p className='md:text-[40px] text-[24px]  font-raleway font-bold text-primary-main'>
             Partner Awards
           </p>
           <div className='w-[200px] h-[2px] bg-grey-primary mt-5'></div>
         </div>
         <div className='container mx-auto'>
-          <section className='flex flex-col md:flex-row mt-10'>
+          <section className='flex flex-col mt-10 md:flex-row'>
             <Image src={partner1} alt='partner-logo' className='w-full' />
             <Image src={partner2} alt='partner-logo' className='w-full' />
           </section>
         </div>
       </div>
       <ImageParallax />
-      <div className='flex justify-center flex-col items-center bg-primary-hight-light md:h-40 h-24'>
+      <div className='flex flex-col items-center justify-center h-24 bg-primary-hight-light md:h-40'>
         <p className='md:text-[40px] text-[23px] font-raleway font-bold text-white'>
           The Mulberry Learning Edge
         </p>
         <div className='w-[200px] h-[2px] bg-grey-primary mt-5'></div>
       </div>
-      <div className='container mx-auto px-4'>
-        <section className='md:flex block items-center justify-around mt-10'>
+      <div className='container px-4 mx-auto'>
+        <section className='items-center justify-around block mt-10 md:flex'>
           {learnEdge.map((i) => {
             return (
               <div key={i.id}>
@@ -62,7 +62,7 @@ export default function Home() {
                   <p className='text-[26px] font-raleway font-bold'>
                     {i.title}
                   </p>
-                  <div className='md:px-10 px-0'>
+                  <div className='px-0 md:px-10'>
                     <p className='text-[16px] md:text-[20px] font-avenir font-light text-center'>
                       {i.desc}
                     </p>
@@ -76,13 +76,13 @@ export default function Home() {
           })}
         </section>
       </div>
-      <div className=' flex justify-center flex-col items-center md:h-40 h-24'>
+      <div className='flex flex-col items-center justify-center h-24 md:h-40'>
         <p className='md:text-[40px] text-[23px] font-raleway font-bold text-primary-main'>
           Center Highlights
         </p>
         <div className='w-[200px] h-[2px] bg-grey-primary mt-5'></div>
       </div>
-      <div className='container mx-auto mt-2 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 gap-4 px-4 justify-stretch'>
+      <div className='container grid grid-cols-1 gap-4 px-4 mx-auto mt-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 justify-stretch'>
         {centerHighlight.map((location) => (
           <LocationCard
             url={location.value}

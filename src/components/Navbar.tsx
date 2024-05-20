@@ -1,6 +1,6 @@
 'use client';
 
-import { Fragment, useEffect, useState } from 'react';
+import { Fragment, memo, useEffect, useState } from 'react';
 
 import Image from 'next/image';
 import Link from 'next/link';
@@ -17,14 +17,14 @@ import { contactData, menu, socialMedias } from '@/utils/data-util';
 
 type menuType = (typeof menu)[0];
 
-export default function Navbar() {
+function Navbar() {
   const pathname = usePathname();
   // console.log('pathname:', pathname);
   const navigate = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [prevScrollpos, setPrevScrollpos] = useState(0);
-  const [openSubmenu, setOpenSubmenu] = useState('/about');
+  const [openSubmenu, setOpenSubmenu] = useState('');
 
   // console.log('hideNav:', hideNav);
 
@@ -33,6 +33,9 @@ export default function Navbar() {
     if (!menu.subMenu) {
       return pathname === menu.value;
     } else {
+      if (pathname === menu.value) {
+        return true;
+      }
       const isSubActive = menu.subMenu.findIndex((sm) => sm.value === pathname);
       if (isSubActive !== -1) {
         return true;
@@ -99,8 +102,10 @@ export default function Navbar() {
             ))}
           </span>
           {/* end social media */}
-          <button className='flex items-center h-12 px-3 text-xl font-normal text-white transition duration-150 font-patrick bg-primary-main hover:bg-primary-hight-light'>
-            Book a School Tour <FiEdit3 className='ml-2' size={24} />
+          <button className='transition duration-150 bg-primary-main hover:bg-primary-hight-light'>
+            <span className='flex items-center h-12 px-3 text-xl font-normal text-white transition duration-150 font-patrick hover:transform hover:scale-105'>
+              Book a School Tour <FiEdit3 className='ml-2' size={24} />
+            </span>
           </button>
         </div>
       </div>
@@ -135,13 +140,18 @@ export default function Navbar() {
                   onMouseEnter={() => setOpenSubmenu(m.value)}
                   onMouseLeave={() => setOpenSubmenu('')}
                 >
-                  <div>
-                    <Menu.Button
-                      className={`h-10 flex px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
+                  <Menu.Button
+                    className={`h-10 flex`}
+                    // className={`h-10 flex px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
+                  >
+                    <Link
+                      key={i}
+                      href={m.value}
+                      className={`h-full px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
                     >
                       {m.title}
-                    </Menu.Button>
-                  </div>
+                    </Link>
+                  </Menu.Button>
                   <Transition
                     as={Fragment}
                     show={openSubmenu === m.value}
@@ -191,7 +201,6 @@ export default function Navbar() {
               href={m.value}
               className={`flex items-center justify-center h-14 border-b hover:text-primary-hight-light hover:bg-gray-50 ${isActive(m) && 'text-primary-hight-light'}`}
               onClick={() => {
-                setOpenSubmenu(m.value);
                 setOpenSubmenu('');
                 setIsOpen(false);
               }}
@@ -212,9 +221,16 @@ export default function Navbar() {
                       setOpenSubmenu('');
                     }}
                   >
-                    <span className='text-sm font-semibold font-raleway'>
+                    <Link
+                      className='text-sm font-semibold font-raleway'
+                      href={m.value}
+                      onClick={() => {
+                        setOpenSubmenu('');
+                        setIsOpen(false);
+                      }}
+                    >
                       {m.title}
-                    </span>
+                    </Link>
                     <IoChevronDown
                       className={`${open ? 'rotate-180 transform' : ''} absolute right-4 h-5 w-5`}
                     />
@@ -259,3 +275,5 @@ export default function Navbar() {
     </div>
   );
 }
+
+export default memo(Navbar);

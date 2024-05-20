@@ -12,7 +12,7 @@ import image1 from '/public/img/image1.webp';
 
 export const ImagePreview = () => {
   return (
-    <div className='container mx-auto w-full mt-10 mb-10'>
+    <div className='container w-full mx-auto mt-10 mb-10'>
       <ImageGallery
         items={images}
         infinite={false}
@@ -47,8 +47,8 @@ export const HomePreview = () => {
 
   return (
     <>
-      <div className='relative w-full'>
-        <div className='md:hidden flex'>
+      <div className='relative w-full overflow-hidden'>
+        <div className='flex md:hidden'>
           <ImageGallery
             items={smallScreen}
             infinite={true}
@@ -64,7 +64,7 @@ export const HomePreview = () => {
             }}
           />
         </div>
-        <div className='md:flex hidden'>
+        <div className='hidden md:flex'>
           <ImageGallery
             items={mediumScreen}
             additionalClass='w-full'
@@ -81,7 +81,7 @@ export const HomePreview = () => {
             }}
           />
         </div>
-        <div className='absolute mt-5 top-1/3 left-1/3 md:ml-36 ml-9 transform -translate-x-1/2 -translate-y-1/2 '>
+        <div className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 md:ml-36 ml-9 '>
           <h2
             className={`${fontSize} text-primary-hight-light font-raleway font-bold  ${
               activeSlideIndex === 0 ? 'opacity-100' : 'opacity-0'
@@ -109,7 +109,7 @@ export const HomePreview = () => {
           </div>
         </div>
 
-        <div className='absolute mt-5 top-1/3 left-1/3 md:ml-36 ml-9 transform -translate-x-1/2 -translate-y-1/2 '>
+        <div className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 md:ml-36 ml-9 '>
           <p
             className={`${fontSize} ${activeSlideIndex === 1 && 'animate-right-to-left'} text-light font-raleway font-bold ${
               activeSlideIndex === 1 ? 'opacity-100' : 'opacity-0'

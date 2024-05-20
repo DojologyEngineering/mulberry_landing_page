@@ -49,7 +49,15 @@ function Map() {
           );
         }}
       >
-        <Marker position={mapOptions.center} />
+        <Marker
+          position={mapOptions.center}
+          onClick={() => {
+            window.open(
+              'https://maps.app.goo.gl/63c9WtJHULsmnZ289?g_st=ic',
+              '_blank',
+            );
+          }}
+        />
       </GoogleMap>
       {/* </LoadScript> */}
     </div>

@@ -51,10 +51,10 @@ export const menu = [
       { title: 'S.T.E.A.M Enrichment', value: 'steam-enrichment' },
     ],
   },
-  { title: 'News & Events', value: '/news' },
+  { title: 'News & Events', value: '/latest-news' },
   {
     title: 'Locations',
-    value: '/center',
+    value: '/centers',
     subMenu: [
       // { title: 'Mulberry Learning @ BGC', value: '/mulberry-learning-bgc' },
       {

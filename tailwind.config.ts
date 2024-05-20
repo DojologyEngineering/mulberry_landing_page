@@ -61,6 +61,7 @@ const config: Config = {
         },
         purple: {
           main: '#FEE5F3',
+          light: '#C9C5EE',
         },
         footer: '#EAEAEA',
         siliver: '#C74300',
@@ -68,6 +69,9 @@ const config: Config = {
       textColor: {
         secondary: '#333333',
         light: '#FFCE04',
+      },
+      borderColor: {
+        grey: '#59595A',
       },
 
       // backgroundColor: {
