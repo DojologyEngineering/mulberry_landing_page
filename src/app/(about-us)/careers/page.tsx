@@ -16,7 +16,9 @@ import Gallery from '../../../../public/img/gallery.png';
 import CareerBanner from '../../../../public/img/new-img/DSC02077.jpg';
 
 function Careers() {
-  const contact = contactData.find((item) => item.text === 'test@gmail.com');
+  const contact = contactData.find(
+    (item) => item.text === 'admissions@mulberryinternationalpreschool.edu.kh',
+  );
   return (
     <main>
       <div className='flex justify-center align-middle flex-col'>
