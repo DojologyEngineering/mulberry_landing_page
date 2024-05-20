@@ -8,7 +8,11 @@ export const contactData = [
     text: '+85578 553 778 / +85516 509 278',
     href: 'tel:+85578 553 778 / +85516 509 278',
   },
-  { icon: TbMailFilled, text: 'test@gmail.com', href: 'mailto:test@gmail.com' },
+  {
+    icon: TbMailFilled,
+    text: 'admissions@mulberryinternationalpreschool.edu.kh',
+    href: 'mailto:admissions@mulberryinternationalpreschool.edu.kh',
+  },
 ];
 
 export const socialMedias = [
