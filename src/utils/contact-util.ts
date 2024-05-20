@@ -56,11 +56,10 @@ export const partnership = [
   },
 ];
 export const Centers = [
-  { id: 1, name: 'Mulberry Learning @ BGC', value: 'Mulberry Learning @ BGC' },
   {
     id: 2,
-    name: 'Mulberry Learning @ Greenhills',
-    value: 'Mulberry Learning @ Greenhills',
+    name: 'Mulberry Learning @ Cambodia',
+    value: 'Mulberry Learning @ Cambodia',
   },
 ];
 export const program = [

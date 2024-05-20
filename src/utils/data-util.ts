@@ -56,10 +56,10 @@ export const menu = [
     title: 'Locations',
     value: '/centers',
     subMenu: [
-      { title: 'Mulberry Learning @ BGC', value: '/mulberry-learning-bgc' },
+      // { title: 'Mulberry Learning @ BGC', value: '/mulberry-learning-bgc' },
       {
-        title: 'Mulberry Learning @ Greenhills',
-        value: '/mulberry-learning-greenhills',
+        title: 'Mulberry Learning @ Cambodia',
+        value: '/mulberry-learning-cambodia',
       },
     ],
   },
@@ -81,4 +81,4 @@ export const location = [
 ];
 
 export const footerCenterText =
-  'Mulberry Learning is the only preschool in Singapore with a truly unique preschool programs that incorporates the Reggio Emilia methodology, Habits of Mind™ framework and Multiple Intelligences that will nurture your child into a competent explorer, an imaginative thinker, and a creative problem solver.';
+  'Mulberry Learning is the only preschool in Cambodia with a truly unique preschool programs that incorporates the Reggio Emilia methodology, Habits of Mind™ framework and Multiple Intelligences that will nurture your child into a competent explorer, an imaginative thinker, and a creative problem solver.';
