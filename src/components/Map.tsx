@@ -18,10 +18,10 @@ function Map() {
     height: '300px',
   };
   const mapOptions = {
-    zoom: 15,
+    zoom: 17,
     center: {
-      lat: 11.5627958,
-      lng: 104.9064597,
+      lat: 11.5246018,
+      lng: 104.9524343,
     },
   };
 
@@ -42,6 +42,12 @@ function Map() {
         mapContainerStyle={containerStyle}
         center={mapOptions.center}
         zoom={mapOptions.zoom}
+        onClick={() => {
+          window.open(
+            'https://maps.app.goo.gl/63c9WtJHULsmnZ289?g_st=ic',
+            '_blank',
+          );
+        }}
       >
         <Marker position={mapOptions.center} />
       </GoogleMap>

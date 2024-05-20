@@ -127,9 +127,9 @@ export const locations = [
     imageReview: imageReview,
   },
   {
-    slug: 'mulberry-learning-greenhills',
+    slug: 'mulberry-learning-cambodia',
     location:
-      '297 Connecticut St., Greenhills East, Mandaluyong City, Metro Manila',
+      'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
     title: 'iOS Developer',
     description: '',
     logo: openSoon,

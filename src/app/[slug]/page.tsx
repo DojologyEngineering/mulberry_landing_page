@@ -49,20 +49,13 @@ export default async function Job({ params }: { params: { slug: string } }) {
       </div>
       <div className='px-5'>
         <div className='container mx-auto'>
-          {params.slug === 'mulberry-learning-greenhills' ? (
+          {params.slug === 'mulberry-learning-cambodia' && (
             <p className='text-[18px] md:text-[26px] font-bold font-raleway text-primary-main mt-10'>
               Mulberry Learning
               <span className='text-primary-hight-light text-[18px] md:text-[26px]'>
-                @ Greenhills
+                @ Cambodia
               </span>
             </p>
-          ) : (
-            <h1 className='text-[18px] md:text-[26px] font-bold font-raleway text-primary-main mt-10'>
-              Mulberry Learning
-              <span className='text-primary-hight-light text-[18px] md:text-[26px] '>
-                @ BGC
-              </span>
-            </h1>
           )}
         </div>
         <div className='container mx-auto '>
@@ -111,8 +104,8 @@ export default async function Job({ params }: { params: { slug: string } }) {
             ))}
         </div>
 
-        <div className='container mx-auto mt-10 mb-10 '>
-          <div className='grid grid-cols-1 md:grid-cols-2'>
+        <div className='container mx-auto mt-10 mb-10 flex space-x-6 justify-center'>
+          <div className='grid grid-cols-1 md:grid-cols-2 gap-20'>
             <BookTour />
 
             <div className='relative flex flex-col items-center max-w-md mt-10 md:mt-0'>
