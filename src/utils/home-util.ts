@@ -67,7 +67,7 @@ export const centerHighlight = [
     nameLocation: 'Mulberry Learning @ Cambodia',
     locationDetail:
       'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
-    value: '/centers/cambodia',
+    value: '/mulberry-learning-cambodia',
   },
 ];
 export const images = [
