@@ -21,7 +21,7 @@ const textCover2 = 'Through S.T.E.A.M Enrichment';
 
 const headData = {
   headTittle:
-    'Singapore’s push for a Smart Nation exemplifies this change and demand for graduates in the fields of Science, Technology, Engineering, and Mathematics is expected to increase.',
+    'Cambodia’s push for a Smart Nation exemplifies this change and demand for graduates in the fields of Science, Technology, Engineering, and Mathematics is expected to increase.',
   desTittle: 'What is S.T.E.A.M Enrichment?',
   desArr: [
     {

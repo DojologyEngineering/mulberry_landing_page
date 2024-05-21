@@ -19,7 +19,7 @@ export const Parent =
 export const Aware = 'Awards';
 export const awards = [
   {
-    title: 'Winner of the Singapore Prestige Brand Award (Established Brands)',
+    title: 'Winner of the Cambodia Prestige Brand Award (Established Brands)',
     year: '2020 / 21',
   },
   {
@@ -39,7 +39,7 @@ export const awards = [
     year: '2016 – 2019',
   },
   {
-    title: 'Singapore Preschool Accreditation Framework (SPARK)',
+    title: 'Cambodia Preschool Accreditation Framework (SPARK)',
   },
   {
     title: 'Healthy Preschool Accreditation (HPS)',
@@ -50,7 +50,7 @@ export const awards = [
   },
 ];
 export const location =
-  'Voted as “Singapore’s Best Holistic Curriculum” for 3 years running by leading parenting publications, and recently recorded a double win at the Singapore Prestige Brand Award 2020/21, bagging the Winner and Overall Winner awards for the Established Brands category! Express your interest in a School Tour and speak to our highly qualified educators to learn more about Mulberry Learning’s proprietary award-winning curriculum and explore our Reggio-inspired learning spaces.';
+  'Voted as “Cambodia’s Best Holistic Curriculum” for 3 years running by leading parenting publications, and recently recorded a double win at the Cambodia Prestige Brand Award 2020/21, bagging the Winner and Overall Winner awards for the Established Brands category! Express your interest in a School Tour and speak to our highly qualified educators to learn more about Mulberry Learning’s proprietary award-winning curriculum and explore our Reggio-inspired learning spaces.';
 export const visit = 'For more information on Global EduHub, visit';
 export const imagePaths = [
   '/img/award.webp',

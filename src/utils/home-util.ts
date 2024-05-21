@@ -33,7 +33,7 @@ export const learnEdge = [
     id: 0,
     logo: GrCertificate,
     title: 'Curriculum',
-    desc: 'Voted Singapore’s "Best Holistic Learning Programs" for consecutive years running, Mulberry Learning’s proprietary iDevelop / iExplore / iLearn / iExperience model promises a fun bilingual learning experience like no other, providing each child with a comprehensive and holistic education.',
+    desc: 'Voted Cambodia’s "Best Holistic Learning Programs" for consecutive years running, Mulberry Learning’s proprietary iDevelop / iExplore / iLearn / iExperience model promises a fun bilingual learning experience like no other, providing each child with a comprehensive and holistic education.',
     url: '',
   },
   {
@@ -53,21 +53,21 @@ export const learnEdge = [
 ];
 
 export const centerHighlight = [
-  {
-    id: 0,
-    logo: center1,
-    nameLocation: 'Mulberry Learning @ BGC',
-    locationDetail:
-      '7/F, GSC Corporate Tower, Triangle Drive, Bonifacio Global City, Taguig City, 1630 Metro Manila',
-    value: '',
-  },
+  // {
+  //   id: 0,
+  //   logo: center1,
+  //   nameLocation: 'Mulberry Learning @ BGC',
+  //   locationDetail:
+  //     '7/F, GSC Corporate Tower, Triangle Drive, Bonifacio Global City, Taguig City, 1630 Metro Manila',
+  //   value: '',
+  // },
   {
     id: 1,
     logo: center2,
-    nameLocation: 'Mulberry Learning @ Greenhills',
+    nameLocation: 'Mulberry Learning @ Cambodia',
     locationDetail:
-      '297 Connecticut St., Greenhills East, Mandaluyong City, Metro Manila',
-    value: '',
+      'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
+    value: '/centers/cambodia',
   },
 ];
 export const images = [
