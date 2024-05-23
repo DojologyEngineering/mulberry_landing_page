@@ -14,6 +14,9 @@ import footerAbout2 from '../../../../public/img/footerAbout2.jpg';
 import Gallery from '../../../../public/img/gallery.png';
 import HabitsOfMineBanner from '../../../../public/img/new-img/DSC02826.jpg';
 
+export const metadata = {
+  title: 'Habits of mind | Mulberry Learning Cambodia',
+};
 export const textCover1 = 'Intelligent Thinking';
 
 export const textCover2 = 'Through Habits of Mind';

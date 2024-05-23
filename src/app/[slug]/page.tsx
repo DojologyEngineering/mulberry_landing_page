@@ -1,5 +1,6 @@
 import NotFoundLocation from '@/app/not-found';
 
+import Head from 'next/head';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
 
@@ -22,12 +23,26 @@ export async function generateStaticParams() {
     slug: job.slug,
   }));
 }
-
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const Tittle = locations.find((j) => j.slug === params.slug);
+  return {
+    title: `${Tittle?.slug} | Mulberry Learning Cambodia`,
+  };
+}
 export default async function Job({ params }: { params: { slug: string } }) {
   const job = locations.find((j) => j.slug === params.slug);
 
   return (
     <div>
+      <Head>
+        <title>My page title</title>
+        <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+      </Head>
+
       <div className='relative'>
         <Image
           src={center}

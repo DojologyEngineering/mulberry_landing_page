@@ -1,12 +1,15 @@
+import Head from 'next/head';
+import { headers } from 'next/headers';
 import Image from 'next/image';
 
-import SchoolLogo from '../../../../public/img/MBR Logo with tagline.webp';
-
-import Gallery from '../../../../public/img/gallery.png';
 import { AboutUsData, ImgFooter } from '@/utils/about-util';
 
+import SchoolLogo from '../../../../public/img/MBR Logo with tagline.webp';
+import Gallery from '../../../../public/img/gallery.png';
 
-
+export const metadata = {
+  title: 'About us | Mulberry Learning Cambodia',
+};
 export default function About() {
   return (
     <main className='pb-10'>
@@ -40,7 +43,7 @@ export default function About() {
         </section>
         <section className='pt-10 flex justify-center'>
           <div className='flex flex-col lg:flex-row justify-center align-middle'>
-            {ImgFooter.map((item,index) => (
+            {ImgFooter.map((item, index) => (
               <Image
                 key={index}
                 src={item.img}

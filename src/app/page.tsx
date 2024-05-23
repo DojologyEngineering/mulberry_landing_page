@@ -1,5 +1,6 @@
 import { Metadata } from 'next';
 
+import { headers } from 'next/headers';
 import Image from 'next/image';
 
 import HomeCard from '@/components/HomeCard';

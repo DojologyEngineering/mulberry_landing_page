@@ -15,6 +15,9 @@ import { contactData } from '@/utils/data-util';
 import Gallery from '../../../../public/img/gallery.png';
 import CareerBanner from '../../../../public/img/new-img/DSC02077.jpg';
 
+export const metadata = {
+  title: 'Careers | Mulberry Learning Cambodia',
+};
 function Careers() {
   const contact = contactData.find(
     (item) => item.text === 'admissions@mulberryinternationalpreschool.edu.kh',

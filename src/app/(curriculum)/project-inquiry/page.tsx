@@ -14,6 +14,9 @@ import ProjectInquiryBanner from '../../../../public/img/new-img/DSC09939-Edit.j
 // import ProjectInquiryBanner from '../../../../public/newimg/DSC09939-Edit.webp';
 import { AwardWinning } from '../habits-of-mind/page';
 
+export const metadata = {
+  title: 'Project inquiry | Mulberry Learning Cambodia',
+};
 const textCover1 = 'Reggio-Inspired';
 const textCover2 = 'Project Inquiry Program';
 

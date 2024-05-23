@@ -16,6 +16,9 @@ import {
   visit,
 } from '@/utils/campus-util';
 
+export const metadata = {
+  title: 'Campus | Mulberry Learning Cambodia',
+};
 function page() {
   return (
     <div className=''>

@@ -16,6 +16,10 @@ import Gallery from '../../../../public/img/gallery.png';
 import SteamBanner from '../../../../public/img/new-img/DSC00654.jpg';
 import { AwardWinning } from '../habits-of-mind/page';
 
+export const metadata = {
+  title: 'S.T.E.A.M Enrichment | Mulberry Learning Cambodia',
+};
+
 const textCover1 = 'Preparing For The Future';
 const textCover2 = 'Through S.T.E.A.M Enrichment';
 
