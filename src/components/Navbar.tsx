@@ -1,5 +1,6 @@
 'use client';
 
+import useMetaTitle from '@/hooks/useMetaTitle';
 import { Fragment, memo, useEffect, useState } from 'react';
 
 import Image from 'next/image';
@@ -18,6 +19,10 @@ import { contactData, menu, socialMedias } from '@/utils/data-util';
 type menuType = (typeof menu)[0];
 
 function Navbar() {
+  // const { title, updateTitle } = useMetaTitle({
+  //   initialTitle: 'About Us | Mulberry Learning CM',
+  // });
+
   const pathname = usePathname();
   // console.log('pathname:', pathname);
   const navigate = useRouter();
@@ -128,6 +133,9 @@ function Navbar() {
                 <Link
                   key={i}
                   href={m.value}
+                  onClick={() => {
+                    // updateTitle(`${m.title} | Mulberry Learning Cambodia`);
+                  }}
                   className={`h-10 px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
                 >
                   {m.title}
@@ -147,6 +155,9 @@ function Navbar() {
                     <Link
                       key={i}
                       href={m.value}
+                      onClick={() => {
+                        // updateTitle(`${m.title} | Mulberry Learning Cambodia`);
+                      }}
                       className={`h-full px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
                     >
                       {m.title}
@@ -171,6 +182,9 @@ function Navbar() {
                               className={`w-full px-6 py-3 text-sm font-semibold transition ease-in-out delay-100 border-b hover:text-primary-hight-light hover:bg-gray-100 text-gray-500 ${pathname === sm.value && 'text-primary-hight-light'}`}
                               onClick={() => {
                                 setOpenSubmenu('');
+                                // updateTitle(
+                                //   `${sm.title} | Mulberry Learning Cambodia`,
+                                // );
                               }}
                             >
                               {sm.title}

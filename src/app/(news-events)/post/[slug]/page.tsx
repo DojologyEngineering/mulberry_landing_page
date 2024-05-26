@@ -13,7 +13,16 @@ export async function generateStaticParams() {
     slug: data.route,
   }));
 }
-
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const dataDetails = CardData.find((item) => item.route === params.slug);
+  return {
+    title: `${dataDetails?.tittle} | Mulberry Learning Cambodia`,
+  };
+}
 export default function Page({ params }: { params: { slug: string } }) {
   const dataDetails = CardData.find((item) => item.route === params.slug);
   return (

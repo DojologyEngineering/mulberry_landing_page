@@ -25,6 +25,9 @@ const description = {
   ],
   icon: FaStar,
 };
+export const metadata = {
+  title: 'Curriculum | Mulberry Learning Cambodia',
+};
 
 const dataCurriculum = {
   headTitle: 'Highlights of the curriculum model',

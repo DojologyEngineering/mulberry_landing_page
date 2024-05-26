@@ -1,3 +1,4 @@
+import { Metadata } from 'next';
 import React from 'react';
 
 import Image from 'next/image';
@@ -15,6 +16,9 @@ import {
   visit,
 } from '@/utils/campus-util';
 
+export const metadata = {
+  title: 'Campus | Mulberry Learning Cambodia',
+};
 function page() {
   return (
     <div className=''>
@@ -36,7 +40,7 @@ function page() {
       <div className='flex justify-center mt-3 px-4 md:px-0 text-center'>
         <h1 className='md:text-xl text-xl font-bold text-black font-avenir italic'>
           <span className='text-primary-hight-light'> ‘Unique Boutique’ </span>
-          Singaporean Franchise Preschool Opens its doors in Pheng Huot, Chbar
+          Cambodiaan Franchise Preschool Opens its doors in Pheng Huot, Chbar
           Ampov
         </h1>
       </div>

@@ -4,21 +4,21 @@ import schoolLocatio2 from '/public/img/new-img/DSC00348-Edit.jpg';
 export const help =
   'Choosing the right educational childcare and preschool for your family is a big decision. We know you have questions, so we have compiled our most frequently asked questions below.';
 export const location = [
-  {
-    id: 0,
-    logo: schoolLocatio1,
-    nameLocation: 'Mulberry Learning @ BGC',
-    locationDetail:
-      '7/F, GSC Corporate Tower, Triangle Drive, Bonifacio Global City, Taguig City, 1630 Metro Manila',
-    value: '',
-  },
+  // {
+  //   id: 0,
+  //   logo: schoolLocatio1,
+  //   nameLocation: 'Mulberry Learning @ BGC',
+  //   locationDetail:
+  //     '7/F, GSC Corporate Tower, Triangle Drive, Bonifacio Global City, Taguig City, 1630 Metro Manila',
+  //   value: '',
+  // },
   {
     id: 1,
     logo: schoolLocatio2,
-    nameLocation: 'Mulberry Learning @ Greenhills',
+    nameLocation: 'Mulberry Learning @ Cambodia',
     locationDetail:
-      '297 Connecticut St., Greenhills East, Mandaluyong City, Metro Manila',
-    value: '',
+      'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
+    value: '/mulberry-learning-cambodia',
   },
   // {
   //   id: 2,

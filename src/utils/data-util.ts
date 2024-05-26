@@ -77,11 +77,11 @@ export const location = [
     href: 'https://maps.app.goo.gl/63c9WtJHULsmnZ289?g_st=ic',
   },
 
-  {
-    icon: PiMapPinLineFill,
-    text: 'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
-    href: 'https://maps.app.goo.gl/63c9WtJHULsmnZ289?g_st=ic',
-  },
+  // {
+  //   icon: PiMapPinLineFill,
+  //   text: 'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
+  //   href: 'https://maps.app.goo.gl/63c9WtJHULsmnZ289?g_st=ic',
+  // },
 ];
 
 export const footerCenterText =

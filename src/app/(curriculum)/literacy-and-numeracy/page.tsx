@@ -2,13 +2,17 @@ import React from 'react';
 
 import Image from 'next/image';
 
-import Girl from '../../../../public/img/Girl.webp';
-import LANBanner from '../../../../public/img/LNNbanner.webp';
-import Kid from '../../../../public/img/Kid.webp';
-import Gallery from '../../../../public/img/gallery.png';
-import { AwardWinning } from '../habits-of-mind/page';
 import ImageBanner from '@/components/ImageBanner';
 
+import Girl from '../../../../public/img/Girl.webp';
+import Kid from '../../../../public/img/Kid.webp';
+import LANBanner from '../../../../public/img/LNNbanner.webp';
+import Gallery from '../../../../public/img/gallery.png';
+import { AwardWinning } from '../habits-of-mind/page';
+
+export const metadata = {
+  title: 'Literacy and Numeracy | Mulberry Learning Cambodia',
+};
 const textCover1 = 'Literacy and Numeracy';
 
 const headData = {
@@ -70,7 +74,11 @@ function LiteracyAndNumeracy() {
             {textCover}
           </span>
         </div> */}
-        <ImageBanner textCover1={textCover1} img={LANBanner} imgReponsive={Kid}/>
+        <ImageBanner
+          textCover1={textCover1}
+          img={LANBanner}
+          imgReponsive={Kid}
+        />
 
         <Image
           src={Gallery}
@@ -102,7 +110,7 @@ function LiteracyAndNumeracy() {
             <div className='max-w-[450px] sm:ml-[10vw]'>
               {' '}
               {/* Adjust max width as needed */}
-              {midData.desArr.map((item,index) => (
+              {midData.desArr.map((item, index) => (
                 <div className='flex flex-col' key={index}>
                   <h3 className='text-[26px] font-bold text-primary-hight-light font-raleway'>
                     {item.tittle}
@@ -110,12 +118,12 @@ function LiteracyAndNumeracy() {
                   <p className=' text-base py-4 font-avenir font-bold'>
                     {item.des}
                   </p>
-                  {item.subDesArr.map((data,index) => (
-                   <div key={index}>
-                     <p className=' text-base py-4 font-avenir font-light'>
-                      {data.subDdes}
-                    </p>
-                   </div>
+                  {item.subDesArr.map((data, index) => (
+                    <div key={index}>
+                      <p className=' text-base py-4 font-avenir font-light'>
+                        {data.subDdes}
+                      </p>
+                    </div>
                   ))}
                 </div>
               ))}
