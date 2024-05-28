@@ -13,7 +13,8 @@ function NotFoundPost() {
       </p>
 
       <Link
-        href={'/latest-news'}
+        // href={'/latest-news'}
+        href={'/'}
         className='text-center mx-auto font-avenir text-base text-primary-hight-light mt-10 font-light'
       >
         <button className=''>See More Posts</button>
