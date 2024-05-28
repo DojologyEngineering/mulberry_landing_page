@@ -39,7 +39,7 @@ export default function Home() {
             />
           ))}
         </div> */}
-        <div className='container flex flex-col items-center justify-center mx-auto'>
+        <div className='container flex flex-col items-center justify-center mx-auto pt-10'>
           <p className='md:text-[40px] text-[24px]  font-raleway font-bold text-primary-main'>
             Partner Awards
           </p>
