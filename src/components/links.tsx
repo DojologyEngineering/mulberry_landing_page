@@ -6,11 +6,11 @@ export function Links() {
   return (
     <nav>
       <ul style={{ display: 'flex', justifyContent: 'space-around' }}>
-        <li style={{ listStyle: 'none' }}>
+        {/* <li style={{ listStyle: 'none' }}>
           <Link href='/latest-news' className='text-primary-main'>
             News & Events
           </Link>
-        </li>
+        </li> */}
         <li style={{ listStyle: 'none' }}>
           <Link href='/locations' className='text-black'>
             Locations
