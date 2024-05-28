@@ -40,7 +40,7 @@ function page() {
       <div className='flex justify-center mt-3 px-4 md:px-0 text-center'>
         <h1 className='md:text-xl text-xl font-bold text-black font-avenir italic'>
           <span className='text-primary-hight-light'> ‘Unique Boutique’ </span>
-          Cambodiaan Franchise Preschool Opens its doors in Pheng Huot, Chbar
+          Cambodian Franchise Preschool Opens its doors in Pheng Huot, Chbar
           Ampov
         </h1>
       </div>

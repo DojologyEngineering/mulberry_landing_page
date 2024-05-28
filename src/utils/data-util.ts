@@ -19,17 +19,17 @@ export const socialMedias = [
   {
     icon: FaInstagram,
     title: 'instagram',
-    value: 'https://www.instagram.com',
+    value: 'https://www.instagram.com/mulberryinternational/',
   },
   {
     icon: FaFacebookF,
     title: 'facebook',
-    value: 'https://www.facebook.com',
+    value: 'https://web.facebook.com/MulberryKH/',
   },
   {
     icon: FaTiktok,
     title: 'tiktok',
-    value: 'https://www.tiktok.com',
+    value: 'https://www.tiktok.com/@mulberryinternational?_t=8mjC5o3o2l6&_r=1',
   },
 ];
 

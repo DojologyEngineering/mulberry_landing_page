@@ -22,7 +22,7 @@ export default function Home() {
     <div>
       <HomeImageSlider />
       <div className='px-4 '>
-        <div className='container flex flex-col items-center justify-center mx-auto'>
+        {/* <div className='container flex flex-col items-center justify-center mx-auto'>
           <p className='md:text-[40px] text-[24px] mt-10 font-raleway font-bold text-primary-main'>
             WHAT&apos;S NEW
           </p>
@@ -38,7 +38,7 @@ export default function Home() {
               locationDetail={location.title}
             />
           ))}
-        </div>
+        </div> */}
         <div className='container flex flex-col items-center justify-center mx-auto'>
           <p className='md:text-[40px] text-[24px]  font-raleway font-bold text-primary-main'>
             Partner Awards
