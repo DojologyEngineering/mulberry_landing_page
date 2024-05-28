@@ -1,6 +1,5 @@
 'use client';
 
-import useMetaTitle from '@/hooks/useMetaTitle';
 import { Fragment, memo, useEffect, useState } from 'react';
 
 import Image from 'next/image';
