@@ -12,12 +12,13 @@ function NotFoundPost() {
         Check out some of the other great posts in this blog.
       </p>
 
-      {/* <Link
-        href={'/latest-news'}
+      <Link
+        // href={'/latest-news'}
+        href={'/'}
         className='text-center mx-auto font-avenir text-base text-primary-hight-light mt-10 font-light'
       >
         <button className=''>See More Posts</button>
-      </Link> */}
+      </Link>
     </div>
   );
 }
