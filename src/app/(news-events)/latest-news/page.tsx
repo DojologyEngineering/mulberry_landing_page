@@ -29,7 +29,7 @@ import Gallery from '../../../../public/img/gallery.png';
 import NewBanner from '../../../../public/img/newsBanner.webp';
 
 export const metadata = {
-  title: 'News & Events | Mulberry Learning Cambodia',
+  title: 'News & Events | Mulberry International Preschool, Cambodia',
 };
 export const textCover = 'News and Events';
 
@@ -37,17 +37,18 @@ export const CardData = [
   {
     img: FirstCard,
     profileImg: ProfileCard,
-    tittle: 'Mulberry Learning',
+    tittle: 'Mulberry International Preschool, Cambodia',
     date: 'Aug 29, 2023',
     status: '1 min',
-    description: "Mulberry Learning Annual Teachers' Training 2023",
+    description:
+      "Mulberry International Preschool, Cambodia Annual Teachers' Training 2023",
     route: 'annual-mulberry-learning-teachers-training-2023',
     imgDetail: FirstCard2,
   },
   {
     img: SecondCard,
     profileImg: ProfileCard,
-    tittle: 'Mulberry Learning',
+    tittle: 'Mulberry International Preschool, Cambodia',
     date: 'Aug 21, 2023',
     status: '4 min',
     description: 'Importance of Good Nutrition For Preschoolers',
@@ -57,17 +58,18 @@ export const CardData = [
   {
     img: ThirdCard,
     profileImg: ProfileCard,
-    tittle: 'Mulberry Learning',
+    tittle: 'Mulberry International Preschool, Cambodia',
     date: 'Aug 15, 2023',
     status: '1 min',
-    description: 'Mulberry Learning @ BGC is Officially Open',
+    description:
+      'Mulberry International Preschool, Cambodia @ BGC is Officially Open',
     route: 'mulberry-learning-bgc-is-officially-open',
     imgDetail: ThirdCard2,
   },
   {
     img: FouthCard,
     profileImg: ProfileCard,
-    tittle: 'Mulberry Learning',
+    tittle: 'Mulberry International Preschool, Cambodia',
     date: 'Jul 8, 2023',
     status: '4 min',
     description: 'Mommy, don’t go!',
@@ -77,7 +79,7 @@ export const CardData = [
   {
     img: FifthCard,
     profileImg: ProfileCard,
-    tittle: 'Mulberry Learning',
+    tittle: 'Mulberry International Preschool, Cambodia',
     date: 'Jul 16, 2023',
     status: '5 min',
     description: 'Self-Regulation: The key to achieving success',
@@ -87,7 +89,7 @@ export const CardData = [
   {
     img: SixthCard,
     profileImg: ProfileCard,
-    tittle: 'Mulberry Learning',
+    tittle: 'Mulberry International Preschool, Cambodia',
     date: 'Jun 16, 2023',
     status: '3 min',
     description: 'The Reggio Emilia Approach And Why It Works',
@@ -97,7 +99,7 @@ export const CardData = [
   {
     img: SeventhCard,
     profileImg: ProfileCard,
-    tittle: 'Mulberry Learning',
+    tittle: 'Mulberry International Preschool, Cambodia',
     date: 'Jun 15, 2023',
     status: '5 min',
     description: 'Why Play Is Important For Your Child – Five Tips For Parents',
@@ -107,7 +109,7 @@ export const CardData = [
   {
     img: EighthCard,
     profileImg: ProfileCard,
-    tittle: 'Mulberry Learning',
+    tittle: 'Mulberry International Preschool, Cambodia',
     date: 'Jun 14, 2023',
     status: '2 min',
     description: '3 Ways You May Be Unknowingly Jeopardizing Your Kids’ Health',

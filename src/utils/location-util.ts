@@ -14,7 +14,7 @@ interface Feature {
   featuretype: FeatureType[];
 }
 export const bookTour =
-  'Book a School Tour Express your interest in a School Tour and speak to our highly-qualified educators to learn more about Mulberry Learning’s proprietary award-winning curriculum and explore our Reggio-inspired learning spaces.';
+  'Book a School Tour Express your interest in a School Tour and speak to our highly-qualified educators to learn more about Mulberry International Preschool, Cambodia’s proprietary award-winning curriculum and explore our Reggio-inspired learning spaces.';
 export const promote =
   'Take advantage of exclusive school fee discounts of up to P50,000 while your child experiences and enjoys fun-filled activities at our Reggio-inspired learning environment. Book a school tour to learn more about the special enrollment promotions on offer for 2023 enrollment!';
 
@@ -121,7 +121,7 @@ export const locations = [
       '7/F, GSC Corporate Tower, Triangle Drive, Bonifacio Global City, Taguig City, 1630 Metro Manila',
     title: 'Junior Web Developer',
     description:
-      'Conveniently located at GSC Tower near Uptown Mall BGC, Mulberry Learning @ BGC is a Reggio Emilia inspired haven with spaces that stimulate a child’s senses and encourage their natural curiosity to explore. Our school is bathed in the glow of natural light. Studies reveal that access to natural daylight provides better learning conditions and health in schools. It`s been proven that students had a 20% better learning rate in math and 26% improved rate in reading performance. With 400 sqm of dedicated learning space, Mulberry Learning BGC`s well-thought out design features:',
+      'Conveniently located at GSC Tower near Uptown Mall BGC, Mulberry International Preschool, Cambodia @ BGC is a Reggio Emilia inspired haven with spaces that stimulate a child’s senses and encourage their natural curiosity to explore. Our school is bathed in the glow of natural light. Studies reveal that access to natural daylight provides better learning conditions and health in schools. It`s been proven that students had a 20% better learning rate in math and 26% improved rate in reading performance. With 400 sqm of dedicated learning space, Mulberry International Preschool, Cambodia BGC`s well-thought out design features:',
     logo: enrollMent,
     feature: featureData,
     imageReview: imageReview,
@@ -129,7 +129,7 @@ export const locations = [
   {
     slug: 'mulberry-learning-cambodia',
     location:
-      'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
+      'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Peng Huoth Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
     title: 'iOS Developer',
     description: '',
     logo: openSoon,

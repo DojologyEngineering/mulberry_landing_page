@@ -12,7 +12,8 @@ export const homeBlog = [
   {
     id: 0,
     img: media1,
-    title: 'Mulberry Learning Annual Teachers` Training 2023',
+    title:
+      'Mulberry International Preschool, Cambodia Annual Teachers` Training 2023',
     value: '',
   },
   {
@@ -24,7 +25,8 @@ export const homeBlog = [
   {
     id: 2,
     img: media2,
-    title: 'Mulberry Learning @ BGC is Officially Open',
+    title:
+      'Mulberry International Preschool, Cambodia @ BGC is Officially Open',
     value: '',
   },
 ];
@@ -33,21 +35,21 @@ export const learnEdge = [
     id: 0,
     logo: GrCertificate,
     title: 'Curriculum',
-    desc: 'Voted Cambodia’s "Best Holistic Learning Programs" for consecutive years running, Mulberry Learning’s proprietary iDevelop / iExplore / iLearn / iExperience model promises a fun bilingual learning experience like no other, providing each child with a comprehensive and holistic education.',
+    desc: 'Voted Cambodia’s "Best Holistic Learning Programs" for consecutive years running, Mulberry International Preschool, Cambodia’s proprietary iDevelop / iExplore / iLearn / iExperience model promises a fun bilingual learning experience like no other, providing each child with a comprehensive and holistic education.',
     url: '',
   },
   {
     id: 1,
     logo: TbUsersGroup,
     title: 'Teachers',
-    desc: 'The driving force behind Mulberry Learning’s award-winning curriculum – Our Preschool Teachers and Principals. With over 250 hours of extensive training, Mulberry Learning’s teachers embody and impart our Reggio-Inspired Curriculum that supports child-centric learning.',
+    desc: 'The driving force behind Mulberry International Preschool, Cambodia’s award-winning curriculum – Our Preschool Teachers and Principals. With over 250 hours of extensive training, Mulberry International Preschool, Cambodia’s teachers embody and impart our Reggio-Inspired Curriculum that supports child-centric learning.',
     url: '',
   },
   {
     id: 2,
     logo: RiSchoolLine,
     title: 'Center Environment',
-    desc: 'Beautifully designed spaces are hallmarks of the Mulberry Learning environment. We believe that our children learn best in beautiful surroundings, specially curated to stimulate their senses and encourage their natural urge to explore everything around. We have 2 child care centers conveniently located in BGC and Greenhills.',
+    desc: 'Beautifully designed spaces are hallmarks of the Mulberry International Preschool, Cambodia environment. We believe that our children learn best in beautiful surroundings, specially curated to stimulate their senses and encourage their natural urge to explore everything around. We have 2 child care centers conveniently located in Cambodia.',
     url: '',
   },
 ];
@@ -56,7 +58,7 @@ export const centerHighlight = [
   // {
   //   id: 0,
   //   logo: center1,
-  //   nameLocation: 'Mulberry Learning @ BGC',
+  //   nameLocation: 'Mulberry International Preschool, Cambodia @ BGC',
   //   locationDetail:
   //     '7/F, GSC Corporate Tower, Triangle Drive, Bonifacio Global City, Taguig City, 1630 Metro Manila',
   //   value: '',
@@ -64,9 +66,9 @@ export const centerHighlight = [
   {
     id: 1,
     logo: center2,
-    nameLocation: 'Mulberry Learning @ Cambodia',
+    nameLocation: 'Mulberry International Preschool, Cambodia @ Cambodia',
     locationDetail:
-      'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
+      'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Peng Huoth Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
     value: '/mulberry-learning-cambodia',
   },
 ];

@@ -48,7 +48,7 @@ const bodyData = {
 };
 
 const Descriptionheader = {
-  des: 'While the Habits of Mind™ framework has long been adopted by Cambodia’s Ministry of Education to groom the top 1% of students under its Gifted Education Program, Mulberry Learning is the first and only preschool network globally certified by the',
+  des: 'While the Habits of Mind™ framework has long been adopted by Singapore Ministry of Education to groom the top 1% of students under its Gifted Education Program, Mulberry Learning is the first and only preschool network globally certified by the',
   link: 'Institute for Habits of Mind™.',
   value: 'https://www.habitsofmindinstitute.org/',
 };

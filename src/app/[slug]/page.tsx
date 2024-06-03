@@ -30,7 +30,7 @@ export async function generateMetadata({
 }) {
   const Tittle = locations.find((j) => j.slug === params.slug);
   return {
-    title: `${Tittle?.slug} | Mulberry Learning Cambodia`,
+    title: `${Tittle?.slug} | Mulberry International Preschool, Cambodia`,
   };
 }
 export default async function Job({ params }: { params: { slug: string } }) {
@@ -58,7 +58,7 @@ export default async function Job({ params }: { params: { slug: string } }) {
         />
         <div className='flex justify-center top-10 absolute left-0 right-0'>
           <h1 className='md:text-[40px] text-[18px] font-bold text-white font-raleway bg-primary-light px-4 py-2'>
-            Mulberry Learning Centers
+            Mulberry International Preschool, Cambodia Centers
           </h1>
         </div>
       </div>
@@ -66,7 +66,7 @@ export default async function Job({ params }: { params: { slug: string } }) {
         <div className='container mx-auto'>
           {params.slug === 'mulberry-learning-cambodia' && (
             <p className='text-[18px] md:text-[26px] font-bold font-raleway text-primary-main mt-10'>
-              Mulberry Learning
+              Mulberry International Preschool, Cambodia
               <span className='text-primary-hight-light text-[18px] md:text-[26px]'>
                 @ Cambodia
               </span>
@@ -79,12 +79,12 @@ export default async function Job({ params }: { params: { slug: string } }) {
           </p>
         </div>
         <div className='container mx-auto '>
-          <Image
+          {/* <Image
             src={job?.logo || ''}
             alt='logo'
             priority
             className='h-30 pt-10 object-cover w-full'
-          />
+          /> */}
           <p className='mt-10 text-secondary font-light font-avenir text-[15px] md:text-[16px]'>
             {job?.description}
           </p>

@@ -1,6 +1,5 @@
 'use client';
 
-import useMetaTitle from '@/hooks/useMetaTitle';
 import { Fragment, memo, useEffect, useState } from 'react';
 
 import Image from 'next/image';
@@ -20,7 +19,7 @@ type menuType = (typeof menu)[0];
 
 function Navbar() {
   // const { title, updateTitle } = useMetaTitle({
-  //   initialTitle: 'About Us | Mulberry Learning CM',
+  //   initialTitle: 'About Us | Mulberry International Preschool, Cambodia CM',
   // });
 
   const pathname = usePathname();
@@ -134,7 +133,7 @@ function Navbar() {
                   key={i}
                   href={m.value}
                   onClick={() => {
-                    // updateTitle(`${m.title} | Mulberry Learning Cambodia`);
+                    // updateTitle(`${m.title} | Mulberry International Preschool, Cambodia`);
                   }}
                   className={`h-10 px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
                 >
@@ -156,7 +155,7 @@ function Navbar() {
                       key={i}
                       href={m.value}
                       onClick={() => {
-                        // updateTitle(`${m.title} | Mulberry Learning Cambodia`);
+                        // updateTitle(`${m.title} | Mulberry International Preschool, Cambodia`);
                       }}
                       className={`h-full px-4 text-sm font-semibold transition ease-in-out delay-100 border-b-2 hover:border-primary-hight-light hover:text-primary-hight-light ${isActive(m) ? 'border-primary-hight-light text-primary-hight-light' : 'border-transparent'}`}
                     >
@@ -183,7 +182,7 @@ function Navbar() {
                               onClick={() => {
                                 setOpenSubmenu('');
                                 // updateTitle(
-                                //   `${sm.title} | Mulberry Learning Cambodia`,
+                                //   `${sm.title} | Mulberry International Preschool, Cambodia`,
                                 // );
                               }}
                             >

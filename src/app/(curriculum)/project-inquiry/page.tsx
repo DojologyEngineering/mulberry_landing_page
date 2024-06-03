@@ -15,7 +15,7 @@ import ProjectInquiryBanner from '../../../../public/img/new-img/DSC09939-Edit.j
 import { AwardWinning } from '../habits-of-mind/page';
 
 export const metadata = {
-  title: 'Project inquiry | Mulberry Learning Cambodia',
+  title: 'Project inquiry | Mulberry International Preschool, Cambodia',
 };
 const textCover1 = 'Reggio-Inspired';
 const textCover2 = 'Project Inquiry Program';
@@ -56,7 +56,7 @@ const bodyData = {
   subDesArr: [
     {
       subDes:
-        'The approach recognizes parents as first educators and teachers as educational partners where both parties play important roles in children’s development. At Mulberry Learning, we work closely with parents, providing them with regular developmental updates and involving them in their child’s education.',
+        'The approach recognizes parents as first educators and teachers as educational partners where both parties play important roles in children’s development. At Mulberry International Preschool, Cambodia, we work closely with parents, providing them with regular developmental updates and involving them in their child’s education.',
       icon: GoPeople,
     },
     {
@@ -284,13 +284,22 @@ function ProjectInquiry() {
                 {footData.headFoot}
               </h3>
 
-              <div className='relative h-auto max-w-[800px] mx-auto mt-10'>
+              {/* <div className='relative h-auto max-w-[800px] mx-auto mt-10'>
                 <span className='hidden sm:block absolute w-full bg-purple-light mt-8 -ml-8 p-[25%]'></span>
                 <Image
                   src={footData.img}
                   alt='logo'
                   priority
                   className='w-[600px] h-auto relative'
+                />
+              </div> */}
+              <div className='relative h-auto max-w-[800px] mx-auto mt-10'>
+                <span className='hidden sm:block absolute w-full bg-purple-light mt-8 -ml-8 p-[27%]'></span>
+                <Image
+                  src={footData.img}
+                  alt='logo'
+                  priority
+                  className='w-[600px] h-[320px] relative'
                 />
               </div>
               <div className='flex flex-col mt-16'>

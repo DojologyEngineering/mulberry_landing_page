@@ -7,7 +7,7 @@ const nextConfig = {
         headers: [
           {
             key: 'x-custom-header',
-            value: 'about | Mulberry Learning Cambodia',
+            value: 'about | Mulberry International Preschool, Cambodia',
           },
         ],
       },

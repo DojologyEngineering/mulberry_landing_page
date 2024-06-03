@@ -10,6 +10,7 @@ import {
   Parent,
   Spaces,
   awards,
+  imageCampus,
   imagePaths,
   location,
   mapLocatio,
@@ -17,7 +18,7 @@ import {
 } from '@/utils/campus-util';
 
 export const metadata = {
-  title: 'Campus | Mulberry Learning Cambodia',
+  title: 'Campus | Mulberry International Preschool, Cambodia',
 };
 function page() {
   return (
@@ -59,23 +60,48 @@ function page() {
 
       <div className='flex justify-center'>
         <h1 className='md:text-4xl text-xl font-bold text-primary-hight-light font-avenir'>
-          Awards
+          Our Campus in Cambodia
         </h1>
       </div>
-      <div className='flex flex-col items-center font-avenir px-4 md:px-0'>
+
+      {/* <div className='flex flex-col items-center font-avenir px-4 md:px-0'>
         {awards.map((award, index) => (
           <div key={index} className='flex flex-row justify-start font-light '>
             <span className='mr-2'>
               &bull;{' '}
-              {/* Use a span with bullet character instead of <li> for custom bullet */}
-            </span>
+\            </span>
             <p className='ml-2'>
               {award.title}
               <span className='ml-2'> {award.year}</span>
             </p>
-            {/* {award.year && <span>, {award.year}</span>} */}
-          </div>
+\          </div>
         ))}
+      </div> */}
+      <div className='container mx-auto mt-3 mb-3 px-[16px] md:px-0'>
+        <div className='flex md:flex-row flex-col justify-center align-middle'>
+          <Image
+            src={imageCampus.image1}
+            alt='GrowthModelImg'
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          />
+          <Image
+            src={imageCampus.image2}
+            alt='GrowthModelImg'
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          />
+        </div>
+        <div className='flex md:flex-row flex-col justify-center align-middle'>
+          <Image
+            src={imageCampus.image3}
+            alt='GrowthModelImg'
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          />
+          <Image
+            src={imageCampus.image4}
+            alt='GrowthModelImg'
+            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'
+          />
+        </div>
       </div>
 
       <div className='grid grid-cols-1 md:grid-cols-3 justify-items-center container mx-auto'>

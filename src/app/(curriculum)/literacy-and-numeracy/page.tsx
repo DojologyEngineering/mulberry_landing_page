@@ -4,14 +4,15 @@ import Image from 'next/image';
 
 import ImageBanner from '@/components/ImageBanner';
 
-import Girl from '../../../../public/img/Girl.webp';
-import Kid from '../../../../public/img/Kid.webp';
-import LANBanner from '../../../../public/img/LNNbanner.webp';
 import Gallery from '../../../../public/img/gallery.png';
+// import Girl from '../../../../public/img/Girl.webp';
+import Kid from '../../../../public/img/new-img/DSC05776.jpg';
+import LANBanner from '../../../../public/img/new-img/DSC05776.jpg';
+import Girl from '../../../../public/img/new-img/DSC09939-Edit.jpg';
 import { AwardWinning } from '../habits-of-mind/page';
 
 export const metadata = {
-  title: 'Literacy and Numeracy | Mulberry Learning Cambodia',
+  title: 'Literacy and Numeracy | Mulberry International Preschool, Cambodia',
 };
 const textCover1 = 'Literacy and Numeracy';
 
@@ -99,12 +100,12 @@ function LiteracyAndNumeracy() {
         <div className='flex justify-center relative md:bottom-6'>
           <div className='grid sm:grid-cols-2 grid-cols-1 align-middle max-w-[1470px] px-[20px] xl:px-[100px] justify-center'>
             <div className='relative w-full h-auto'>
-              <span className='hidden sm:block absolute w-full bg-purple-light mt-8 -ml-8 p-[26%]'></span>
+              <span className='hidden sm:block absolute w-full bg-purple-light mt-8 -ml-8 p-[30%]'></span>
               <Image
                 src={midData.img}
                 alt='logo'
                 priority
-                className='w-full h-auto relative'
+                className='w-full md:h-[350px] h-auto relative'
               />
             </div>
             <div className='max-w-[450px] sm:ml-[10vw]'>

@@ -14,7 +14,7 @@ import Gallery from '../../../../public/img/gallery.png';
 import LearningCentersMedia from '../../../../public/img/new-img/DSC00300-Edit.jpg';
 
 export const metadata = {
-  title: 'Locations | Mulberry Learning Cambodia',
+  title: 'Locations | Mulberry International Preschool, Cambodia',
 };
 function Centers() {
   return (

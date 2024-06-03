@@ -13,15 +13,15 @@ import TeacherHighFive from '../../public/img/new-img/DSC02077.jpg';
 import TeacherTech from '../../public/img/new-img/DSC02717.jpg';
 
 export const AboutUsData = {
-  textHead:
-    "Mulberry Learning Philippines is a proud partner of Cambodia's Award-Winning Preschool Brand - Mulberry Learning.",
+  textHead: "I believe it should be Singapore's award-winning preschool brand",
+  // "Mulberry International Preschool, Cambodia Philippines is a proud partner of Cambodia's Award-Winning Preschool Brand - Mulberry International Preschool, Cambodia.",
   paragraph:
-    'Mulberry Learning started out with the dream of creating well-rounded children with imaginative young minds, positive attitudes and strength of character. Over the years, our unique pedagogy has touched the lives of many children and parents. We are recognized for our vibrant Reggio Emilia-inspired learning spaces, comprehensive bilingual programs, holistic development outcomes, and strengths in character development via Habits of Mind™. We have won multiple awards in Cambodia, and we are the ﬁrst ever preschool network in the world to be certiﬁed by The Institute for Habits of Mind from the USA.',
+    'Mulberry International Preschool, Cambodia started out with the dream of creating well-rounded children with imaginative young minds, positive attitudes and strength of character. Over the years, our unique pedagogy has touched the lives of many children and parents. We are recognized for our vibrant Reggio Emilia-inspired learning spaces, comprehensive bilingual programs, holistic development outcomes, and strengths in character development via Habits of Mind™. We have won multiple awards in Cambodia, and we are the ﬁrst ever preschool network in the world to be certiﬁed by The Institute for Habits of Mind from the USA.',
   awards: 'Awards',
   awardLists: [
     {
       textList:
-        'Winner of the Cambodia Prestige Brand Award (Established Brands), 2020 / 21',
+        'Winner of the Singapore Prestige Brand Award (Established Brands), 2020 / 21',
     },
     {
       textList: 'Best Early Learning Program (aged 0 – 6 years old), 2021',
@@ -36,7 +36,7 @@ export const AboutUsData = {
       textList: 'Best Holistic Learning Programs, 2016 – 2019',
     },
     {
-      textList: 'Cambodia Preschool Accreditation Framework (SPARK)',
+      textList: 'Singapore Preschool Accreditation Framework (SPARK)',
     },
     {
       textList: 'Healthy Preschool Accreditation (HPS)',
@@ -57,7 +57,8 @@ export const ImgFooter = [
   },
 ];
 
-export const textCover = 'Careers at Mulberry Learning';
+export const textCover =
+  'Careers at Mulberry International Preschool, Cambodia';
 
 export const HeadContent = {
   textHead: 'Learning is Engaging, Teaching is Vibrant, Respect for All!',
@@ -68,7 +69,7 @@ export const HeadContent = {
     },
     {
       paragraph:
-        'Look no further! At Mulberry Learning, we believe that early childhood educators are the heart of our business. The job may be challenging, but making a difference in the lives of little children can be extremely rewarding.',
+        'Look no further! At Mulberry International Preschool, Cambodia, we believe that early childhood educators are the heart of our business. The job may be challenging, but making a difference in the lives of little children can be extremely rewarding.',
     },
     {
       paragraph:
@@ -85,11 +86,11 @@ export const BodyContent = {
   paragraphArr: [
     {
       paragraph:
-        'At Mulberry Learning, we are dedicated towards our mission of nurturing the Future Ready Child. We are always on the lookout for the best talent possible – highly passionate and energetic early childhood educators who believe in our dream and possess a burning desire to shape the next generation of young leaders.',
+        'At Mulberry International Preschool, Cambodia, we are dedicated towards our mission of nurturing the Future Ready Child. We are always on the lookout for the best talent possible – highly passionate and energetic early childhood educators who believe in our dream and possess a burning desire to shape the next generation of young leaders.',
     },
     {
       paragraph:
-        'Start your rewarding and fulfilling career with a fast growing education juggernaut. Grow with us to develop your talents and chase your passions! Career advancement opportunities abound, both at Mulberry Learning.',
+        'Start your rewarding and fulfilling career with a fast growing education juggernaut. Grow with us to develop your talents and chase your passions! Career advancement opportunities abound, both at Mulberry International Preschool, Cambodia.',
     },
   ],
 };
@@ -98,17 +99,17 @@ export const FootContent = {
   textHead: 'Our i-Inspire™ Teacher Growth Model',
   img: GrowthModelImg,
   description:
-    'With over 250 hours of extensive training, Mulberry Learning’s teachers embody and impart our Reggio-Inspired Curriculum that supports child-centric learning.',
+    'With over 250 hours of extensive training, Mulberry International Preschool, Cambodia’s teachers embody and impart our Reggio-Inspired Curriculum that supports child-centric learning.',
   paragraphArr: [
     {
       paragraph1: 'Learning never ceases, even for our',
       paragraph2:
-        ' Mulberry Learning values our educators and wishes to see them develop as educators. Our latest i-Inspire™ teacher growth model helps our early childhood educators map out clear career advancement pathways and boost their competencies. Every year, all teachers and principals receive both in-house and external professional development training courses to expand their knowledge, skills, and competencies. These sessions are great ways for them to take a step back, reflect and share best practices in their teaching journey.',
+        ' Mulberry International Preschool, Cambodia values our educators and wishes to see them develop as educators. Our latest i-Inspire™ teacher growth model helps our early childhood educators map out clear career advancement pathways and boost their competencies. Every year, all teachers and principals receive both in-house and external professional development training courses to expand their knowledge, skills, and competencies. These sessions are great ways for them to take a step back, reflect and share best practices in their teaching journey.',
       span: ' teachers and principals!',
     },
     {
       paragraph1:
-        'Like the tree that provides a strong structure and support for children of different abilities to explore and make sense of the world around them, we want to ensure that our teachers gain a solid foundation in their professional development growth at Mulberry Learning. We strongly believe in building their careers by providing clear advancement structure that defines the opportunities, rewards, career pathways and the training required for them to expand their professional capacities!',
+        'Like the tree that provides a strong structure and support for children of different abilities to explore and make sense of the world around them, we want to ensure that our teachers gain a solid foundation in their professional development growth at Mulberry International Preschool, Cambodia. We strongly believe in building their careers by providing clear advancement structure that defines the opportunities, rewards, career pathways and the training required for them to expand their professional capacities!',
     },
   ],
 };
@@ -119,13 +120,14 @@ export const Links = {
     'If you want to get in touch with our HR team, please write to',
 };
 
-export const textCoverCenters = 'Mulberry Learning Centers';
+export const textCoverCenters =
+  'Mulberry International Preschool, Cambodia Centers';
 
 export const HeadAbout = {
   headTextPurple: 'Our',
   headTextPink: 'Learning Spaces',
   paragraph:
-    'Beautifully designed spaces are hallmarks of the Mulberry Learning center environment. We believe that our children learn best in thoughtfully-curated surroundings. That is why we spare no effort in creating a physical canvas that stimulates their senses, unleashes their innate creativity, and encourages their natural desire to explore.',
+    'Beautifully designed spaces are hallmarks of the Mulberry International Preschool, Cambodia center environment. We believe that our children learn best in thoughtfully-curated surroundings. That is why we spare no effort in creating a physical canvas that stimulates their senses, unleashes their innate creativity, and encourages their natural desire to explore.',
 };
 
 export const BodyAbout = {
@@ -134,7 +136,7 @@ export const BodyAbout = {
   paragraohArr: [
     {
       paragraph:
-        'The Reggio Emilia approach firmly believes that the centre environment plays a significant role in a child’s learning process and is often seen as the “third teacher”. At Mulberry Learning, the indoors and outdoors are seamlessly connected, allowing children to be immersed in nature while ensuring safety.',
+        'The Reggio Emilia approach firmly believes that the centre environment plays a significant role in a child’s learning process and is often seen as the “third teacher”. At Mulberry International Preschool, Cambodia, the indoors and outdoors are seamlessly connected, allowing children to be immersed in nature while ensuring safety.',
     },
     {
       paragraph:
