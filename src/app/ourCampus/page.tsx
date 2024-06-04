@@ -3,6 +3,8 @@ import React from 'react';
 
 import Image from 'next/image';
 
+import ImageBanner from '@/components/ImageBanner';
+
 import {
   Aware,
   Learning,
@@ -17,17 +19,31 @@ import {
   visit,
 } from '@/utils/campus-util';
 
+import Gallery from '/public/img/gallery.png';
+import CareerBanner from '/public/img/new-img/DSC02717.jpg';
+
 export const metadata = {
   title: 'Campus | Mulberry International Preschool, Cambodia',
 };
 function page() {
   return (
     <div className=''>
-      <div className='bg-primary-light w-full pl-4 md:pl-0'>
+      <ImageBanner
+        centerText={'Our Campus in Cambodia'}
+        img={CareerBanner}
+        imgReponsive={CareerBanner}
+      />
+      <Image
+        src={Gallery}
+        alt='logo'
+        priority
+        className='max-h-[120px] w-full relative lg:bottom-12 md:bottom-10 sm:bottom-6 bottom-4'
+      />
+      {/* <div className='bg-primary-light w-full pl-4 md:pl-0'>
         <h1 className='md:text-3xl text-xl  text-white font-avenir py-10 container mx-auto '>
           Our Campus in Cambodia
         </h1>
-      </div>
+      </div> */}
       <div className=' flex justify-center '>
         <div className='flex items-center flex-col mt-4'>
           <h1 className='md:text-4xl text-xl font-bold text-black font-avenir'>
@@ -41,21 +57,21 @@ function page() {
       <div className='flex justify-center mt-3 px-4 md:px-0 text-center'>
         <h1 className='md:text-xl text-xl font-bold text-black font-avenir italic'>
           <span className='text-primary-hight-light'> ‘Unique Boutique’ </span>
-          Cambodiaan Franchise Preschool Opens its doors in Pheng Huot, Chbar
+          Cambodian Franchise Preschool Opens its doors in Pheng Huot, Chbar
           Ampov
         </h1>
       </div>
       <div className='mt-4 mb-4 container mx-auto px-4 md:px-0'>
-        <p className='font-avenir font-light text-center'>{Learning}</p>
+        <p className='font-avenir font-light '>{Learning}</p>
       </div>
       <div className='mt-4 mb-4 container mx-auto px-4 md:px-0'>
-        <p className='font-avenir font-light text-center'>{Over}</p>
+        <p className='font-avenir font-light'>{Over}</p>
       </div>
       <div className='mt-4 mb-4 container mx-auto px-4 md:px-0'>
-        <p className='font-avenir font-light text-center'>{Spaces}</p>
+        <p className='font-avenir font-light'>{Spaces}</p>
       </div>
       <div className='mt-4 mb-4 container mx-auto px-4 md:px-0'>
-        <p className='font-avenir font-light text-center'>{Parent}</p>
+        <p className='font-avenir font-light'>{Parent}</p>
       </div>
 
       <div className='flex justify-center'>
@@ -116,10 +132,10 @@ function page() {
           </div>
         ))}
       </div>
-      <div className='flex justify-center text-center mt-5 container mx-auto px-4 md:px-0'>
+      <div className='flex justify-center  mt-5 container mx-auto px-4 md:px-0'>
         <p className='font-avenir  font-light'>{location}</p>
       </div>
-      <div className='flex justify-center text-center mt-5 container mx-auto mb-8 md:flex-row flex-col px-4 md:px-0'>
+      <div className='flex justify-center mt-5 container mx-auto mb-8 md:flex-row flex-col px-4 md:px-0'>
         <p className='font-avenir font-light'>{visit}</p>
         <a
           href={mapLocatio}

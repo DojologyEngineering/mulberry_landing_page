@@ -34,7 +34,7 @@ function Centers() {
         </div> */}
         <ImageBanner
           // textCover1={textCover1}
-          // textCover2={textCover2}
+          centerText={'Mulberry Learning Centers '}
           img={LearningCentersMedia}
           imgReponsive={LearningCentersMedia}
         />
@@ -44,7 +44,7 @@ function Centers() {
           src={Gallery}
           alt='logo'
           priority
-          className='max-h-[120px] w-full relative lg:bottom-12 md:bottom-10 sm:bottom-6 bottom-2'
+          className='max-h-[120px] w-full relative lg:bottom-12 md:bottom-10 sm:bottom-6 bottom-5'
         />
         {/* <div className='relative h-[140px]w-full sm:bottom-16 bottom-6'>
           <Image src={Gallery} alt='logo' priority />

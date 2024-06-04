@@ -9,6 +9,7 @@ import { FiEdit3 } from 'react-icons/fi';
 import { LiaCalendarCheckSolid } from 'react-icons/lia';
 
 import { BookTour, ButtonBookTour } from '@/components/BookTour';
+import ImageBanner from '@/components/ImageBanner';
 import { ImagePreview } from '@/components/ImagePreview';
 import Map from '@/components/Map';
 
@@ -42,8 +43,19 @@ export default async function Job({ params }: { params: { slug: string } }) {
         <title>My page title</title>
         <meta name='viewport' content='initial-scale=1.0, width=device-width' />
       </Head>
-
-      <div className='relative'>
+      <ImageBanner
+        // textCover1={textCover1}
+        centerText={'Mulberry International Preschool, Cambodia Centers'}
+        img={center}
+        imgReponsive={center}
+      />
+      <Image
+        src={profilePic}
+        alt='logo'
+        priority
+        className='max-h-[120px] w-full relative lg:bottom-12 md:bottom-10 sm:bottom-6 bottom-4'
+      />
+      {/* <div className='relative'>
         <Image
           src={center}
           alt='Picture of the author'
@@ -61,7 +73,7 @@ export default async function Job({ params }: { params: { slug: string } }) {
             Mulberry International Preschool, Cambodia Centers
           </h1>
         </div>
-      </div>
+      </div> */}
       <div className='px-5'>
         <div className='container mx-auto'>
           {params.slug === 'mulberry-learning-cambodia' && (

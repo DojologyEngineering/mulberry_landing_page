@@ -7,9 +7,16 @@ interface Iprops {
   textCover2?: string;
   img: StaticImageData;
   imgReponsive: StaticImageData;
+  centerText?: string;
 }
 
-function ImageBanner({ img, textCover1, imgReponsive, textCover2 }: Iprops) {
+function ImageBanner({
+  img,
+  textCover1,
+  imgReponsive,
+  textCover2,
+  centerText,
+}: Iprops) {
   return (
     <div className='relative flex justify-center items-center'>
       <Image
@@ -24,6 +31,9 @@ function ImageBanner({ img, textCover1, imgReponsive, textCover2 }: Iprops) {
         priority
         className='w-full max-h-[140px] sm:h-auto sm:hidden object-cover'
       />
+      <span className='absolute sm:whitespace-nowrap text-[16px] sm:text-[26px] md:text-[40px] font-raleway font-bold px-1  text-white bg-primary-main text-start lg:mb-[40px] sm:mb-[40px]'>
+        {centerText}
+      </span>
       <span className='absolute  md:left-[25%]   sm:whitespace-nowrap lg:mr-[320px] text-[18px] sm:text-[26px] lg:text-[40px] font-raleway font-bold px-1 sm:px-5 text-white bg-primary-main text-start lg:mb-[40px] sm:mb-[40px]'>
         {textCover1}
       </span>

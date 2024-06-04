@@ -34,7 +34,7 @@ function Careers() {
         </div> */}
         <ImageBanner
           // textCover1={textCover1}
-          // textCover2={textCover2}
+          centerText={'Careers at Mulberry Learning '}
           img={CareerBanner}
           imgReponsive={CareerBanner}
         />
