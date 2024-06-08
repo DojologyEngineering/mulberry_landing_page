@@ -8,7 +8,7 @@ import SchoolLogo from '../../../../public/img/MBR Logo with tagline.webp';
 import Gallery from '../../../../public/img/gallery.png';
 
 export const metadata = {
-  title: 'About us | Mulberry Learning Cambodia',
+  title: 'About us | Mulberry International Preschool, Cambodia',
 };
 export default function About() {
   return (

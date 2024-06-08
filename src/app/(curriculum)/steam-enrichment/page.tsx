@@ -10,6 +10,7 @@ import { MdOutlineScience } from 'react-icons/md';
 import { RiComputerLine } from 'react-icons/ri';
 
 import ImageBanner from '@/components/ImageBanner';
+import { ImagePreview } from '@/components/ImagePreview';
 
 // import SteamBanner from '../../../../public/img/SteamBannerReponsive.webp';
 import Gallery from '../../../../public/img/gallery.png';
@@ -17,7 +18,7 @@ import SteamBanner from '../../../../public/img/new-img/DSC00654.jpg';
 import { AwardWinning } from '../habits-of-mind/page';
 
 export const metadata = {
-  title: 'S.T.E.A.M Enrichment | Mulberry Learning Cambodia',
+  title: 'S.T.E.A.M Enrichment | Mulberry International Preschool, Cambodia',
 };
 
 const textCover1 = 'Preparing For The Future';
@@ -42,7 +43,7 @@ const headData = {
 
 const footData = {
   headTittle: 'Our STEAM Enrichment Program',
-  des: 'Since S.T.E.A.M concepts rely heavily on hands-on learning and production, they are second nature for young kids. At Mulberry Learning, these seemingly big concepts are acquired via a range of highly engaging and exciting S.T.E.A.M enrichment activities that hones children’s creativity, problem solving and critical thinking skills – all while having fun!',
+  des: 'Since S.T.E.A.M concepts rely heavily on hands-on learning and production, they are second nature for young kids. At Mulberry International Preschool, Cambodia, these seemingly big concepts are acquired via a range of highly engaging and exciting S.T.E.A.M enrichment activities that hones children’s creativity, problem solving and critical thinking skills – all while having fun!',
   desArr: [
     {
       subDesTittle: 'Picasso Kidz™ (Art)',
@@ -218,6 +219,9 @@ function SteamEnrichment() {
           </div>
         </div>
       </section>
+      <div className='bg-white'>
+        <ImagePreview />
+      </div>
     </main>
   );
 }

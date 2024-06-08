@@ -39,7 +39,10 @@ export const menu = [
     title: 'About Us',
     value: '/about',
     subMenu: [
-      { title: 'Mulberry Learning Credo', value: '/about' },
+      {
+        title: 'Mulberry International Preschool, Cambodia Credo',
+        value: '/about',
+      },
       { title: 'Center Enviroment', value: '/centers' },
       { title: 'Careers', value: '/careers' },
       { title: 'Our Campus in Cambodia', value: '/ourCampus' },
@@ -60,9 +63,9 @@ export const menu = [
     title: 'Locations',
     value: '/centers',
     subMenu: [
-      // { title: 'Mulberry Learning @ BGC', value: '/mulberry-learning-bgc' },
+      // { title: 'Mulberry International Preschool, Cambodia @ BGC', value: '/mulberry-learning-bgc' },
       {
-        title: 'Mulberry Learning @ Cambodia',
+        title: 'Mulberry International Preschool, Cambodia @ Cambodia',
         value: '/mulberry-learning-cambodia',
       },
     ],
@@ -73,16 +76,16 @@ export const menu = [
 export const location = [
   {
     icon: PiMapPinLineFill,
-    text: 'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
+    text: 'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Peng Huoth Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
     href: 'https://maps.app.goo.gl/63c9WtJHULsmnZ289?g_st=ic',
   },
 
   // {
   //   icon: PiMapPinLineFill,
-  //   text: 'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
+  //   text: 'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Peng Huoth Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
   //   href: 'https://maps.app.goo.gl/63c9WtJHULsmnZ289?g_st=ic',
   // },
 ];
 
 export const footerCenterText =
-  'Mulberry Learning is the only preschool in Cambodia with a truly unique preschool programs that incorporates the Reggio Emilia methodology, Habits of Mind™ framework and Multiple Intelligences that will nurture your child into a competent explorer, an imaginative thinker, and a creative problem solver.';
+  'Mulberry International Preschool, Cambodia is the only preschool in Cambodia with a truly unique preschool programs that incorporates the Reggio Emilia methodology, Habits of Mind™ framework and Multiple Intelligences that will nurture your child into a competent explorer, an imaginative thinker, and a creative problem solver.';

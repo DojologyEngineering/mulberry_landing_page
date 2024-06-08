@@ -26,7 +26,7 @@ const description = {
   icon: FaStar,
 };
 export const metadata = {
-  title: 'Curriculum | Mulberry Learning Cambodia',
+  title: 'Curriculum | Mulberry International Preschool, Cambodia',
 };
 
 const dataCurriculum = {

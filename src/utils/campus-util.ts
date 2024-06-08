@@ -1,3 +1,7 @@
+import mulberry3 from '../../public/img/new-img/DSC00436.jpg';
+import mulberry from '../../public/img/new-img/DSC02717.jpg';
+import mulberry2 from '../../public/img/new-img/DSC04340.jpg';
+import mulberry1 from '../../public/img/new-img/DSC05749.jpg';
 import award from '/public/img/award.webp';
 import habit from '/public/img/habit.webp';
 import honkey from '/public/img/honkey.webp';
@@ -15,7 +19,7 @@ export const Over =
 export const Spaces =
   'Beautifully designed spaces are hallmarks of the MIP centre environment. We believe that our children learn best in thoughtfully curated surroundings.';
 export const Parent =
-  'Parents with young children can look forward to enrolling their children in a quality preschool. Mulberry Learning’s award-winning preschool offering will provide the new generation of working parents in Phnom Penh a high-quality early childhood education for infants aged 3 to 17 months and pre-schoolers aged 18 months to 6 years old.';
+  'Parents with young children can look forward to enrolling their children in a quality preschool. Mulberry International Preschool, Cambodia’s award-winning preschool offering will provide the new generation of working parents in Phnom Penh a high-quality early childhood education for infants aged 3 to 17 months and pre-schoolers aged 18 months to 6 years old.';
 export const Aware = 'Awards';
 export const awards = [
   {
@@ -49,8 +53,14 @@ export const awards = [
       'World’s first and only preschool network certified by the USA for the Habits of MindTM',
   },
 ];
+export const imageCampus = {
+  image1: mulberry,
+  image2: mulberry1,
+  image3: mulberry2,
+  image4: mulberry3,
+};
 export const location =
-  'Voted as “Cambodia’s Best Holistic Curriculum” for 3 years running by leading parenting publications, and recently recorded a double win at the Cambodia Prestige Brand Award 2020/21, bagging the Winner and Overall Winner awards for the Established Brands category! Express your interest in a School Tour and speak to our highly qualified educators to learn more about Mulberry Learning’s proprietary award-winning curriculum and explore our Reggio-inspired learning spaces.';
+  'Voted as “Cambodia’s Best Holistic Curriculum” for 3 years running by leading parenting publications, and recently recorded a double win at the Cambodia Prestige Brand Award 2020/21, bagging the Winner and Overall Winner awards for the Established Brands category! Express your interest in a School Tour and speak to our highly qualified educators to learn more about Mulberry International Preschool, Cambodia’s proprietary award-winning curriculum and explore our Reggio-inspired learning spaces.';
 export const visit = 'For more information on Global EduHub, visit';
 export const imagePaths = [
   '/img/award.webp',

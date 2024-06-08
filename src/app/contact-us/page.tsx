@@ -4,9 +4,9 @@ import React from 'react';
 import ContactUs from '@/components/ContactUs';
 
 export const metadata: Metadata = {
-  title: ' Contact Us | Mulberry Learning Cambodia',
+  title: ' Contact Us | Mulberry International Preschool, Cambodia',
   description:
-    'Mulberry Learning Cambodia is a vibrant environment that promotes holistic learning and empowers children to become enthusiastic, confident, and caring global citizens of the world. Powered by Cambodia Award-winning Reggio-inspired Preschool, certified by the USA`s Habits of Mind Institute',
+    'Mulberry International Preschool, Cambodia is a vibrant environment that promotes holistic learning and empowers children to become enthusiastic, confident, and caring global citizens of the world. Powered by Cambodia Award-winning Reggio-inspired Preschool, certified by the USA`s Habits of Mind Institute',
 };
 function page() {
   return (

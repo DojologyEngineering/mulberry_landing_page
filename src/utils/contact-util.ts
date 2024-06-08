@@ -7,7 +7,7 @@ export const location = [
   // {
   //   id: 0,
   //   logo: schoolLocatio1,
-  //   nameLocation: 'Mulberry Learning @ BGC',
+  //   nameLocation: 'Mulberry International Preschool, Cambodia @ BGC',
   //   locationDetail:
   //     '7/F, GSC Corporate Tower, Triangle Drive, Bonifacio Global City, Taguig City, 1630 Metro Manila',
   //   value: '',
@@ -15,15 +15,15 @@ export const location = [
   {
     id: 1,
     logo: schoolLocatio2,
-    nameLocation: 'Mulberry Learning @ Cambodia',
+    nameLocation: 'Mulberry International Preschool, Cambodia @ Cambodia',
     locationDetail:
-      'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Pheng Hout Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
+      'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Peng Huoth Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
     value: '/mulberry-learning-cambodia',
   },
   // {
   //   id: 2,
   //   logo: schoolLocation,
-  //   nameLocation: 'Mulberry Learning @ Greenhills',
+  //   nameLocation: 'Mulberry International Preschool, Cambodia @ Greenhills',
   //   locationDetail:
   //     '297 Connecticut St., Greenhills East, Mandaluyong City, Metro Manila',
   //   value: '',
@@ -31,22 +31,24 @@ export const location = [
 ];
 export const parentsData = [
   {
-    question: 'I’m interested in enrolling my child at a Mulberry Learning.',
+    question:
+      'I’m interested in enrolling my child at a Mulberry International Preschool, Cambodia.',
     answer:
       'Great! Please fill out the booking form below to schedule a tour and to learn about the fees and enrollment process. We look forward to hearing from you.',
   },
   {
-    question: 'I’m a Mulberry Learning parent with a question.',
+    question:
+      'I’m a Mulberry International Preschool, Cambodia parent with a question.',
     answer:
       'We are available to assist you Monday through Friday between the hours of 9 a.m. to 5 p.m. You can reach us by phone at +63 945 186 6486 or you can email us at inquiry@mulberrylearning.com.ph.',
   },
 ];
 export const jopSeeker = [
   {
-    question: 'I’d like to work at Mulberry Learning.',
+    question: 'I’d like to work at Mulberry International Preschool, Cambodia.',
     answer:
-      'Great! We`re looking for dedicated educators and child care professionals like you. Mulberry Learning professionals enjoy careers that are both challenging and rewarding.',
-    link: 'Learn more about Careers with Mulberry Learning',
+      'Great! We`re looking for dedicated educators and child care professionals like you. Mulberry International Preschool, Cambodia professionals enjoy careers that are both challenging and rewarding.',
+    link: 'Learn more about Careers with Mulberry International Preschool, Cambodia',
   },
 ];
 export const partnership = [
@@ -58,8 +60,8 @@ export const partnership = [
 export const Centers = [
   {
     id: 2,
-    name: 'Mulberry Learning @ Cambodia',
-    value: 'Mulberry Learning @ Cambodia',
+    name: 'Mulberry International Preschool, Cambodia @ Cambodia',
+    value: 'Mulberry International Preschool, Cambodia @ Cambodia',
   },
 ];
 export const program = [

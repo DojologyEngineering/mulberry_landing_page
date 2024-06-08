@@ -79,8 +79,8 @@ export default function Footer() {
       <div className='bg-primary-main'>
         <div className='container px-16 py-8 mx-auto'>
           <p className='text-sm font-light text-center text-white font-helvetica tracking-[0.01em]'>
-            Copyright © {new Date().getFullYear()} Mulberry Learning Cambodia.
-            All Rights Reserved. Privacy Policy
+            Copyright © {new Date().getFullYear()} Mulberry International
+            Preschool, Cambodia. All Rights Reserved. Privacy Policy
           </p>
         </div>
       </div>

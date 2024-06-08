@@ -20,7 +20,7 @@ export async function generateMetadata({
 }) {
   const dataDetails = CardData.find((item) => item.route === params.slug);
   return {
-    title: `${dataDetails?.tittle} | Mulberry Learning Cambodia`,
+    title: `${dataDetails?.tittle} | Mulberry International Preschool, Cambodia`,
   };
 }
 export default function Page({ params }: { params: { slug: string } }) {
