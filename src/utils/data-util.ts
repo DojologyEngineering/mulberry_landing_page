@@ -5,7 +5,7 @@ import { TbMailFilled, TbPhoneFilled } from 'react-icons/tb';
 export const contactData = [
   {
     icon: TbPhoneFilled,
-    text: '+85578 553 778 / +85516 509 278',
+    text: '+855 78 553 778 / +855 16 509 278',
     href: 'tel:+85578 553 778 / +85516 509 278',
   },
   {
@@ -40,7 +40,7 @@ export const menu = [
     value: '/about',
     subMenu: [
       {
-        title: 'Mulberry International Preschool, Cambodia Credo',
+        title: 'Mulberry Learning Credo',
         value: '/about',
       },
       { title: 'Center Enviroment', value: '/centers' },
@@ -52,21 +52,22 @@ export const menu = [
     title: 'Curriculum',
     value: '/curriculum',
     subMenu: [
+      { title: 'Our Programs', value: '/curriculum' },
       { title: 'Habits of Mind', value: '/habits-of-mind' },
       { title: 'Literacy And Numeracy', value: '/literacy-and-numeracy' },
       { title: 'Project Inquiry', value: '/project-inquiry' },
-      { title: 'S.T.E.A.M Enrichment', value: 'steam-enrichment' },
+      { title: 'S.T.E.A.M Enrichment', value: '/steam-enrichment' },
     ],
   },
   // { title: 'News & Events', value: '/latest-news' },
   {
     title: 'Locations',
-    value: '/centers',
+    value: '/locations',
     subMenu: [
       // { title: 'Mulberry International Preschool, Cambodia @ BGC', value: '/mulberry-learning-bgc' },
       {
         title: 'Mulberry International Preschool, Cambodia @ Cambodia',
-        value: '/mulberry-learning-cambodia',
+        value: '/locations/mulberry-learning-cambodia',
       },
     ],
   },

@@ -49,7 +49,7 @@ export const learnEdge = [
     id: 2,
     logo: RiSchoolLine,
     title: 'Center Environment',
-    desc: 'Beautifully designed spaces are hallmarks of the Mulberry International Preschool, Cambodia environment. We believe that our children learn best in beautiful surroundings, specially curated to stimulate their senses and encourage their natural urge to explore everything around. We have 2 child care centers conveniently located in Cambodia.',
+    desc: 'Beautifully designed spaces are hallmarks of the Mulberry International Preschool, Cambodia environment. We believe that our children learn best in beautiful surroundings, specially curated to stimulate their senses and encourage their natural urge to explore everything around. Our child care centers conveniently located in Cambodia.',
     url: '',
   },
 ];
@@ -69,7 +69,7 @@ export const centerHighlight = [
     nameLocation: 'Mulberry International Preschool, Cambodia @ Cambodia',
     locationDetail:
       'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Peng Huoth Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
-    value: '/mulberry-learning-cambodia',
+    value: '/locations/mulberry-learning-cambodia',
   },
 ];
 export const images = [

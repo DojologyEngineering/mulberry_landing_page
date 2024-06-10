@@ -18,7 +18,7 @@ export const location = [
     nameLocation: 'Mulberry International Preschool, Cambodia @ Cambodia',
     locationDetail:
       'The Star Platinum Mercurean Clubhouse, #8, M04 & M05, Borey Peng Huoth Boeung Snor, Phum Boeung Chuk, Sangkat Niroth, Khan Chbar Ampov',
-    value: '/mulberry-learning-cambodia',
+    value: '/locations/mulberry-learning-cambodia',
   },
   // {
   //   id: 2,

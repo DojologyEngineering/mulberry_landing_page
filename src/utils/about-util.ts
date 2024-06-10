@@ -13,8 +13,9 @@ import TeacherHighFive from '../../public/img/new-img/DSC02077.jpg';
 import TeacherTech from '../../public/img/new-img/DSC02717.jpg';
 
 export const AboutUsData = {
-  textHead: "I believe it should be Singapore's award-winning preschool brand",
-  // "Mulberry International Preschool, Cambodia Philippines is a proud partner of Cambodia's Award-Winning Preschool Brand - Mulberry International Preschool, Cambodia.",
+  // textHead: "I believe it should be Singapore's award-winning preschool brand",
+  textHead:
+    "Mulberry International Preschool, Cambodia is a proud partner of Singapore's award-winning preschool brand - Mulberry Learning.",
   paragraph:
     'Mulberry International Preschool, Cambodia started out with the dream of creating well-rounded children with imaginative young minds, positive attitudes and strength of character. Over the years, our unique pedagogy has touched the lives of many children and parents. We are recognized for our vibrant Reggio Emilia-inspired learning spaces, comprehensive bilingual programs, holistic development outcomes, and strengths in character development via Habits of Mind™. We have won multiple awards in Cambodia, and we are the ﬁrst ever preschool network in the world to be certiﬁed by The Institute for Habits of Mind from the USA.',
   awards: 'Awards',
