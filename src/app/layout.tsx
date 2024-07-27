@@ -1,13 +1,13 @@
-import type { Metadata } from 'next';
-
+// import type { Metadata } from 'next';
+import { GoogleAnalytics } from '@next/third-parties/google';
 import { Patrick_Hand, Poppins, Raleway } from 'next/font/google';
 import localFont from 'next/font/local';
 
 import Footer from '@/components/Footer';
 import Navbar from '@/components/Navbar';
 import ScrollToTopButton from '@/components/ScrollToTop';
-import { Links } from '@/components/links';
 
+// import { Links } from '@/components/links';
 import './globals.css';
 
 const poppin = Poppins({
@@ -76,6 +76,7 @@ export default function RootLayout({
         <ScrollToTopButton />
         <Footer />
       </body>
+      <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_ANALYTICS_ID || ''} />
     </html>
   );
 }
