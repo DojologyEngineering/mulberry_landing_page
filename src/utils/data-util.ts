@@ -45,7 +45,7 @@ export const menu = [
       },
       { title: 'Center Enviroment', value: '/centers' },
       { title: 'Careers', value: '/careers' },
-      { title: 'Our Campus in Cambodia', value: '/ourCampus' },
+      { title: 'Our Campus in Cambodia', value: '/our-campus' },
     ],
   },
   {
@@ -62,7 +62,7 @@ export const menu = [
   // { title: 'News & Events', value: '/latest-news' },
   {
     title: 'Locations',
-    value: '/locations',
+    value: '/locations/mulberry-learning-cambodia',
     subMenu: [
       // { title: 'Mulberry International Preschool, Cambodia @ BGC', value: '/mulberry-learning-bgc' },
       {
