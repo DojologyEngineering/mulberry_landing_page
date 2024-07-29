@@ -1,5 +1,3 @@
-import NotFoundLocation from '@/app/not-found';
-
 import Head from 'next/head';
 import Image from 'next/image';
 import { notFound } from 'next/navigation';
