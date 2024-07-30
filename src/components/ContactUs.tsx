@@ -1,13 +1,7 @@
 'use client';
 
-import React, {
-  InputHTMLAttributes,
-  Ref,
-  createRef,
-  forwardRef,
-  useRef,
-  useState,
-} from 'react';
+import axios from 'axios';
+import React, { useRef, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import ReCAPTCHA from 'react-google-recaptcha';
@@ -15,14 +9,9 @@ import { Controller, SubmitHandler, useForm } from 'react-hook-form';
 
 import Image from 'next/image';
 import Link from 'next/link';
-import Script from 'next/script';
 
 import { Disclosure, Listbox } from '@headlessui/react';
 import { BiCalendar } from 'react-icons/bi';
-import { FaFacebookF, FaInstagram, FaTiktok } from 'react-icons/fa';
-import { FaLocationDot } from 'react-icons/fa6';
-import { FaPhone } from 'react-icons/fa6';
-import { GrMail } from 'react-icons/gr';
 import { MdKeyboardArrowDown, MdKeyboardArrowUp } from 'react-icons/md';
 
 import {
@@ -35,12 +24,12 @@ import {
   program,
 } from '@/utils/contact-util';
 
+import CusDialog from './CusDialog/CusDialog';
+import CusErrDialog, { IErrDialogRef } from './CusDialog/CusErrDialog';
 import LocationCard from './LocationCard';
-import schoolLogo from '/public/img/MBR_Logo_RGB.webp';
 import profilePic from '/public/img/curve.webp';
-import schoolLocation from '/public/img/school.jpg';
 
-interface IFormInput {
+export interface IFormInput {
   center: string;
   program: string;
   name: string;
@@ -58,28 +47,86 @@ interface IFormInput {
 function ContactUs() {
   const [loading, setLoading] = useState(true);
   const [isOpen, setIsOpen] = useState(false);
-  const [selectedProgram, setSelectedProgram] = useState(program[0]);
-  const [startDate, setStartDate] = useState<Date | null>(new Date());
-  const [isRecaptchaReady, setRecaptchaReady] = useState(false);
-
   const handleRecaptchaLoad = () => {
-    // Set loading to false once reCAPTCHA is loaded
     setLoading(false);
   };
+  const recaptchaRef = useRef<ReCAPTCHA>(null);
+  const errDialogRef = useRef<IErrDialogRef>(null);
   const {
-    register,
     control,
+    setValue,
+    reset,
     handleSubmit,
     formState: { errors },
   } = useForm<IFormInput>();
-  const onSubmit: SubmitHandler<IFormInput> = (data) => console.log(data);
-
-  const toggleListbox = () => {
-    setIsOpen(!isOpen);
+  const onSubmit: SubmitHandler<IFormInput> = async (data) => {
+    const telegramMessage = `
+      New Contact Form For School Tour:
+      - Selected Centers: ${data.center}
+      - Interested Programme: ${data.program}
+      - Parent's Full Name: ${data.name}
+      - Mobile Number: ${data.mobile}
+      - Email Address: ${data.address}
+      **Child 1 Details:**
+      - Child's Name: ${data.childname1}
+      - Child's Date of Birth: ${data.datechild1}
+      **Child 2 Details (if any):**
+      - Child's Name: ${data.childname2 ? data.childname2 : 'N/A'}
+      - Child's Date of Birth: ${data.datechild2 ? data.datechild2 : 'N/A'}
+      - How did you learn about us?: ${data.question || 'NA'}
+      - Message: ${data.message || 'NA'}
+    `;
+    try {
+      setLoading(true);
+      setIsOpen(false);
+      const response = await axios.post('/api/submit', {
+        name: data.name,
+        message: telegramMessage,
+        recaptchaToken: data.recaptcha ? data.recaptcha.toString() : '',
+      });
+      setLoading(false);
+      if (response.data) {
+        setIsOpen(true);
+        recaptchaRef.current?.reset();
+        reset({
+          name: '',
+          mobile: '',
+          address: '',
+          childname1: '',
+          datechild1: '',
+          childname2: '',
+          datechild2: '',
+          question: '',
+          message: '',
+          recaptcha: false,
+        });
+        setValue('recaptcha', false);
+      }
+      console.log(response.data);
+      reset();
+    } catch (error) {
+      setIsOpen(false);
+      console.error('Error submitting form:', error);
+      errDialogRef.current?.open('Error Occured');
+    }
   };
 
   return (
     <div>
+      <CusErrDialog
+        ref={errDialogRef}
+        title='Something went wrong'
+        buttonText='OK'
+      />
+      <CusDialog
+        isOpen={isOpen}
+        onClose={() => setIsOpen(false)}
+        title={
+          'Your school tour has been successfully submitted. We will contact you later.'
+        }
+        buttonText='Ok'
+        loading={loading}
+      />
       <div className='shadow-sm'>
         <div className=' bg-primary-light md:h-36 flex items-center w-full absolute mt-2'>
           <Image
@@ -189,7 +236,7 @@ function ContactUs() {
                   <Controller
                     name='center'
                     control={control}
-                    defaultValue={program[0].value}
+                    defaultValue={Centers[0].value}
                     render={({ field }) => (
                       <div className='relative'>
                         <Listbox
@@ -198,7 +245,7 @@ function ContactUs() {
                         >
                           <Listbox.Button
                             className='bg-grey-main text-white py-2 px-4 rounded-3xl w-full flex items-center justify-between hover:bg-purple-main'
-                            onClick={toggleListbox}
+                            // onClick={toggleListbox}
                           >
                             <div className='text-black'>{field.value}</div>
                             {isOpen ? (
@@ -246,14 +293,14 @@ function ContactUs() {
                   control={control}
                   defaultValue={program[0].value}
                   render={({ field }) => (
-                    <div className='relative'>
+                    <div className='relative z-50'>
                       <Listbox
                         value={field.value}
                         onChange={(value) => field.onChange(value)}
                       >
                         <Listbox.Button
                           className='bg-grey-main text-white py-2 px-4 rounded-3xl w-full flex items-center justify-between hover:bg-purple-main'
-                          onClick={toggleListbox}
+                          // onClick={toggleListbox}
                         >
                           <div className='text-black'> {field.value}</div>
                           {isOpen ? (
@@ -306,7 +353,8 @@ function ContactUs() {
                   render={({ field: { onChange, value } }) => (
                     <>
                       <input
-                        onChange={(value) => onChange(value)}
+                        value={value}
+                        onChange={(e) => onChange(e.target.value)}
                         type='text'
                         className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
                           errors.name
@@ -332,7 +380,8 @@ function ContactUs() {
                   render={({ field: { onChange, value } }) => (
                     <>
                       <input
-                        onChange={(value) => onChange(value)}
+                        value={value}
+                        onChange={(e) => onChange(e.target.value)}
                         type='text'
                         className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
                           errors.name
@@ -358,7 +407,8 @@ function ContactUs() {
                   render={({ field: { onChange, value } }) => (
                     <>
                       <input
-                        onChange={(value) => onChange(value)}
+                        value={value}
+                        onChange={(e) => onChange(e.target.value)}
                         type='text'
                         className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
                           errors.name
@@ -384,7 +434,8 @@ function ContactUs() {
                   render={({ field: { onChange, value } }) => (
                     <>
                       <input
-                        onChange={(value) => onChange(value)}
+                        value={value}
+                        onChange={(e) => onChange(e.target.value)}
                         type='text'
                         className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
                           errors.name
@@ -441,7 +492,8 @@ function ContactUs() {
                   render={({ field: { onChange, value } }) => (
                     <>
                       <input
-                        onChange={(value) => onChange(value)}
+                        value={value}
+                        onChange={(e) => onChange(e.target.value)}
                         type='text'
                         className='bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none'
                       />
@@ -463,7 +515,8 @@ function ContactUs() {
                   render={({ field: { onChange, value } }) => (
                     <>
                       <input
-                        onChange={(value) => onChange(value)}
+                        value={value}
+                        onChange={(e) => onChange(e.target.value)}
                         type='text'
                         className='bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none'
                       />
@@ -507,7 +560,8 @@ function ContactUs() {
                     <div className='w-full max-w-screen-md mx-auto'>
                       {loading && <p>Loading...</p>}
                       <ReCAPTCHA
-                        sitekey='6LdI4n8pAAAAADB04MnWhrp2zajRiKS2bDRrIkD4'
+                        ref={recaptchaRef}
+                        sitekey={`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY_REACT || ''}`}
                         onChange={(value) => {
                           field.onChange(value);
                           console.log('value', value);
@@ -517,7 +571,7 @@ function ContactUs() {
                       />
                       <div className={`${errors.name ? 'text-red-500' : ''}`}>
                         {fieldState?.error && (
-                          <span className='text-sm'>
+                          <span className='text-sm text-red-500'>
                             {fieldState.error.message}
                           </span>
                         )}

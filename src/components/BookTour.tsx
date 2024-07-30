@@ -10,14 +10,16 @@ import { LiaCalendarCheckSolid } from 'react-icons/lia';
 import { bookTour } from '@/utils/location-util';
 
 export const ButtonBookTour = () => {
+  const router = useRouter();
   return (
     <>
       <button
         onClick={() => {
-          window.open(
-            'https://form.jotform.com/srunrotha614/testing',
-            '_blank',
-          );
+          // window.open(
+          //   'https://form.jotform.com/srunrotha614/testing',
+          //   '_blank',
+          // );
+          router.push('/contact-us');
         }}
         className='flex items-center justify-center md:min-w-96 min-w-72 h-12 px-3 text-white transition duration-200 bg-primary-light hover:bg-primary-hight-light rounded-full border-2'
       >
@@ -30,16 +32,18 @@ export const ButtonBookTour = () => {
   );
 };
 export const BookTour = () => {
+  const router = useRouter();
   return (
     <div>
       <div className='flex justify-start'>
         <div className='relative flex flex-col items-center max-w-md justify-end'>
           <div
             onClick={() => {
-              window.open(
-                'https://form.jotform.com/srunrotha614/testing',
-                '_blank',
-              );
+              // window.open(
+              //   'https://form.jotform.com/srunrotha614/testing',
+              //   '_blank',
+              // );
+              router.push('/contact-us');
             }}
             className='rounded-full text-primary-hight-light w-36 md:w-20 h-20 border-4 border-primary-hight-light flex items-center justify-center hover:bg-primary-hight-light hover:text-white hover:cursor-pointer'
           >

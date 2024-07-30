@@ -5,7 +5,8 @@ import { Fragment, memo, useEffect, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import {
-  usePathname, // useRouter
+  usePathname,
+  useRouter, // useRouter
 } from 'next/navigation';
 
 import { Disclosure, Menu, Transition } from '@headlessui/react';
@@ -26,7 +27,7 @@ function Navbar() {
 
   const pathname = usePathname();
   // console.log('pathname:', pathname);
-  // const navigate = useRouter();
+  const navigate = useRouter();
   const [isOpen, setIsOpen] = useState(false);
   const [hideNav, setHideNav] = useState(false);
   const [prevScrollpos, setPrevScrollpos] = useState(0);
@@ -108,7 +109,10 @@ function Navbar() {
             ))}
           </span>
           {/* end social media */}
-          <button className='transition duration-150 bg-primary-main hover:bg-primary-hight-light'>
+          <button
+            className='transition duration-150 bg-primary-main hover:bg-primary-hight-light'
+            onClick={() => navigate.push('/contact-us')}
+          >
             <span className='flex items-center h-12 px-3 text-xl font-normal text-white transition duration-150 font-patrick hover:transform hover:scale-105'>
               Book a School Tour <FiEdit3 className='ml-2' size={24} />
             </span>
