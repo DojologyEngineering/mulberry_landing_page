@@ -52,36 +52,14 @@ function ContactUs() {
   };
   const recaptchaRef = useRef<ReCAPTCHA>(null);
   const errDialogRef = useRef<IErrDialogRef>(null);
-  const {
-    control,
-    setValue,
-    reset,
-    handleSubmit,
-    formState: { errors },
-  } = useForm<IFormInput>();
+  const { control, setValue, reset, handleSubmit } = useForm<IFormInput>();
   const onSubmit: SubmitHandler<IFormInput> = async (data) => {
-    const telegramMessage = `
-      New Contact Form For School Tour:
-      - Selected Centers: ${data.center}
-      - Interested Programme: ${data.program}
-      - Parent's Full Name: ${data.name}
-      - Mobile Number: ${data.mobile}
-      - Email Address: ${data.address}
-      **Child 1 Details:**
-      - Child's Name: ${data.childname1}
-      - Child's Date of Birth: ${data.datechild1}
-      **Child 2 Details (if any):**
-      - Child's Name: ${data.childname2 ? data.childname2 : 'N/A'}
-      - Child's Date of Birth: ${data.datechild2 ? data.datechild2 : 'N/A'}
-      - How did you learn about us?: ${data.question || 'NA'}
-      - Message: ${data.message || 'NA'}
-    `;
     try {
       setLoading(true);
       setIsOpen(false);
       const response = await axios.post('/api/submit', {
         name: data.name,
-        message: telegramMessage,
+        message: data,
         recaptchaToken: data.recaptcha ? data.recaptcha.toString() : '',
       });
       setLoading(false);
@@ -350,18 +328,21 @@ function ContactUs() {
                   control={control}
                   defaultValue={''}
                   rules={{ required: true }}
-                  render={({ field: { onChange, value } }) => (
+                  render={({
+                    field: { value, onChange },
+                    fieldState: { error },
+                  }) => (
                     <>
                       <input
                         value={value}
                         onChange={(e) => onChange(e.target.value)}
                         type='text'
                         className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
-                          errors.name
+                          error
                             ? 'border-2 border-errorborder-light bg-errorbg-main'
                             : ''
                         }`}
-                        aria-invalid={errors.name ? 'true' : 'false'}
+                        aria-invalid={error ? 'true' : 'false'}
                       />
                     </>
                   )}
@@ -375,21 +356,41 @@ function ContactUs() {
                 <Controller
                   name='mobile'
                   control={control}
-                  rules={{ required: true }}
+                  rules={{
+                    required: {
+                      value: true,
+                      message: '',
+                    },
+                    pattern: {
+                      value: /^0[0-9]{8,9}$/,
+                      message:
+                        'The input must start with 0 and can be 9 to 10 digits long.',
+                    },
+                  }}
                   defaultValue={''}
-                  render={({ field: { onChange, value } }) => (
+                  render={({
+                    field: { value, onChange },
+                    fieldState: { error },
+                  }) => (
                     <>
                       <input
+                        maxLength={10}
                         value={value}
+                        placeholder='0887726356'
                         onChange={(e) => onChange(e.target.value)}
                         type='text'
                         className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
-                          errors.name
+                          error
                             ? 'border-2 border-errorborder-light bg-errorbg-main'
                             : ''
                         }`}
-                        aria-invalid={errors.name ? 'true' : 'false'}
+                        aria-invalid={error ? 'true' : 'false'}
                       />
+                      {error && (
+                        <p role='alert' className='text-[12px] text-red-500'>
+                          {error.message}
+                        </p>
+                      )}
                     </>
                   )}
                 />
@@ -402,20 +403,35 @@ function ContactUs() {
                 <Controller
                   name='address'
                   control={control}
-                  rules={{ required: true }}
+                  rules={{
+                    required: true,
+                    pattern: {
+                      value: /^[^\s@]+@[^\s@]+\.[^\s@]+$/, // Regular expression for email validation
+                      message: 'Invalid email address', // Custom error message
+                    },
+                  }}
                   defaultValue={''}
-                  render={({ field: { onChange, value } }) => (
+                  render={({
+                    field: { value, onChange },
+                    fieldState: { error },
+                  }) => (
                     <>
                       <input
                         value={value}
                         onChange={(e) => onChange(e.target.value)}
                         type='text'
+                        placeholder='example@gmail.com'
                         className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
-                          errors.name
+                          error
                             ? 'border-2 border-errorborder-light bg-errorbg-main'
                             : ''
                         }`}
                       />
+                      {error && (
+                        <span className='text-red-500 text-[12px]'>
+                          {error.message}
+                        </span>
+                      )}
                     </>
                   )}
                 />
@@ -431,14 +447,17 @@ function ContactUs() {
                   control={control}
                   defaultValue={''}
                   rules={{ required: true }}
-                  render={({ field: { onChange, value } }) => (
+                  render={({
+                    field: { value, onChange },
+                    fieldState: { error },
+                  }) => (
                     <>
                       <input
                         value={value}
                         onChange={(e) => onChange(e.target.value)}
                         type='text'
                         className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
-                          errors.name
+                          error
                             ? 'border-2 border-errorborder-light bg-errorbg-main'
                             : ''
                         }`}
@@ -457,7 +476,10 @@ function ContactUs() {
                   control={control}
                   defaultValue={''}
                   rules={{ required: true }}
-                  render={({ field: { onChange, value } }) => (
+                  render={({
+                    field: { value, onChange },
+                    fieldState: { error },
+                  }) => (
                     <div className='relative w-full'>
                       <DatePicker
                         selected={value ? new Date(value) : null}
@@ -469,7 +491,7 @@ function ContactUs() {
                         wrapperClassName='w-full'
                         showYearDropdown
                         className={`bg-grey-main px-4 rounded-3xl h-10 hover:bg-purple-main w-full focus:outline-none ${
-                          errors.name
+                          error
                             ? 'border-2 border-errorborder-light bg-errorbg-main'
                             : ''
                         }`}
@@ -556,23 +578,26 @@ function ContactUs() {
                   name='recaptcha'
                   control={control}
                   rules={{ required: 'Please complete the reCAPTCHA' }}
-                  render={({ field, fieldState }) => (
+                  render={({
+                    field: { value, onChange },
+                    fieldState: { error },
+                  }) => (
                     <div className='w-full max-w-screen-md mx-auto'>
                       {loading && <p>Loading...</p>}
                       <ReCAPTCHA
                         ref={recaptchaRef}
                         sitekey={`${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY_REACT || ''}`}
                         onChange={(value) => {
-                          field.onChange(value);
+                          onChange(value);
                           console.log('value', value);
                         }}
                         onLoadCapture={handleRecaptchaLoad}
                         style={{ width: '100%' }}
                       />
-                      <div className={`${errors.name ? 'text-red-500' : ''}`}>
-                        {fieldState?.error && (
-                          <span className='text-sm text-red-500'>
-                            {fieldState.error.message}
+                      <div className={`${error ? 'text-red-500' : ''}`}>
+                        {error && (
+                          <span className='text-[12px] text-red-500'>
+                            {error.message}
                           </span>
                         )}
                       </div>
