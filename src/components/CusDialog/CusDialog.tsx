@@ -45,7 +45,7 @@ const CusDialog = ({
               leaveFrom='opacity-100 scale-100'
               leaveTo='opacity-0 scale-95'
             >
-              <Dialog.Panel className='w-full max-w-md transform overflow-hidden  bg-white p-6 text-left align-middle shadow-xl transition-all'>
+              <Dialog.Panel className='w-full max-w-md transform overflow-hidden rounded-2xl bg-white p-6 text-left align-middle shadow-xl transition-all'>
                 <Dialog.Title className='text-lg font-medium leading-6 text-gray-900'>
                   {title}
                 </Dialog.Title>
@@ -57,7 +57,7 @@ const CusDialog = ({
                   <button
                     disabled={loading}
                     type='button'
-                    className='disabled:opacity-50 inline-flex justify-center px-4 py-2 text-sm font-bloc text-blue-900 hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2'
+                    className='rounded-md inline-flex justify-center px-4 py-2 text-sm font-medium text-primary-lighter bg-primary hover:bg-blue-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500 focus-visible:ring-offset-2 disabled:opacity-50'
                     onClick={onClose}
                   >
                     {loading ? 'Loading' : buttonText || 'Close'}

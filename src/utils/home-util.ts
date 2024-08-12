@@ -4,8 +4,6 @@ import { TbUsersGroup } from 'react-icons/tb';
 
 import media1 from '/public/img/media1.webp';
 import media2 from '/public/img/media2.webp';
-import media from '/public/img/media.webp';
-import center1 from '/public/img/new-img/DSC00300-Edit.jpg';
 import center2 from '/public/img/new-img/DSC00348-Edit.jpg';
 
 export const homeBlog = [
@@ -109,6 +107,9 @@ export const mediumScreen = [
   {
     original: '/img/homepageslide2.webp',
   },
+  {
+    original: '/img/campusbigscreen.jpg',
+  },
 ];
 export const smallScreen = [
   {
@@ -116,5 +117,8 @@ export const smallScreen = [
   },
   {
     original: '/img/homeslide4.webp',
+  },
+  {
+    original: '/img/campussmallscreen.jpg',
   },
 ];

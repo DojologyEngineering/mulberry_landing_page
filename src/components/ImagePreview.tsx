@@ -129,6 +129,15 @@ export const HomePreview = () => {
             </button>
           </div>
         </div>
+        <div className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 md:ml-36 ml-9 '>
+          <p
+            className={`${fontSize} ${activeSlideIndex === 2 && 'animate-right-to-left'} text-primary-hight-light font-raleway font-bold ${
+              activeSlideIndex === 2 ? 'opacity-100' : 'opacity-0'
+            } transition-opacity duration-500`}
+          >
+            Mulberry International Preschool, Cambodia
+          </p>
+        </div>
       </div>
     </>
   );

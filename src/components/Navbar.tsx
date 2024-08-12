@@ -80,7 +80,7 @@ function Navbar() {
 
   return (
     <div
-      className={`transition-all ease-in-out duration-300 sticky z-10 bg-white ${hideNav ? '-top-52' : 'top-0'} ${!hideNav && prevScrollpos > 0 ? 'drop-shadow-md' : 'drop-shadow-none'}`}
+      className={`transition-all ease-in-out duration-300 sticky z-20 bg-white ${hideNav ? '-top-52' : 'top-0'} ${!hideNav && prevScrollpos > 0 ? 'drop-shadow-md' : 'drop-shadow-none'}`}
     >
       <div className='hidden bg-primary-lighter md:block'>
         <div className='container flex items-center mx-auto space-x-6'>
