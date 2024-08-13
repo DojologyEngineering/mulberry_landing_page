@@ -66,6 +66,7 @@ function ContactUs() {
       if (response.data) {
         setIsOpen(true);
         recaptchaRef.current?.reset();
+        reset();
         reset({
           name: '',
           mobile: '',
@@ -81,7 +82,6 @@ function ContactUs() {
         setValue('recaptcha', false);
       }
       console.log(response.data);
-      reset();
     } catch (error) {
       setIsOpen(false);
       console.error('Error submitting form:', error);
@@ -504,8 +504,7 @@ function ContactUs() {
 
               <div>
                 <label className='block mb-1 font-avenir text-sm'>
-                  How did you learn about Mulberry International Preschool,
-                  Cambodia ?
+                  How did you learn about Mulberry International Preschool?
                 </label>
                 <Controller
                   name='question'
@@ -618,6 +617,7 @@ function ContactUs() {
                 render={({ field: { onChange, value } }) => (
                   <>
                     <textarea
+                      value={value}
                       onChange={(value) => onChange(value)}
                       className='bg-grey-main px-4 pt-1 rounded-md hover:bg-purple-main w-full h-36 focus:outline-none'
                     ></textarea>

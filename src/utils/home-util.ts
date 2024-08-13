@@ -102,23 +102,23 @@ export const images = [
 ];
 export const mediumScreen = [
   {
+    original: '/img/campusbigscreen.jpg',
+  },
+  {
     original: '/img/homepageslide.webp',
   },
   {
     original: '/img/homepageslide2.webp',
   },
-  {
-    original: '/img/campusbigscreen.jpg',
-  },
 ];
 export const smallScreen = [
+  {
+    original: '/img/campussmallscreen.jpg',
+  },
   {
     original: '/img/homeslide3.webp',
   },
   {
     original: '/img/homeslide4.webp',
-  },
-  {
-    original: '/img/campussmallscreen.jpg',
   },
 ];

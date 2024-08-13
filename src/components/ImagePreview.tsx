@@ -10,17 +10,17 @@ import { images, mediumScreen, smallScreen } from '@/utils/home-util';
 
 import image1 from '/public/img/image1.webp';
 
-export const ImagePreview = () => {
-  return (
-    <div className='container w-full mx-auto mt-10 mb-10'>
-      <ImageGallery
-        items={images}
-        infinite={false}
-        additionalClass='bg-white'
-      />
-    </div>
-  );
-};
+// export const ImagePreview = () => {
+//   return (
+//     <div className='container w-full mx-auto mt-10 mb-10'>
+//       <ImageGallery
+//         items={images}
+//         infinite={false}
+//         additionalClass='bg-white'
+//       />
+//     </div>
+//   );
+// };
 export const HomePreview = () => {
   const [activeSlideIndex, setActiveSlideIndex] = useState(0);
   const handleSlide = (index: number) => {
@@ -52,7 +52,7 @@ export const HomePreview = () => {
           <ImageGallery
             items={smallScreen}
             infinite={true}
-            autoPlay={true}
+            // autoPlay={true}
             showThumbnails={false}
             showFullscreenButton={false}
             showPlayButton={false}
@@ -82,9 +82,19 @@ export const HomePreview = () => {
           />
         </div>
         <div className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 md:ml-36 ml-9 '>
+          <p
+            className={`${fontSize} ${activeSlideIndex === 0 && 'animate-right-to-left'} text-primary-hight-light font-raleway font-bold ${
+              activeSlideIndex === 0 ? 'opacity-100' : 'opacity-0'
+            } transition-opacity duration-300`}
+          >
+            Mulberry International Preschool, Cambodia
+          </p>
+        </div>
+
+        <div className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 md:ml-36 ml-9 '>
           <h2
             className={`${fontSize} text-primary-hight-light font-raleway font-bold  ${
-              activeSlideIndex === 0 ? 'opacity-100' : 'opacity-0'
+              activeSlideIndex === 1 ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-300`}
           >
             Equip your child with intelligent thinking skills
@@ -93,7 +103,7 @@ export const HomePreview = () => {
             <Link
               href={'#'}
               className={`underline md:text-[26px] font-raleway font-bold text-gray-500 ${
-                activeSlideIndex === 0 ? 'opacity-100' : 'opacity-0'
+                activeSlideIndex === 1 ? 'opacity-100' : 'opacity-0'
               } transition-opacity duration-300`}
             >
               Secure exclusive
@@ -101,7 +111,7 @@ export const HomePreview = () => {
             <Link
               href={'#'}
               className={`underline md:text-[26px] font-raleway font-bold text-gray-500 ${
-                activeSlideIndex === 0 ? 'opacity-100' : 'opacity-0'
+                activeSlideIndex === 1 ? 'opacity-100' : 'opacity-0'
               } transition-opacity duration-300`}
             >
               enrollment promotions!
@@ -111,32 +121,23 @@ export const HomePreview = () => {
 
         <div className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 md:ml-36 ml-9 '>
           <p
-            className={`${fontSize} ${activeSlideIndex === 1 && 'animate-right-to-left'} text-light font-raleway font-bold ${
-              activeSlideIndex === 1 ? 'opacity-100' : 'opacity-0'
+            className={`${fontSize} ${activeSlideIndex === 2 && 'animate-right-to-left'} text-light font-raleway font-bold ${
+              activeSlideIndex === 2 ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-300`}
           >
             NURTURING THE FUTURE READY CHILD
           </p>
           <div
             className={` text-primary-hight-light font-raleway font-bold ${
-              activeSlideIndex === 1 ? 'opacity-100' : 'opacity-0'
+              activeSlideIndex === 2 ? 'opacity-100' : 'opacity-0'
             } transition-opacity duration-300`}
           >
             <button
-              className={`md:mt-4 md:text-[20px] ${activeSlideIndex === 1 && 'animate-left-to-right'} rounded-full bg-siliver text-white px-10 py-3`}
+              className={`md:mt-4 md:text-[20px] ${activeSlideIndex === 2 && 'animate-left-to-right'} rounded-full bg-siliver text-white px-10 py-3`}
             >
               ENROLL NOW
             </button>
           </div>
-        </div>
-        <div className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 md:ml-36 ml-9 '>
-          <p
-            className={`${fontSize} ${activeSlideIndex === 2 && 'animate-right-to-left'} text-primary-hight-light font-raleway font-bold ${
-              activeSlideIndex === 2 ? 'opacity-100' : 'opacity-0'
-            } transition-opacity duration-500`}
-          >
-            Mulberry International Preschool, Cambodia
-          </p>
         </div>
       </div>
     </>
