@@ -103,22 +103,28 @@ export const images = [
 export const mediumScreen = [
   {
     original: '/img/campusbigscreen.jpg',
+    description: 'image1',
   },
   {
     original: '/img/homepageslide.webp',
+    description: 'image2',
   },
   {
     original: '/img/homepageslide2.webp',
+    description: 'image3',
   },
 ];
 export const smallScreen = [
   {
-    original: '/img/campussmallscreen.jpg',
+    original: '/img/campusbigscreen.jpg',
+    description: 'image1',
   },
   {
     original: '/img/homeslide3.webp',
+    description: 'image2',
   },
   {
     original: '/img/homeslide4.webp',
+    description: 'image3',
   },
 ];
