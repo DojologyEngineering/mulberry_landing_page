@@ -177,7 +177,7 @@ export const HomePreview = () => {
           {item.description === 'image1' ? (
             <div className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 w-full pl-28 md:pl-[200px] text-left'>
               <p
-                className={`${fontSize} text-primary-hight-light font-raleway font-bold w-full md:pl-0 leading-relaxed`} // Added leading for vertical spacing
+                className={`${fontSize} text-primary-hight-light font-raleway font-bold w-full md:pl-32 leading-relaxed`} // Added leading for vertical spacing
                 style={{ whiteSpace: 'normal' }}
               >
                 Mulberry International Preschool, Cambodia
