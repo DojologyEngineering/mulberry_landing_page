@@ -116,7 +116,7 @@ export const mediumScreen = [
 ];
 export const smallScreen = [
   {
-    original: '/img/campusbigscreen.jpg',
+    original: '/img/campussmallscreen.jpg',
     description: 'image1',
   },
   {

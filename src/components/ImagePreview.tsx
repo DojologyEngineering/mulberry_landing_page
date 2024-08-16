@@ -169,7 +169,9 @@ export const HomePreview = () => {
         <Image
           src={item.original || ''}
           alt={item.description || ''}
-          className='w-full h-[288px] md:h-[585px]'
+          className={`w-full`}
+          // className='w-full h-[288px] md:h-[585px]'
+          // h-[288px] md:h-[585px] ${item.description === 'image1' && `h-[288px]`}
           height={800}
           width={800}
           objectFit='contain'
