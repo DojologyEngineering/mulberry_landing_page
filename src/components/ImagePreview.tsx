@@ -172,64 +172,65 @@ export const HomePreview = () => {
           className='w-full h-[288px] md:h-[585px]'
           height={800}
           width={800}
+          objectFit='contain'
         />
-        <div className='description'>
-          {item.description === 'image1' ? (
-            <div className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 w-full pl-28 md:pl-[200px] text-left'>
-              <p
-                className={`${fontSize} text-primary-hight-light font-raleway font-bold w-full md:pl-32 leading-relaxed`} // Added leading for vertical spacing
-                style={{ whiteSpace: 'normal' }}
-              >
-                Mulberry International Preschool, Cambodia
-              </p>
-            </div>
-          ) : item.description === 'image2' ? (
-            <div
-              key={1}
-              className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 pl-28 md:pl-[320px] w-full text-left'
+        {item.description === 'image1' ? (
+          <div className='container mx-auto absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2 text-left '>
+            <p
+              className={`${fontSize} text-primary-hight-light font-raleway font-bold leading-relaxed md:ml-40 ml-12 md:w-[80%]`}
+              style={{ whiteSpace: 'normal' }}
             >
+              Mulberry International Preschool, Cambodia
+            </p>
+          </div>
+        ) : item.description === 'image2' ? (
+          <div
+            key={1}
+            className='container mx-auto absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2 text-left'
+          >
+            <div className='md:w-[80%]'>
               <h2
-                className={`${fontSize} text-primary-hight-light font-raleway font-bold leading-relaxed`} // Added leading for spacing between lines
+                className={`${fontSize} text-primary-hight-light font-raleway font-bold leading-relaxed md:ml-40 ml-12`}
                 style={{ whiteSpace: 'normal' }}
               >
                 Equip your child with intelligent thinking skills
               </h2>
-              <div className='flex flex-col items-baseline mt-4'>
-                <Link
-                  href={'#'}
-                  className='underline md:text-[26px] font-raleway font-bold text-gray-500'
-                >
-                  Secure exclusive
-                </Link>
-                <Link
-                  href={'#'}
-                  className='underline md:text-[26px] font-raleway font-bold text-gray-500 mt-7 md:pt-8' // Added margin for vertical spacing
-                >
-                  enrollment promotions!
-                </Link>
+            </div>
+            <div className=' flex flex-col items-baseline '>
+              <Link
+                href={'#'}
+                className='underline text-[16px] md:text-[26px] font-raleway font-bold text-gray-500  leading-relaxed md:ml-40 ml-12'
+              >
+                Secure exclusive
+              </Link>
+              <Link
+                href={'#'}
+                className='underline text-[16px] md:text-[26px] font-raleway font-bold text-gray-500 md:mt-5 mt-4 lg:mt-5 eading-relaxed md:ml-40 ml-12'
+              >
+                enrollment promotions!
+              </Link>
+            </div>
+          </div>
+        ) : (
+          item.description === 'image3' && (
+            <div
+              key={2}
+              className='container mx-auto absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2 w-full  text-left'
+            >
+              <p
+                className={`${fontSize} text-light font-raleway font-bold leading-relaxed md:ml-40 ml-12 md:w-[70%]`}
+                style={{ whiteSpace: 'normal' }}
+              >
+                NURTURING THE FUTURE READY CHILD
+              </p>
+              <div className='text-primary-hight-light font-raleway font-bold md:ml-40 ml-12'>
+                <button className='text-[16px] md:text-[20px] rounded-full bg-siliver text-white py-5 px-3'>
+                  ENROLL NOW
+                </button>
               </div>
             </div>
-          ) : (
-            item.description === 'image3' && (
-              <div
-                key={2}
-                className='absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/3 pl-28 md:pl-[320px] w-full text-left'
-              >
-                <p
-                  className={`${fontSize} text-light font-raleway font-bold leading-relaxed `}
-                  style={{ whiteSpace: 'normal' }}
-                >
-                  NURTURING THE FUTURE READY CHILD
-                </p>
-                <div className='text-primary-hight-light font-raleway font-bold mt-4'>
-                  <button className='md:mt-4 md:text-[20px] rounded-full bg-siliver text-white px-10 py-5'>
-                    ENROLL NOW
-                  </button>
-                </div>
-              </div>
-            )
-          )}
-        </div>
+          )
+        )}
       </div>
     );
   };
@@ -247,22 +248,6 @@ export const HomePreview = () => {
           showThumbnails={false}
           showFullscreenButton={false}
           showPlayButton={false}
-          // renderLeftNav={renderCustomLeftNav}
-          // renderRightNav={renderCustomRightNav}
-          onSlide={(i) => {
-            switch (smallScreen[i].original) {
-              case '/img/campussmallscreen.jpg':
-                setActiveSlideIndex(0);
-                break;
-              case '/img/homeslide3.webp':
-                setActiveSlideIndex(1);
-                break;
-              case '/img/homeslide4.webp':
-                setActiveSlideIndex(2);
-                break;
-              default:
-            }
-          }}
         />
       </div>
       <div className='hidden md:flex'>
@@ -277,22 +262,6 @@ export const HomePreview = () => {
           showThumbnails={false}
           showFullscreenButton={false}
           showPlayButton={false}
-          onSlide={(i) => {
-            switch (smallScreen[i].original) {
-              case '/img/campussmallscreen.jpg':
-                setActiveSlideIndex(0);
-                break;
-              case '/img/homeslide3.webp':
-                setActiveSlideIndex(1);
-                break;
-              case '/img/homeslide4.webp':
-                setActiveSlideIndex(2);
-                break;
-              default:
-            }
-          }}
-          // renderLeftNav={renderCustomLeftNav}
-          // renderRightNav={renderCustomRightNav}
         />
       </div>
 
