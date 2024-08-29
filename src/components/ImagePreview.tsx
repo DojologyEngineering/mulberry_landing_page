@@ -213,23 +213,35 @@ export const HomePreview = () => {
               </Link>
             </div>
           </div>
+        ) : item.description === 'image3' ? (
+          <div
+            key={2}
+            className='container mx-auto absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2 w-full  text-left'
+          >
+            <p
+              className={`${fontSize} text-light font-raleway font-bold leading-relaxed md:ml-40 ml-12 md:w-[70%]`}
+              style={{ whiteSpace: 'normal' }}
+            >
+              NURTURING THE FUTURE READY CHILD
+            </p>
+            <div className='text-primary-hight-light font-raleway font-bold md:ml-40 ml-12'>
+              <button className='text-[16px] md:text-[20px] rounded-full bg-siliver text-white py-5 px-3'>
+                ENROLL NOW
+              </button>
+            </div>
+          </div>
         ) : (
-          item.description === 'image3' && (
+          item.description === 'image4' && (
             <div
               key={2}
-              className='container mx-auto absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2 w-full  text-left'
+              className='container mx-auto absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2 w-full  text-left pr-3 md:pr-0'
             >
               <p
-                className={`${fontSize} text-light font-raleway font-bold leading-relaxed md:ml-40 ml-12 md:w-[70%]`}
+                className={`${fontSize} text-primary-hight-light font-raleway font-bold leading-relaxed md:ml-40 ml-12 md:w-[70%] `}
                 style={{ whiteSpace: 'normal' }}
               >
-                NURTURING THE FUTURE READY CHILD
+                The Environment as &apos;The Third Teacher&apos;
               </p>
-              <div className='text-primary-hight-light font-raleway font-bold md:ml-40 ml-12'>
-                <button className='text-[16px] md:text-[20px] rounded-full bg-siliver text-white py-5 px-3'>
-                  ENROLL NOW
-                </button>
-              </div>
             </div>
           )
         )}

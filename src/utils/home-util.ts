@@ -113,6 +113,10 @@ export const mediumScreen = [
     original: '/img/homepageslide2.webp',
     description: 'image3',
   },
+  {
+    original: '/img/enviromentmedium.jpeg',
+    description: 'image4',
+  },
 ];
 export const smallScreen = [
   {
@@ -126,5 +130,9 @@ export const smallScreen = [
   {
     original: '/img/homeslide4.webp',
     description: 'image3',
+  },
+  {
+    original: '/img/enviromentsmall.jpeg',
+    description: 'image4',
   },
 ];
