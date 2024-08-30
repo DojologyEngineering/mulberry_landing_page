@@ -187,31 +187,15 @@ export const HomePreview = () => {
           </div>
         ) : item.description === 'image2' ? (
           <div
-            key={1}
-            className='container mx-auto absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2 text-left'
+            key={2}
+            className='container mx-auto absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2 w-full  text-left pr-3 md:pr-0'
           >
-            <div className='md:w-[80%]'>
-              <h2
-                className={`${fontSize} text-primary-hight-light font-raleway font-bold leading-relaxed md:ml-40 ml-12`}
-                style={{ whiteSpace: 'normal' }}
-              >
-                Equip your child with intelligent thinking skills
-              </h2>
-            </div>
-            <div className=' flex flex-col items-baseline '>
-              <Link
-                href={'#'}
-                className='underline text-[16px] md:text-[26px] font-raleway font-bold text-gray-500  leading-relaxed md:ml-40 ml-12'
-              >
-                Secure exclusive
-              </Link>
-              <Link
-                href={'#'}
-                className='underline text-[16px] md:text-[26px] font-raleway font-bold text-gray-500 md:mt-5 mt-4 lg:mt-5 eading-relaxed md:ml-40 ml-12'
-              >
-                enrollment promotions!
-              </Link>
-            </div>
+            <p
+              className={`${fontSize} text-primary-hight-light font-raleway font-bold leading-relaxed md:ml-40 ml-12 md:w-[70%] `}
+              style={{ whiteSpace: 'normal' }}
+            >
+              The Environment as &apos;The Third Teacher&apos;
+            </p>
           </div>
         ) : item.description === 'image3' ? (
           <div
@@ -233,15 +217,31 @@ export const HomePreview = () => {
         ) : (
           item.description === 'image4' && (
             <div
-              key={2}
-              className='container mx-auto absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2 w-full  text-left pr-3 md:pr-0'
+              key={1}
+              className='container mx-auto absolute mt-5 transform -translate-x-1/2 -translate-y-1/2 top-1/3 left-1/2 text-left'
             >
-              <p
-                className={`${fontSize} text-primary-hight-light font-raleway font-bold leading-relaxed md:ml-40 ml-12 md:w-[70%] `}
-                style={{ whiteSpace: 'normal' }}
-              >
-                The Environment as &apos;The Third Teacher&apos;
-              </p>
+              <div className='md:w-[80%]'>
+                <h2
+                  className={`${fontSize} text-primary-hight-light font-raleway font-bold leading-relaxed md:ml-40 ml-12`}
+                  style={{ whiteSpace: 'normal' }}
+                >
+                  Equip your child with intelligent thinking skills
+                </h2>
+              </div>
+              <div className=' flex flex-col items-baseline '>
+                <Link
+                  href={'#'}
+                  className='underline text-[16px] md:text-[26px] font-raleway font-bold text-gray-500  leading-relaxed md:ml-40 ml-12'
+                >
+                  Secure exclusive
+                </Link>
+                <Link
+                  href={'#'}
+                  className='underline text-[16px] md:text-[26px] font-raleway font-bold text-gray-500 md:mt-5 mt-4 lg:mt-5 eading-relaxed md:ml-40 ml-12'
+                >
+                  enrollment promotions!
+                </Link>
+              </div>
             </div>
           )
         )}

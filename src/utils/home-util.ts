@@ -106,15 +106,16 @@ export const mediumScreen = [
     description: 'image1',
   },
   {
-    original: '/img/homepageslide.webp',
+    original: '/img/enviromentmedium.jpeg',
     description: 'image2',
   },
+
   {
     original: '/img/homepageslide2.webp',
     description: 'image3',
   },
   {
-    original: '/img/enviromentmedium.jpeg',
+    original: '/img/homepageslide.webp',
     description: 'image4',
   },
 ];
@@ -124,7 +125,7 @@ export const smallScreen = [
     description: 'image1',
   },
   {
-    original: '/img/homeslide3.webp',
+    original: '/img/enviromentsmall.jpeg',
     description: 'image2',
   },
   {
@@ -132,7 +133,7 @@ export const smallScreen = [
     description: 'image3',
   },
   {
-    original: '/img/enviromentsmall.jpeg',
+    original: '/img/homeslide3.webp',
     description: 'image4',
   },
 ];
