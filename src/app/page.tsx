@@ -53,8 +53,8 @@ export default function Home() {
         </div>
       </div>
       <ImageParallax />
-      <div className='flex flex-col items-center justify-center h-24 bg-primary-hight-light md:h-40'>
-        <p className='md:text-[40px] text-[23px] font-raleway font-bold text-white'>
+      <div className='flex flex-col items-center justify-center h-40 bg-primary-hight-light md:h-40'>
+        <p className='md:text-[40px] text-[23px] font-raleway font-bold text-white text-center'>
           The Mulberry International Preschool, Cambodia Edge
         </p>
         <div className='w-[200px] h-[2px] bg-grey-primary mt-5'></div>
