@@ -274,7 +274,13 @@ function Navbar() {
           ),
         )}
         <div className='flex flex-col items-center mt-8'>
-          <button className='flex items-center px-8 text-xl text-white transition duration-150 rounded-lg font-patrick h-14 bg-primary-main hover:bg-primary-hight-light'>
+          <button
+            className='flex items-center px-8 text-xl text-white transition duration-150 rounded-lg font-patrick h-14 bg-primary-main hover:bg-primary-hight-light'
+            onClick={() => {
+              navigate.push('/contact-us');
+              setIsOpen(false);
+            }}
+          >
             Enroll Now <FiEdit3 className='ml-2' size={24} />
           </button>
           <div className='flex mt-8 space-x-3'>
